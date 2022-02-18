@@ -639,11 +639,6 @@ input[type="date"]:valid::before {
     min-height: 180px;
   }
 }
-.wrapper {
-  max-width: 1920px;
-  margin: 0 auto;
-}
-
 .content {
   padding: 40px;
 }
