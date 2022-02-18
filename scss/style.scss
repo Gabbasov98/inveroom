@@ -1,0 +1,22 @@
+@import 'reset';
+@import 'ux';
+@import 'index';
+.wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.content {
+    padding: 40px;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 992px) {
+    .content {
+        padding: 16px;
+    }
+}
