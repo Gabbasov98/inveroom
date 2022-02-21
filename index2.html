@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/apexcharts.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Главная</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header class='header'>
+            <div class="header__left">
+                <a href="" class="header__logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <button class="header__burger">
+                    <svg width="37" height="12" viewBox="0 0 37 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M37 10.5C37 11.3284 36.3284 12 35.5 12H1.5C0.671572 12 0 11.3284 0 10.5C0 9.67157 0.671573 9 1.5 9H35.5C36.3284 9 37 9.67157 37 10.5ZM37 1.5C37 2.32843 36.3284 3 35.5 3H24.5H13.8333C13.0049 3 12.3333 2.32843 12.3333 1.5C12.3333 0.671573 13.0049 0 13.8333 0H35.5C36.3284 0 37 0.671573 37 1.5Z" fill="#7786A5"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="header__right">
+                <button class="header__create btn">
+                    <strong>+</strong>
+                    <span>СОЗДАТЬ</span>
+                </button>
+                <div class="header__notification">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22C10.8954 22 10 21.1046 10 20H14C14 21.1046 13.1046 22 12 22ZM20 19H4V17L6 16V10.5C6 7.038 7.421 4.793 10 4.18V2H14V4.18C16.579 4.792 18 7.036 18 10.5V16L20 17V19ZM12 5.75C10.7797 5.6712 9.60278 6.21728 8.875 7.2C8.25255 8.18456 7.94714 9.33638 8 10.5V17H16V10.5C16.0528 9.33639 15.7474 8.18458 15.125 7.2C14.3972 6.21728 13.2203 5.6712 12 5.75Z" fill="#7786A5"/>
+                    </svg>
+                    <span>3</span>
+                </div>
+                <a href="" class="header__user"><span>A</span></a>
+            </div>
+        </header>
+
+        <div class="content">
+
+
+            <section class='pay card-bg'>
+                <div class='container'>
+                    <div class='pay__inner'>
+                        <div class="pay__title display1">За что, когда и сколько платить</div>
+                        <div class="tabs">
+                            <div class="tab tab--active" data-tab-path="1">График платежей</div>
+                            <div class="tab" data-tab-path="2">Таблица рентабельности</div>
+                            <div class="tab" data-tab-path="3">Сервисные расходы</div>
+                        </div>
+                        <div class="tab__content tab__content--active" data-tab-path="1">
+                            <div class="pay__desc">Укажите в форме интересующие вас параметры для расчета платежей:</div>
+                            <div class="pay__form">
+                                <fieldset id="homePrice" class='form-group'>
+                                    <label>Цена недвижимости</label>
+                                    <div class="form-group__wrap">
+                                        <span class="form-group__info">
+                                            <span class="form-group__num"><span>158500</span> €</span>
+                                        </span>
+                                    </div>
+                                    <div class="form-group__range">
+                                        <div class="polzunok"></div>
+                                    </div>
+                                </fieldset>
+                                <fieldset id="rentPeriod" class='form-group'>
+                                    <label>5 лет</label>
+                                    <div class="form-group__wrap">
+                                        <div class="form-group__info">
+                                            <span class="form-group__num"><span>5</span> лет</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group__range">
+                                        <div class="polzunok"></div>
+                                    </div>
+
+                                </fieldset>
+                                <fieldset class='form-group'>
+                                    <label>Цена недвижимости</label>
+                                    <div class="form-group__wrap form-group__wrap--dropdown">
+                                        <span class="form-group__info">
+                                            <span class="form-group__num">~ 1 Февраля 2024 г.</span>
+                                        <span class="form-group__num2">Через 54 мес </span>
+                                        </span>
+                                        <button class="form-group__arrow">
+                                           <img src="img/Arrow-Bottom.svg" alt="">
+                                       </button>
+                                    </div>
+                                    <div class="form-group__dropdown">
+                                        <div class="form-group__dropdown-item">
+                                            <input checked type='radio' class='radio' id='buildFinish1' name='buildFinish' />
+                                            <label for='buildFinish1'>
+                                                <span class="form-group__info">
+                                                    <span class="form-group__num">~ 1 Февраля 2024 г.</span>
+                                                    <span class="form-group__num2">Через 54 мес </span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group__dropdown-item">
+                                            <input type='radio' class='radio' id='buildFinish2' name='buildFinish' />
+                                            <label for='buildFinish2'>
+                                                <span class="form-group__info">
+                                                    <span class="form-group__num">~ 15 Февраля 2023 г.</span>
+                                                    <span class="form-group__num2">Через 44 мес </span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group__dropdown-item">
+                                            <input type='radio' class='radio' id='buildFinish3' name='buildFinish' />
+                                            <label for='buildFinish3'>
+                                                <span class="form-group__info">
+                                                    <span class="form-group__num">~ 25 Февраля 2022 г.</span>
+                                                    <span class="form-group__num2">Через 34 мес </span>
+                                                </span>                                          
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class='form-group'>
+                                    <label>Интервал платежей</label>
+                                    <div class="form-group__wrap form-group__wrap--dropdown">
+                                        <span class="form-group__info">
+                                            <span class="form-group__num">Каждый месяц</span>
+                                        <span class="form-group__num2">7 600 € в месяц</span>
+                                        </span>
+                                        <button class="form-group__arrow">
+                                           <img src="img/Arrow-Bottom.svg" alt="">
+                                       </button>
+                                    </div>
+                                    <div class="form-group__dropdown">
+                                        <div class="form-group__dropdown-item">
+                                            <input checked type='radio' class='radio' id='payInterval1' name='payInterval' />
+                                            <label for='payInterval1'>
+                                                <span class="form-group__info">
+                                                    <span class="form-group__num">Каждый месяц</span>
+                                                <span class="form-group__num2">7 600 € в месяц</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group__dropdown-item">
+                                            <input type='radio' class='radio' id='payInterval2' name='payInterval' />
+                                            <label for='payInterval2'>
+                                                <span class="form-group__info">
+                                                    <span class="form-group__num">Каждый год</span>
+                                                <span class="form-group__num2">97 600 € в месяц</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset id="homeSquare" class='form-group'>
+                                    <label>Общая площадь</label>
+                                    <div class="form-group__wrap">
+                                        <span class="form-group__info">
+                                            <span class="form-group__num"><span>202</span> м²</span>
+                                        </span>
+                                    </div>
+                                    <div class="form-group__range">
+                                        <div class="polzunok"></div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class='form-group'>
+                                    <label>Акции и бонусы</label>
+                                    <div class="form-group__wrap form-group__wrap--dropdown">
+                                        <span class="form-group__info">
+                                            <span class="form-group__num">Кэшбек от застройщика</span>
+                                        <span class="form-group__num2">— 4 % от суммы</span>
+                                        </span>
+                                        <button class="form-group__arrow">
+                                           <img src="img/Arrow-Bottom.svg" alt="">
+                                       </button>
+                                    </div>
+                                    <div class="form-group__dropdown">
+                                        <div class="form-group__dropdown-item">
+                                            <input checked type='radio' class='radio' id='cashback1' name='cashback' />
+                                            <label for='cashback1'>
+                                                <span class="form-group__info">
+                                                    <span class="form-group__num">Кэшбек от застройщика</span>
+                                                <span class="form-group__num2">— 4 % от суммы</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group__dropdown-item">
+                                            <input type='radio' class='radio' id='cashback2' name='cashback' />
+                                            <label for='cashback2'>
+                                                <span class="form-group__info">
+                                                    <span class="form-group__num">Кэшбек от застройщика 2</span>
+                                                <span class="form-group__num2">— 8 % от суммы</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class='form-group'>
+                                    <label>Первый взнос</label>
+                                    <div class="form-group__wrap form-group__wrap--dropdown">
+                                        <span class="form-group__info">
+                                            <span class="form-group__num">50 %</span>
+                                        <span class="form-group__num2">78 500 €</span>
+                                        </span>
+                                        <button class="form-group__arrow">
+                                           <img src="img/Arrow-Bottom.svg" alt="">
+                                       </button>
+                                    </div>
+                                    <div class="form-group__dropdown">
+                                        <div class="form-group__dropdown-item">
+                                            <input type='radio' class='radio' id='firstPay1' name='firstPay' />
+                                            <label for='firstPay1'>
+                                                <span class="form-group__info">
+                                                    <span class="form-group__num">30 %</span>
+                                                    <span class="form-group__num2">39 500 €</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group__dropdown-item">
+                                            <input type='radio' class='radio' id='firstPay2' name='firstPay' />
+                                            <label for='firstPay2'>
+                                                <span class="form-group__info">
+                                                    <span class="form-group__num">40 %</span>
+                                                    <span class="form-group__num2">42 200 €</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group__dropdown-item">
+                                            <input checked type='radio' class='radio' id='firstPay3' name='firstPay' />
+                                            <label for='firstPay3'>
+                                                <span class="form-group__info">
+                                                    <span class="form-group__num">50 %</span>
+                                                    <span class="form-group__num2">55 600 €</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group__dropdown-item">
+                                            <input type='radio' class='radio' id='firstPay4' name='firstPay' />
+                                            <label for='firstPay4'>
+                                                <span class="form-group__info">
+                                                    <span class="form-group__num">60 %</span>
+                                                    <span class="form-group__num2">79 000 €</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group__dropdown-item">
+                                            <input type='radio' class='radio' id='firstPay5' name='firstPay' />
+                                            <label for='firstPay5'>
+                                                <span class="form-group__info">
+                                                    <span class="form-group__num">70 %</span>
+                                                    <span class="form-group__num2">95 100 €</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group__dropdown-item">
+                                            <input type='radio' class='radio' id='firstPay6' name='firstPay' />
+                                            <label for='firstPay6'>
+                                                <span class="form-group__info">
+                                                    <span class="form-group__num">80 %</span>
+                                                    <span class="form-group__num2">125 600 €</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group__dropdown-item">
+                                            <input type='radio' class='radio' id='firstPay7' name='firstPay' />
+                                            <label for='firstPay7'>
+                                                <span class="form-group__info">
+                                                    <span class="form-group__num">90 %</span>
+                                                    <span class="form-group__num2">145 500 €</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group__dropdown-item">
+                                            <input type='radio' class='radio' id='firstPay8' name='firstPay' />
+                                            <label for='firstPay8'>
+                                                <span class="form-group__info">
+                                                    <span class="form-group__num">100 %</span>
+                                                    <span class="form-group__num2">158 500 €</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class='form-group'>
+                                    <label>Вариант эксплуотации</label>
+                                    <div class="form-group__wrap">
+
+                                        <div class="form-group__info">
+                                            <div class="form-group__check">
+                                                <input type='checkbox' class='checkbox' id='c' />
+                                                <label for='c'>Оплата первого взноса криптовалютой</label>
+                                            </div>
+                                            <span class="form-group__num2">+ 5 % к сумме</span>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class='form-group'>
+                                    <label>Способ покупки</label>
+                                    <div class="form-group__wrap form-group__wrap--dropdown">
+                                        <span class="form-group__info">
+                                            <span class="form-group__num">В рассрочку от застройщика</span>
+                                        <span class="form-group__num2">0 %</span>
+                                        </span>
+                                        <button class="form-group__arrow">
+                                           <img src="img/Arrow-Bottom.svg" alt="">
+                                       </button>
+                                    </div>
+                                    <div class="form-group__dropdown">
+                                        <div class="form-group__dropdown-item">
+                                            <input checked type='radio' class='radio' id='buyWay1' name='buyWay' />
+                                            <label for='buyWay1'>
+                                                <span class="form-group__info">
+                                                    <span class="form-group__num">В рассрочку от застройщика</span>
+                                                <span class="form-group__num2">0 %</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group__dropdown-item">
+                                            <input type='radio' class='radio' id='buyWay2' name='buyWay' />
+                                            <label for='buyWay2'>
+                                                <span class="form-group__info">
+                                                    <span class="form-group__num">За поклон</span>
+                                                <span class="form-group__num2">-100 %</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class='form-group'>
+                                    <label>Вариант эксплуотации</label>
+                                    <div class="form-group__wrap form-group__wrap--dropdown">
+                                        <span class="form-group__info">
+                                            <span class="form-group__num">Сдавать в аренду с гарантией под 8 %</span>
+                                        <span class="form-group__num2">7 мес в году</span>
+                                        </span>
+                                        <button class="form-group__arrow">
+                                           <img src="img/Arrow-Bottom.svg" alt="">
+                                       </button>
+                                    </div>
+                                    <div class="form-group__dropdown">
+                                        <div class="form-group__dropdown-item">
+                                            <input checked type='radio' class='radio' id='useVariant1' name='useVariant' />
+                                            <label for='useVariant1'>
+                                                <span class="form-group__info">
+                                                    <span class="form-group__num">Сдавать в аренду с гарантией под 8 %</span>
+                                                <span class="form-group__num2">7 мес в году</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group__dropdown-item">
+                                            <input type='radio' class='radio' id='useVariant2' name='useVariant' />
+                                            <label for='useVariant2'>
+                                                <span class="form-group__info">
+                                                    <span class="form-group__num">Сдавать в аренду с гарантией под 10 %</span>
+                                                <span class="form-group__num2">10 мес в году</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="pay__table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>За что</th>
+                                            <th>когда</th>
+                                            <th>сколько</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group__check">
+                                                    <input type="checkbox" class="checkbox" id="tableCheck1">
+                                                    <label for="tableCheck1">Оплата первого взноса криптовалютой</label>
+                                                </div>
+                                            </td>
+                                            <td>Сегодня</td>
+                                            <td>1 000 €</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group__check">
+                                                    <input type="checkbox" class="checkbox" id="tableCheck2">
+                                                    <label for="tableCheck2">Тур за недвижимостью</label>
+                                                </div>
+                                            </td>
+                                            <td>До января 2024 г.</td>
+                                            <td>0 €</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group__check">
+                                                    <input type="checkbox" class="checkbox" id="tableCheck3">
+                                                    <label for="tableCheck3">Персональный менеджер </label>
+                                                </div>
+                                            </td>
+                                            <td>В любое время</td>
+                                            <td>0 €</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group__check">
+                                                    <input type="checkbox" class="checkbox" id="tableCheck4">
+                                                    <label for="tableCheck4">Юридическое сопровождение сделки</label>
+                                                </div>
+                                            </td>
+                                            <td>В любое время</td>
+                                            <td>0 €</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group__check">
+                                                    <input type="checkbox" class="checkbox" id="tableCheck5">
+                                                    <label for="tableCheck5">Первый взнос</label>
+                                                </div>
+                                            </td>
+                                            <td>Март 2022 г.</td>
+                                            <td>0 €</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group__check">
+                                                    <input type="checkbox" class="checkbox" id="tableCheck6">
+                                                    <label for="tableCheck6">1 платеж по рассрочке</label>
+                                                </div>
+                                            </td>
+                                            <td>Апрель 2022 г.</td>
+                                            <td>7 600 €</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group__check">
+                                                    <input type="checkbox" class="checkbox" id="tableCheck7">
+                                                    <label for="tableCheck7">2 платеж по рассрочке</label>
+                                                </div>
+                                            </td>
+                                            <td>Май 2022 г.</td>
+                                            <td>7 600 €</td>
+                                        </tr>
+                                        <tr class="pay__table-row--green">
+                                            <td>
+                                                <div class="form-group__check">
+                                                    <input type="checkbox" class="checkbox" id="tableCheck8">
+                                                    <label for="tableCheck8">Кэшбек от застройщика</label>
+                                                </div>
+                                            </td>
+                                            <td>Июнь 2022 г.</td>
+                                            <td>+ 3 950 €</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group__check">
+                                                    <input type="checkbox" class="checkbox" id="tableCheck9">
+                                                    <label for="tableCheck9">3 платеж по рассрочке</label>
+                                                </div>
+                                            </td>
+                                            <td>Июль 2022 г.</td>
+                                            <td>7 600 €</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group__check">
+                                                    <input type="checkbox" class="checkbox" id="tableCheck10">
+                                                    <label for="tableCheck10">4 платеж по рассрочке</label>
+                                                </div>
+                                            </td>
+                                            <td>Август 2022 г.</td>
+                                            <td>7 600 €</td>
+                                        </tr>
+                                        <tr class="pay__table-row--green">
+                                            <td>
+                                                <div class="form-group__check">
+                                                    <input type="checkbox" class="checkbox" id="tableCheck11">
+                                                    <label for="tableCheck11">Кэшбек от застройщика</label>
+                                                </div>
+                                            </td>
+                                            <td>Сентябрь 2022 г.</td>
+                                            <td>+ 3 950 €</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group__check">
+                                                    <input type="checkbox" class="checkbox" id="tableCheck12">
+                                                    <label for="tableCheck12">5 платеж по рассрочке</label>
+                                                </div>
+                                            </td>
+                                            <td>Октябрь 2022 г.</td>
+                                            <td>7 600 €</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group__check">
+                                                    <input type="checkbox" class="checkbox" id="tableCheck13">
+                                                    <label for="tableCheck13">6 платеж по рассрочке</label>
+                                                </div>
+                                            </td>
+                                            <td>Ноябрь 2022 г.</td>
+                                            <td>7 600 €</td>
+                                        </tr>
+                                        <tr class="pay__table-row--green">
+                                            <td>
+                                                <div class="form-group__check">
+                                                    <input type="checkbox" class="checkbox" id="tableCheck14">
+                                                    <label for="tableCheck14">Кэшбек от застройщика</label>
+                                                </div>
+                                            </td>
+                                            <td>Декабрь 2022 г.</td>
+                                            <td>+ 3 950 €</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group__check">
+                                                    <input type="checkbox" class="checkbox" id="tableCheck15">
+                                                    <label for="tableCheck15">8 платеж по рассрочке</label>
+                                                </div>
+                                            </td>
+                                            <td>Январь 2023 г.</td>
+                                            <td>7 600 €</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group__check">
+                                                    <input type="checkbox" class="checkbox" id="tableCheck16">
+                                                    <label for="tableCheck16">9 платеж по рассрочке</label>
+                                                </div>
+                                            </td>
+                                            <td>Февраль 2023 г.</td>
+                                            <td>7 600 €</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="pay__table-info">
+                                                    <div class="form-group__check">
+                                                        <input type="checkbox" class="checkbox" id="tableCheck17">
+                                                        <label for="tableCheck17">Налог на оформление титула</label>
+                                                    </div>
+                                                    <div class="pay__table-percent">3 % от суммы</div>
+                                                </div>
+                                            </td>
+                                            <td>До января 2024 г.</td>
+                                            <td>7 600 €</td>
+                                        </tr>
+                                        <tr class="pay__table-row--dark">
+                                            <td>
+                                                Итоговая сумма в день завершения строительства
+                                            </td>
+                                            <td>~ До 1 Февраля 2024 г.</td>
+                                            <td>79 350 €</td>
+                                        </tr>
+                                        <tr class="pay__table-row--blue">
+                                            <td>
+                                                <div class="form-group__check">
+                                                    <input type="checkbox" class="checkbox" id="tableCheck18">
+                                                    <label for="tableCheck18">Открыть еще 76 платежей</label>
+                                                </div>
+                                            </td>
+                                            <td>До января 2028 г.</td>
+                                            <td>98 000 €</td>
+                                        </tr>
+                                        <tr class="pay__table-row--all">
+                                            <td>
+                                                <div class="form-group__check">
+                                                    <input type="checkbox" class="checkbox" id="tableCheck19">
+                                                    <label for="tableCheck19">Итоговый расход на недвижимость</label>
+                                                </div>
+                                            </td>
+                                            <td>До января 2028 г.</td>
+                                            <td>183 350 €</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab__content" data-tab-path="2">
+                            2
+                        </div>
+                        <div class="tab__content" data-tab-path="3">
+                            3
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+        </div>
+
+
+    </div>
+
+    <script>
+    </script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/apexcharts.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,17 +1,26 @@
 @import 'reset';
 @import 'ux';
 @import 'index';
+.wrapper {
+    width: 100%;
+}
+
 .content {
     padding: 40px;
+    width: 100%;
 }
 
 .container {
-    max-width: 1170px;
+    max-width: 1230px;
     margin: 0 auto;
+    padding: 0 30px;
 }
 
 @media screen and (max-width: 992px) {
     .content {
         padding: 16px;
+    }
+    .container {
+        padding: 0 16px;
     }
 }

@@ -1,340 +1,80 @@
-.header {
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  background: #07122A; }
-  .header__left, .header__right {
-    display: flex;
-    align-items: center;
-    height: 100%; }
-  .header__logo {
-    width: 113px;
-    display: block;
-    margin-right: 40px; }
-    .header__logo img {
-      width: 100%; }
-  .header__user {
-    border: 2px solid #7786A5;
-    font-weight: 500;
-    font-size: 18px;
-    color: #7786A5;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%; }
-    .header__user:hover {
-      color: #fff;
-      border-color: #fff; }
-  .header__notification {
-    position: relative;
-    width: 24px;
-    height: 24px;
-    margin-right: 58px; }
-    .header__notification svg {
-      width: 100%;
-      height: auto; }
-    .header__notification span {
-      background: #DD757B;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 500;
-      font-size: 14px;
-      letter-spacing: 0.1em;
-      color: #FFFFFF;
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      transform: translate(-2px, -50%); }
-  .header__create {
-    margin-right: 16px;
-    height: 100%;
-    width: 136px;
-    padding: 0 20px;
-    color: #FFFFFF;
-    background: #2A344A; }
-    .header__create span {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 140%;
-      letter-spacing: 0.1em; }
-    .header__create strong {
-      font-weight: 300;
-      font-size: 25px;
-      line-height: 140%;
-      margin-right: 8px; }
+/*
+Error: Undefined mixin 'scroll'.
+        on line 521 of D:\work\freelance\inveroom\scss\index.scss, in `scroll'
+        from line 521 of D:\work\freelance\inveroom\scss\index.scss
 
-.main {
-  background-color: #fff;
-  padding: 0 30px; }
-  .main__inner {
-    padding: 30px 0; }
-  .main__gallery {
-    position: relative; }
-    .main__gallery-grid {
-      display: grid;
-      grid-template-columns: calc(50% - (20px / 3)) calc(25% - (20px / 3)) calc(25% - (20px / 3));
-      gap: 10px; }
-    .main__gallery-item {
-      min-height: 210px;
-      width: 100%;
-      background: #E0E7EC; }
-      .main__gallery-item:nth-child(1) {
-        grid-row: 1/3; }
-    .main__gallery-btn {
-      position: absolute;
-      right: 63px;
-      bottom: 21px;
-      background: #FFFFFF;
-      border-radius: 10px;
-      width: 165px;
-      height: 40px;
-      font-size: 15px;
-      line-height: 140%;
-      color: #7786A5; }
-      .main__gallery-btn span {
-        margin-right: 5px; }
-  .main__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 30px; }
-  .main__title {
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 120%; }
-  .main__middle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap; }
-  .main__price {
-    margin: 28px 0 10px;
-    position: relative; }
-    .main__price--active .main__price-show svg {
-      transform: rotate(180deg); }
-    .main__price--active .main__price-hidden {
-      opacity: 1;
-      pointer-events: unset; }
-    .main__price-show {
-      display: flex;
-      align-items: center;
-      cursor: pointer; }
-      .main__price-show svg {
-        margin-left: 10px; }
-    .main__price-num {
-      font-weight: bold;
-      font-size: 40px;
-      line-height: 120%;
-      color: #2551AF; }
-      .main__price-num span {
-        font-size: 30px; }
-    .main__price-hidden {
-      position: absolute;
-      top: 100%;
-      background: #FFFFFF;
-      border: 2px solid #E1EDFD;
-      border-radius: 10px;
-      padding: 20px;
-      width: 322px;
-      opacity: 0;
-      pointer-events: none;
-      transition: all .3s; }
-    .main__price-item {
-      font-size: 16px;
-      line-height: 132%;
-      display: flex;
-      align-items: center; }
-      .main__price-item:not(:last-child) {
-        margin-bottom: 20px; }
-      .main__price-item-title {
-        width: 110px;
-        margin-right: 40px;
-        flex-shrink: 0;
-        color: #7786A5; }
-      .main__price-item-num {
-        width: 93px;
-        flex-shrink: 0;
-        color: #2A344A;
-        font-weight: 600; }
-      .main__price-item-percent {
-        color: #7786A5; }
-    .main__price-currency {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-top: 50px; }
-      .main__price-currency-item {
-        margin: 10px 10px 0 0;
-        width: 50px;
-        height: 50px;
-        background: #F1F7FF;
-        border: 2px solid #F1F7FF;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 22px;
-        color: #7786A5;
-        transition: all .3s; }
-        .main__price-currency-item:hover {
-          cursor: pointer;
-          background: #7786A5;
-          color: #fff; }
-        .main__price-currency-item--active {
-          background: #7786A5;
-          color: #fff;
-          pointer-events: none; }
-  .main__badges {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 28px; }
-  .main__badge {
-    display: flex;
-    align-items: center;
-    height: 40px;
-    background: #F1F7FF;
-    padding: 0 20px;
-    font-size: 16px;
-    color: #4F4F4F;
-    white-space: nowrap;
-    flex-shrink: 0;
-    margin-bottom: 10px; }
-    .main__badge:not(:last-child) {
-      margin-right: 10px; }
-  .main__bottom {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    padding-top: 30px;
-    border-top: 4px solid #E1EDFD; }
-  .main__item {
-    width: 25%;
-    flex-shrink: 0; }
-    .main__item-num {
-      font-weight: bold;
-      font-size: 40px;
-      line-height: 120%; }
-    .main__item-title {
-      font-size: 15px;
-      line-height: 132%;
-      color: #7786A5;
-      margin-top: 10px; }
+516:             }
+517:         }
+518:     }
+519:     .tab__content {
+520:         overflow-x: auto;
+521:         @include scroll();
+522:     }
+523: }
+524: 
+525: .faq {
+526:     &__inner {
 
-@media screen and (max-width: 992px) {
-  .header {
-    padding: 0 15px; }
-    .header__logo {
-      margin-right: 15px;
-      width: 100px; }
-    .header__burger svg {
-      width: 32px; }
-    .header__create {
-      height: 50px;
-      width: 50px;
-      padding: 0;
-      margin-right: 10px; }
-      .header__create span {
-        display: none; }
-      .header__create strong {
-        margin: 0; }
-    .header__notification {
-      margin-right: 20px; }
-      .header__notification span {
-        top: 0;
-        left: unset;
-        right: 0;
-        transform: translate(50%, -50%); }
-
-  .main {
-    padding: 0 16px; }
-    .main__inner {
-      padding: 16px 0; }
-    .main__gallery-grid {
-      gap: 5px;
-      grid-template-columns: 1fr 1fr 1fr 1fr; }
-    .main__gallery-item {
-      min-height: 150px; }
-      .main__gallery-item:nth-child(1) {
-        min-height: 300px;
-        grid-column: 1/5; }
-    .main__gallery-btn {
-      right: unset;
-      bottom: unset;
-      top: 100%;
-      left: 0;
-      margin-top: 16px;
-      background: #E0E7EC; }
-    .main__title {
-      font-size: 30px;
-      margin-top: 15px;
-      width: 100%; }
-    .main__top {
-      margin-top: 16px;
-      flex-wrap: wrap; }
-    .main__more {
-      order: -1;
-      margin-left: auto; }
-    .main__badges {
-      margin-top: 16px; }
-    .main__price {
-      margin-top: 16px; }
-      .main__price-num {
-        font-size: 30px; }
-        .main__price-num span {
-          font-size: 23px; }
-    .main__bottom {
-      margin-top: 16px;
-      padding-top: 16px;
-      border-width: 3px; }
-    .main__item-num {
-      font-size: 30px; } }
-@media screen and (max-width: 768px) {
-  .main__gallery-grid {
-    grid-template-columns: 1fr 1fr; }
-  .main__gallery-item {
-    min-height: 130px; }
-    .main__gallery-item:nth-child(1) {
-      grid-column: 1/3;
-      min-height: 280px; }
-  .main__gallery-btn {
-    width: 100px;
-    height: 35px; }
-    .main__gallery-btn span {
-      display: none; }
-  .main__bottom {
-    flex-wrap: wrap;
-    padding-top: 0; }
-  .main__item {
-    margin-top: 16px;
-    width: 50%; }
-    .main__item-num {
-      font-size: 22px; }
-    .main__item-title {
-      font-size: 14px;
-      margin-top: 5px; }
-  .main__title {
-    font-size: 22px; }
-  .main__price-num {
-    font-size: 22px; }
-    .main__price-num span {
-      font-size: 17px; }
-  .main__badge {
-    padding: 0 10px;
-    height: 32px;
-    font-size: 14px; } }
-@media screen and (max-width: 576px) {
-  .main__gallery-item {
-    min-height: 70px; }
-    .main__gallery-item:nth-child(1) {
-      min-height: 180px; } }
-
-/*# sourceMappingURL=index.css.map */
+Backtrace:
+D:\work\freelance\inveroom\scss\index.scss:521:in `scroll'
+D:\work\freelance\inveroom\scss\index.scss:521
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:98:in `block in with_mixin'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:98:in `with_mixin'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:22:in `load'
+C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'scroll'.\A         on line 521 of D:\work\freelance\inveroom\scss\index.scss, in `scroll'\A         from line 521 of D:\work\freelance\inveroom\scss\index.scss\A \A 516:             }\A 517:         }\A 518:     }\A 519:     .tab__content {\A 520:         overflow-x: auto;\A 521:         @include scroll();\A 522:     }\A 523: }\A 524: \A 525: .faq {\A 526:     &__inner {"; }
