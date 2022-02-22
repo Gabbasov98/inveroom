@@ -188,6 +188,7 @@ function chart1() {
                 offsetX: 0,
                 offsetY: -3,
             },
+
         },
         xaxis: {
             categories: [
@@ -733,7 +734,6 @@ $(document).ready(function() {
 
     $(".form-group__dropdown input").change(function() {
         let value = $(this).parents(".form-group__dropdown").find("input:checked").siblings("label").children(".form-group__info").html()
-        console.log(value)
         $(this).parents(".form-group__dropdown").siblings(".form-group__wrap").find(".form-group__info").html(value)
         $(this).parents(".form-group__dropdown").removeClass("form-group__dropdown--active")
         $(this).parents(".form-group__dropdown").siblings(".form-group__wrap--dropdown").removeClass("form-group__wrap--disable")
@@ -783,6 +783,32 @@ $(document).ready(function() {
             $("#homeSquare .form-group__num span").text($("#homeSquare .polzunok").slider("value"));
         }
     });
+
+    $("#useOption .polzunok").slider({
+        animate: "slow",
+        range: "min",
+        min: 0,
+        max: 13,
+        value: 7,
+        slide: function(event, ui) {
+            $("#useOption .form-group__wrap .form-group__num2 span").text($("#useOption .polzunok").slider("value"));
+        }
+    });
+
+    $("#useOption input[type='radio']").change(function() {
+        let num = parseInt($("#useOption .form-group__wrap .form-group__num2 span").text())
+        $("#useOption .polzunok").slider({
+            animate: "slow",
+            range: "min",
+            min: 0,
+            max: 13,
+            value: num,
+            slide: function(event, ui) {
+                $("#useOption .form-group__wrap .form-group__num2 span").text($("#useOption .polzunok").slider("value"));
+            }
+        });
+    })
+
 
 
     $(".profit__nav-year").click(function() {

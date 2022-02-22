@@ -2590,13 +2590,7 @@
                         <div class="tabs">
                             <div class="tab tab--active" data-tab-path="1">График платежей</div>
                             <div class="tab" data-tab-path="2">Таблица рентабельности</div>
-                            <div class="tab" data-tab-path="3">Сервисные расходы</div>
                         </div>
-
-                    </div>
-                </div>
-                <div class="tab__content tab__content--active" data-tab-path="1">
-                    <div class="container">
                         <div class="pay__desc">Укажите в форме интересующие вас параметры для расчета платежей:</div>
                         <div class="pay__form">
                             <fieldset id="homePrice" class='form-group'>
@@ -2869,16 +2863,19 @@
                                     </div>
                                 </div>
                             </fieldset>
-                            <fieldset class='form-group'>
+                            <fieldset id="useOption" class='form-group'>
                                 <label>Вариант эксплуотации</label>
                                 <div class="form-group__wrap form-group__wrap--dropdown">
                                     <span class="form-group__info">
                                             <span class="form-group__num">Сдавать в аренду с гарантией под 8 %</span>
-                                    <span class="form-group__num2">7 мес в году</span>
+                                    <span class="form-group__num2"><span>7</span> мес в году</span>
                                     </span>
                                     <button class="form-group__arrow">
                                            <img src="img/Arrow-Bottom.svg" alt="">
                                        </button>
+                                </div>
+                                <div class="form-group__range">
+                                    <div class="polzunok"></div>
                                 </div>
                                 <div class="form-group__dropdown">
                                     <div class="form-group__dropdown-item">
@@ -2886,7 +2883,7 @@
                                         <label for='useVariant1'>
                                                 <span class="form-group__info">
                                                     <span class="form-group__num">Сдавать в аренду с гарантией под 8 %</span>
-                                                <span class="form-group__num2">7 мес в году</span>
+                                                <span class="form-group__num2"><span>7</span> мес в году</span>
                                                 </span>
                                             </label>
                                     </div>
@@ -2895,13 +2892,18 @@
                                         <label for='useVariant2'>
                                                 <span class="form-group__info">
                                                     <span class="form-group__num">Сдавать в аренду с гарантией под 10 %</span>
-                                                <span class="form-group__num2">10 мес в году</span>
+                                                <span class="form-group__num2"><span>10</span> мес в году</span>
                                                 </span>
                                             </label>
                                     </div>
                                 </div>
                             </fieldset>
                         </div>
+                    </div>
+                </div>
+                <div class="tab__content tab__content--active" data-tab-path="1">
+                    <div class="container">
+
                         <div class="pay__table">
                             <table>
                                 <thead>
@@ -3310,7 +3312,7 @@
                                     </div>
                                 </div>
                                 <div class="profit__group profit__group1">
-                                    <div class="profit__group-item profit__group1-open profit__col1" data-group-path="1">
+                                    <div class="profit__group-item profit__group1-open profit__group1-open--active profit__col1" data-group-path="1">
                                         <span>Сумма расходов</span>
                                         <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5.24977 5.49713C4.92018 5.16762 4.38581 5.16762 4.05621 5.49713C3.72662 5.82663 3.72662 6.36087 4.05621 6.69037L9.68273 12.3154C10.0123 12.6449 10.5467 12.6449 10.8763 12.3154L16.5028 6.69037C16.8324 6.36087 16.8324 5.82663 16.5028 5.49713C16.1732 5.16762 15.6388 5.16762 15.3092 5.49713L10.2795 10.5255L5.24977 5.49713Z" fill="#7786A5"/>
@@ -3319,7 +3321,7 @@
                                     <div class="profit__group-item profit__col2">—</div>
                                     <div class="profit__group-item profit__col3">1 528 600 €</div>
                                 </div>
-                                <div class="profit__group profit__group2" data-group-path="1">
+                                <div class="profit__group profit__group2  profit__group2--active" data-group-path="1">
                                     <div class="profit__group2-open profit__group-item  profit__col1">
                                         <div class="form-group__check">
                                             <input checked type="checkbox" class="checkbox" id="c100">
@@ -3344,7 +3346,7 @@
                                     <div class="profit__group-item profit__col2">—</div>
                                     <div class="profit__group-item profit__col3">1 528 600 €</div>
                                 </div>
-                                <div class="profit__group profit__group2" data-group-path="1">
+                                <div class="profit__group profit__group2  profit__group2--active" data-group-path="1">
                                     <div class="profit__group2-open profit__group-item  profit__col1">
                                         <div class="form-group__check">
                                             <input checked type="checkbox" class="checkbox" id="c101">
@@ -3354,7 +3356,7 @@
                                     <div class="profit__group-item profit__col2">0 % годовых</div>
                                     <div class="profit__group-item profit__col3">0 €</div>
                                 </div>
-                                <div class="profit__group profit__group2" data-group-path="1">
+                                <div class="profit__group profit__group2  profit__group2--active" data-group-path="1">
                                     <div class="profit__group2-open profit__group-item  profit__col1">
                                         <div class="form-group__check">
                                             <input checked type="checkbox" class="checkbox" id="c102">
@@ -3379,7 +3381,7 @@
                                     <div class="profit__group-item profit__col2">—</div>
                                     <div class="profit__group-item profit__col3">1 528 600 €</div>
                                 </div>
-                                <div class="profit__group profit__group2" data-group-path="1">
+                                <div class="profit__group profit__group2  profit__group2--active" data-group-path="1">
                                     <div class="profit__group2-open profit__group-item  profit__col1">
                                         <div class="form-group__check">
                                             <input checked type="checkbox" class="checkbox" id="c103">
@@ -3390,7 +3392,7 @@
                                     <div class="profit__group-item profit__col3">1 528 600 €</div>
                                 </div>
                                 <div class="profit__group profit__group1">
-                                    <div class="profit__group-item profit__group1-open profit__col1" data-group-path="2">
+                                    <div class="profit__group-item profit__group1-open profit__group1-open--active profit__col1" data-group-path="2">
                                         <span>Сумма доходов</span>
                                         <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5.24977 5.49713C4.92018 5.16762 4.38581 5.16762 4.05621 5.49713C3.72662 5.82663 3.72662 6.36087 4.05621 6.69037L9.68273 12.3154C10.0123 12.6449 10.5467 12.6449 10.8763 12.3154L16.5028 6.69037C16.8324 6.36087 16.8324 5.82663 16.5028 5.49713C16.1732 5.16762 15.6388 5.16762 15.3092 5.49713L10.2795 10.5255L5.24977 5.49713Z" fill="#7786A5"/>
@@ -3399,7 +3401,7 @@
                                     <div class="profit__group-item profit__col2">—</div>
                                     <div class="profit__group-item profit__col3">1 528 600 €</div>
                                 </div>
-                                <div class="profit__group profit__group2" data-group-path="2">
+                                <div class="profit__group profit__group2  profit__group2--active" data-group-path="2">
                                     <div class="profit__group2-open profit__group-item  profit__col1">
                                         <div class="form-group__check green-text">
                                             <input checked type="checkbox" class="checkbox" id="c107">
@@ -3409,7 +3411,7 @@
                                     <div class="profit__group-item profit__col2 green-text">+ 9 %</div>
                                     <div class="profit__group-item profit__col3 green-text">1 528 600 €</div>
                                 </div>
-                                <div class="profit__group profit__group2" data-group-path="2">
+                                <div class="profit__group profit__group2  profit__group2--active" data-group-path="2">
                                     <div class="profit__group2-open profit__group-item  profit__col1">
                                         <div class="form-group__check green-text">
                                             <input checked type="checkbox" class="checkbox" id="c108">
@@ -3419,7 +3421,7 @@
                                     <div class="profit__group-item profit__col2 green-text">+ 9 % годовых</div>
                                     <div class="profit__group-item profit__col3 green-text">1 528 600 €</div>
                                 </div>
-                                <div class="profit__group profit__group2" data-group-path="2">
+                                <div class="profit__group profit__group2  profit__group2--active" data-group-path="2">
                                     <div class="profit__group2-open profit__group-item  profit__col1">
                                         <div class="form-group__check green-text">
                                             <input checked type="checkbox" class="checkbox" id="c109">
@@ -3429,7 +3431,7 @@
                                     <div class="profit__group-item profit__col2 green-text">+ 5 % годовых</div>
                                     <div class="profit__group-item profit__col3 green-text">1 528 600 €</div>
                                 </div>
-                                <div class="profit__group profit__group2" data-group-path="2">
+                                <div class="profit__group profit__group2  profit__group2--active" data-group-path="2">
                                     <div class="profit__group2-open profit__group-item  profit__col1">
                                         <div class="form-group__check green-text">
                                             <input checked type="checkbox" class="checkbox" id="c1010">
@@ -3712,7 +3714,7 @@
                                         <div class="profit__nav-month">— 32 821 €</div>
                                     </div>
                                 </div>
-                                <div class="profit__group profit__group2" data-group-path="1">
+                                <div class="profit__group profit__group2 profit__group2--active" data-group-path="1">
                                     <div class="profit__nav-item profit__nav-year" data-path-year="2022">
                                         — 32 821 €
                                     </div>
@@ -3954,7 +3956,7 @@
                                         <div class="profit__nav-month">— 32 821 €</div>
                                     </div>
                                 </div>
-                                <div class="profit__group profit__group2" data-group-path="1">
+                                <div class="profit__group profit__group2 profit__group2--active" data-group-path="1">
                                     <div class="profit__nav-item profit__nav-year" data-path-year="2022">
                                         0 €
                                     </div>
@@ -4075,7 +4077,7 @@
                                         <div class="profit__nav-month">0 €</div>
                                     </div>
                                 </div>
-                                <div class="profit__group profit__group2" data-group-path="1">
+                                <div class="profit__group profit__group2 profit__group2--active" data-group-path="1">
                                     <div class="profit__nav-item profit__nav-year" data-path-year="2022">
                                         — 32 821 €
                                     </div>
@@ -4317,7 +4319,7 @@
                                         <div class="profit__nav-month">— 32 821 €</div>
                                     </div>
                                 </div>
-                                <div class="profit__group profit__group2" data-group-path="1">
+                                <div class="profit__group profit__group2 profit__group2--active" data-group-path="1">
                                     <div class="profit__nav-item profit__nav-year" data-path-year="2022">
                                         - 6 200 €
                                     </div>
@@ -4560,7 +4562,7 @@
                                         <div class="profit__nav-month">— 32 821 €</div>
                                     </div>
                                 </div>
-                                <div class="profit__group profit__group2" data-group-path="2">
+                                <div class="profit__group profit__group2 profit__group2--active" data-group-path="2">
                                     <div class="profit__nav-item profit__nav-year green-text" data-path-year="2022">
                                         + 32 821 €
                                     </div>
@@ -4681,7 +4683,7 @@
                                         <div class="profit__nav-month green-text">+ 32 821 €</div>
                                     </div>
                                 </div>
-                                <div class="profit__group profit__group2" data-group-path="2">
+                                <div class="profit__group profit__group2 profit__group2--active" data-group-path="2">
                                     <div class="profit__nav-item profit__nav-year green-text" data-path-year="2022">
                                         + 32 821 €
                                     </div>
@@ -4802,7 +4804,7 @@
                                         <div class="profit__nav-month green-text">+ 32 821 €</div>
                                     </div>
                                 </div>
-                                <div class="profit__group profit__group2" data-group-path="2">
+                                <div class="profit__group profit__group2 profit__group2--active" data-group-path="2">
                                     <div class="profit__nav-item profit__nav-year green-text" data-path-year="2022">
                                         + 32 821 €
                                     </div>
@@ -4923,7 +4925,7 @@
                                         <div class="profit__nav-month green-text">+ 32 821 €</div>
                                     </div>
                                 </div>
-                                <div class="profit__group profit__group2" data-group-path="2">
+                                <div class="profit__group profit__group2 profit__group2--active" data-group-path="2">
                                     <div class="profit__nav-item profit__nav-year green-text" data-path-year="2022">
                                         + 32 821 €
                                     </div>

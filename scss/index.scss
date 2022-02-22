@@ -804,13 +804,19 @@
         transition: all .3s;
         width: 100%;
         pointer-events: none;
+        overflow-x: auto;
+        @include scroll();
+        padding-bottom: 10px;
         &--active {
             position: static;
             opacity: 1;
             position: unset;
+            z-index: 3;
+            pointer-events: unset;
         }
     }
     &-block {
+        min-width: 1600px;
         &>div {
             width: 100% !important;
         }
@@ -1157,6 +1163,9 @@
             display: flex;
             align-items: center;
             padding: 0 15px;
+            &:first-child {
+                font-size: 16px;
+            }
         }
         .profit__nav-year {
             pointer-events: none;
@@ -1166,6 +1175,7 @@
             font-weight: 400;
             color: #2A344A;
             border-bottom: 1px solid #E1EDFD;
+            font-size: 14px !important;
         }
     }
     &__group1 {
@@ -1174,11 +1184,20 @@
         .profit__group-item {
             background: #F1F7FF;
         }
+        .profit__nav-year,
+        .profit__nav-month {
+            border-top-width: 4px;
+        }
         .profit__group-item {
             border-top: 4px solid #E1EDFD;
+            font-weight: 600;
+        }
+        .profit__nav-item {
+            font-weight: 600;
         }
         &-open {
             justify-content: space-between;
+            font-size: 16px;
             cursor: pointer;
             &--active {
                 svg {
@@ -1202,6 +1221,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            font-size: 16px;
             cursor: pointer;
             &-btn {
                 position: relative;
