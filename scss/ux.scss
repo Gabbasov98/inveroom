@@ -4,10 +4,10 @@
         height: 6px;
     }
     &::-webkit-scrollbar-track {
-        background: #7786A5;
+        background: #fff;
     }
     &::-webkit-scrollbar-thumb {
-        background: #2551AF;
+        background: #E1EDFD;
         border-radius: 20px;
     }
 }
@@ -550,6 +550,9 @@
         opacity: 0;
         pointer-events: none;
         transition: all .3s;
+        max-height: 360px;
+        overflow-y: auto;
+        @include scroll();
         &--active {
             opacity: 1;
             pointer-events: unset;
@@ -639,6 +642,12 @@
                     background-image: url(../img/check2.svg);
                     background-repeat: no-repeat;
                     background-position: center;
+                }
+            }
+            &:disabled:checked {
+                &+label:before {
+                    background-color: #7786A5;
+                    border-color: #7786A5;
                 }
             }
         }

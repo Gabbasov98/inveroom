@@ -436,7 +436,17 @@
     z-index: 4;
     opacity: 0;
     pointer-events: none;
-    transition: all .3s; }
+    transition: all .3s;
+    max-height: 360px;
+    overflow-y: auto; }
+    .form-group__dropdown::-webkit-scrollbar {
+      width: 6px;
+      height: 6px; }
+    .form-group__dropdown::-webkit-scrollbar-track {
+      background: #fff; }
+    .form-group__dropdown::-webkit-scrollbar-thumb {
+      background: #E1EDFD;
+      border-radius: 20px; }
     .form-group__dropdown--active {
       opacity: 1;
       pointer-events: unset; }
@@ -509,6 +519,9 @@
           background-image: url(../img/check2.svg);
           background-repeat: no-repeat;
           background-position: center; }
+      .form-group__check input:disabled:checked + label:before {
+        background-color: #7786A5;
+        border-color: #7786A5; }
     .form-group__check label {
       position: relative;
       padding-left: 40px;

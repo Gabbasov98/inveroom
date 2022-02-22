@@ -684,6 +684,12 @@ $(document).ready(function() {
         }, 1000);
     }
 
+    $(".pay .tab").click(function() {
+        let path = $(this).attr("data-tab-path")
+        $(".pay .tab__content").removeClass("tab__content--active")
+        $(`.pay .tab__content[data-tab-path='${path}']`).addClass("tab__content--active")
+    })
+
     $(".chart .tab").click(function() {
         let path = $(this).attr("data-tab-path")
         $(".chart .tab__content").removeClass("tab__content--active")
@@ -779,6 +785,38 @@ $(document).ready(function() {
     });
 
 
+    $(".profit__nav-year").click(function() {
+        let year = $(this).attr("data-path-year")
+        console.log(year)
+        if ($(`.profit__nav-months[data-path-year="${year}"]`).hasClass("profit__nav-months--active")) {
+            $(".profit__nav-months").removeClass("profit__nav-months--active")
+            $(".profit__nav-year").removeClass("profit__nav-year--active")
+        } else {
+            $(".profit__nav-months").removeClass("profit__nav-months--active")
+            $(`.profit__nav-months[data-path-year="${year}"]`).addClass("profit__nav-months--active")
+            $(".profit__nav-year").removeClass("profit__nav-year--active")
+            $(this).addClass("profit__nav-year--active")
+        }
 
+    })
+
+    $(".profit__group1-open").click(function() {
+        let group = $(this).attr("data-group-path")
+        console.log(group)
+        if ($(this).hasClass("profit__group1-open--active")) {
+            $(this).removeClass("profit__group1-open--active")
+            $(`.profit__group2[data-group-path="${group}"]`).removeClass("profit__group2--active")
+            $(`.profit__group3[data-group-path="${group}"]`).removeClass("profit__group3--active")
+        } else {
+            $(this).addClass("profit__group1-open--active")
+            $(`.profit__group2[data-group-path="${group}"]`).addClass("profit__group2--active")
+        }
+    })
+
+    $(".profit__group2-open-btn").click(function() {
+        let subgroup = $(this).attr("data-subgroup-path")
+        $(this).toggleClass("profit__group2-open-btn--active")
+        $(`.profit__group3[data-subgroup-path="${subgroup}"]`).toggleClass("profit__group3--active")
+    })
 
 })

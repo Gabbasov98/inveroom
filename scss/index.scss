@@ -1048,8 +1048,229 @@
         }
         .form-group__check {
             color: #7786A5;
-            label:before {
-                border-color: #7786A5;
+            input:checked+label {
+                background-color: transparent;
+            }
+            label {
+                &:before {
+                    border-color: #7786A5;
+                }
+            }
+        }
+    }
+}
+
+.profit {
+    margin-top: 40px;
+    @media screen and (max-width: 1200px) {
+        overflow-x: auto;
+        @include scroll();
+    }
+    &__wrap {
+        display: flex;
+        min-width: 1000px;
+    }
+    &__left {
+        width: 790px;
+        flex-shrink: 0;
+        padding-bottom: 10px;
+    }
+    &__right {
+        width: calc(100% - 790px);
+        overflow-x: auto;
+        @include scroll();
+        padding-bottom: 10px;
+        @media screen and (max-width: 1200px) {
+            overflow-x: unset;
+            width: unset;
+            flex-shrink: 0;
+        }
+    }
+    &__nav {
+        display: flex;
+        height: 63px;
+        &-item {
+            border-top: 1px solid #E1EDFD;
+            border-right: 1px solid #E1EDFD;
+            height: 100%;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 140%;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+        }
+        &-year {
+            width: 150px;
+            flex-shrink: 0;
+            flex-grow: 1;
+            &:hover {
+                cursor: pointer;
+                svg {
+                    opacity: 1;
+                }
+            }
+            svg {
+                margin-left: 10px;
+                opacity: 0;
+            }
+            &--active {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        &-months {
+            display: none;
+            height: 100%;
+            &--active {
+                display: flex;
+            }
+        }
+        &-month {
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 140%;
+            color: #7786A5;
+            display: flex;
+            align-items: center;
+            border-top: 1px solid #E1EDFD;
+            border-right: 1px solid #E1EDFD;
+            width: 150px;
+            flex-shrink: 0;
+            height: 100%;
+            padding: 0 15px;
+        }
+    }
+    &__group {
+        display: flex;
+        height: 70px;
+        margin-top: -1px;
+        &-item {
+            border-top: 1px solid #E1EDFD;
+            border-bottom: 1px solid #E1EDFD;
+            border-right: 1px solid #E1EDFD;
+            height: 100%;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 140%;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+        }
+        .profit__nav-year {
+            pointer-events: none;
+        }
+        .profit__nav-year,
+        .profit__nav-month {
+            font-weight: 400;
+            color: #2A344A;
+            border-bottom: 1px solid #E1EDFD;
+        }
+    }
+    &__group1 {
+        .profit__nav-year,
+        .profit__nav-month,
+        .profit__group-item {
+            background: #F1F7FF;
+        }
+        .profit__group-item {
+            border-top: 4px solid #E1EDFD;
+        }
+        &-open {
+            justify-content: space-between;
+            cursor: pointer;
+            &--active {
+                svg {
+                    transform: rotate(180deg) translateX(-2px);
+                }
+            }
+        }
+    }
+    &__group2,
+    &__group3 {
+        height: 64px;
+        display: none;
+        // display: flex;
+        &--active {
+            display: flex;
+        }
+        .profit__group-item {
+            font-weight: 400;
+        }
+        &-open {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            &-btn {
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    z-index: 1;
+                    width: 50px;
+                    height: 50px;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                &--active {
+                    svg {
+                        transform: rotate(180deg) translateX(-2px);
+                    }
+                }
+            }
+        }
+        .form-group__check {
+            & input:checked+label {
+                background-color: transparent;
+            }
+        }
+    }
+    &__sum {
+        .profit__nav-year,
+        .profit__nav-month,
+        .profit__group-item {
+            font-weight: bold;
+        }
+    }
+    &__col1 {
+        width: 454px;
+        flex-shrink: 0;
+        padding-left: 40px;
+        flex-grow: 1;
+    }
+    &__col2 {
+        width: 150px;
+        flex-shrink: 0;
+    }
+    &__col3 {
+        width: 180px;
+        flex-shrink: 0;
+        border-right: 4px solid #E1EDFD;
+    }
+    .form-group {
+        // height: unset;
+        width: 100%;
+        height: 100%;
+        &__wrap {
+            border: none;
+            padding-left: 0;
+            padding-right: 30px;
+        }
+        &__arrow {
+            right: 0;
+        }
+        &__dropdown {
+            width: 250px;
+            border: 2px solid #E1EDFD;
+            border-radius: 10px;
+            left: 15px;
+            top: 50px;
+            &:before,
+            &:after {
+                display: none;
             }
         }
     }
