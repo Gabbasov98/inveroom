@@ -823,7 +823,6 @@ fieldset {
 }
 
 .apexcharts-tooltip {
-  opacity: 1 !important;
   top: 0 !important;
 }
 .apexcharts-tooltip--right {

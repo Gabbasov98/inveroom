@@ -528,7 +528,6 @@
         transform: translateY(-50%); }
 
 .apexcharts-tooltip {
-  opacity: 1 !important;
   top: 0 !important; }
   .apexcharts-tooltip--right {
     transform: translateX(-50%) !important; }
