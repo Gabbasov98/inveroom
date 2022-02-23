@@ -129,12 +129,8 @@ function serviceSlider() {
 function chart1() {
     var options = {
         series: [{
-            name: 'График изменения цены',
-            data: [
-                40000, 35000, 50000, 50000, 55000, 55000,
-                60000, 50000, 50000, 60000, 68000, 75000,
-                75000, 75000, 80000, 80000, 80000, 90000
-            ]
+            name: '',
+            data: generateDayWiseTimeSeries(0, 18)
         }],
         chart: {
             type: 'line',
@@ -144,7 +140,18 @@ function chart1() {
             toolbar: {
                 show: false,
             },
+            locales: [{
+                "name": "ru",
+                "options": {
+                    "months": ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+                    "shortMonths": ['Янв', 'Фев', 'Март', 'Апр', 'Май', 'Июнь', 'Июль', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+                    "days": ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
+                    "shortDays": ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "СБ"],
+                }
+            }],
+            defaultLocale: "ru"
         },
+        colors: ['#558AFF'],
         stroke: {
             curve: 'stepline',
             width: 2,
@@ -165,6 +172,7 @@ function chart1() {
         },
 
         markers: {
+            fill: '#000000',
             size: 0,
             hover: {
                 sizeOffset: 14
@@ -191,11 +199,7 @@ function chart1() {
 
         },
         xaxis: {
-            categories: [
-                'Май', 'Июнь', 'Июль', 'Авг', 'Сен', 'Окт',
-                'Ноя', 'Дек', '2022', 'Фев', 'Март', 'Апр',
-                'Май', 'Июнь', 'Июль', 'Авг', 'Сен', 'Окт',
-            ],
+            type: 'datetime',
             labels: {
                 style: {
                     colors: ['#7786A5'],
@@ -206,6 +210,13 @@ function chart1() {
                 },
                 offsetX: 2,
                 offsetY: 2,
+                datetimeFormatter: {
+                    year: 'yyyy',
+                    month: 'MMM \'yy',
+                    day: 'dd MMM',
+                    hour: 'HH:mm'
+                },
+                format: 'MMM',
             },
             axisBorder: {
                 show: true,
@@ -215,11 +226,74 @@ function chart1() {
                 offsetX: -100,
                 offsetY: 2
             },
-        }
+            crosshairs: {
+
+                stroke: {
+                    color: '#2551AF',
+                },
+                fill: {
+                    color: '#000000',
+                },
+                tooltip: {
+                    enabled: false
+                }
+            },
+            tooltip: {
+                enabled: false,
+                formatter: undefined,
+                offsetY: 0,
+                style: {
+                    fontSize: 0,
+                    fontFamily: 0,
+                },
+            },
+        },
+        tooltip: {
+            x: {
+                show: true,
+                format: 'dd MMM yyyy',
+                formatter: undefined,
+            },
+            marker: {
+                show: false,
+            },
+        },
+
+
     };
     var chart = new ApexCharts(document.querySelector("#chart1"), options);
     chart.render();
+
+    function generateDayWiseTimeSeries(s, count) {
+        var values = [
+            [40000, 35000, 50000, 50000, 55000, 55000,
+                60000, 50000, 50000, 60000, 68000, 75000,
+                75000, 75000, 80000, 80000, 80000, 90000
+            ]
+        ];
+        var i = 0;
+        var series = [];
+        var x = new Date();
+        while (i < count) {
+            series.push([x, values[s][i]]);
+            x = new Date(x.setMonth(x.getMonth() - 1));
+            i++;
+        }
+        return series;
+    }
 }
+
+$('#chart1').mousemove(function(e) {
+    var x = e.clientX
+    let windowWidth = $(window).innerWidth()
+    if (x < (windowWidth / 2) + 40) {
+        $('#chart1 .apexcharts-tooltip').removeClass("apexcharts-tooltip--left ")
+        $('#chart1 .apexcharts-tooltip').addClass("apexcharts-tooltip--right ")
+    } else {
+        $('#chart1 .apexcharts-tooltip').removeClass("apexcharts-tooltip--right ")
+        $('#chart1 .apexcharts-tooltip').addClass("apexcharts-tooltip--left ")
+    }
+});
 
 function chart2() {
     var options = {

@@ -630,6 +630,9 @@ fieldset {
 .form-group__wrap--disable .form-group__arrow img {
   transform: rotate(180deg);
 }
+.form-group__wrap--disable ~ .form-group__range {
+  z-index: 5;
+}
 .form-group__wrap--dropdown {
   cursor: pointer;
 }
@@ -703,7 +706,8 @@ fieldset {
 .form-group__dropdown {
   position: absolute;
   left: 0;
-  top: 70px;
+  top: 53px;
+  padding-top: 17px;
   border: 2px solid #E1EDFD;
   border-top: none;
   width: 100%;
@@ -729,23 +733,6 @@ fieldset {
 .form-group__dropdown--active {
   opacity: 1;
   pointer-events: unset;
-}
-.form-group__dropdown::before, .form-group__dropdown::after {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  width: 2px;
-  height: 16px;
-  background-color: #E1EDFD;
-  left: -2px;
-  bottom: 100%;
-  border-top-right-radius: 20px;
-}
-.form-group__dropdown::after {
-  left: unset;
-  right: -2px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 0;
 }
 .form-group__dropdown-item {
   height: 44px;
@@ -833,6 +820,49 @@ fieldset {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.apexcharts-tooltip {
+  opacity: 1 !important;
+  top: 0 !important;
+}
+.apexcharts-tooltip--right {
+  transform: translateX(-50%) !important;
+}
+.apexcharts-tooltip--left {
+  transform: translateX(50%) !important;
+}
+
+.apexcharts-tooltip {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.apexcharts-tooltip-title {
+  background-color: transparent !important;
+  border: none !important;
+  text-align: center !important;
+  font-family: 'Roboto' !important;
+  font-weight: normal !important;
+  font-size: 14px !important;
+  line-height: 140% !important;
+  color: #7786A5 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.apexcharts-tooltip-series-group {
+  justify-content: center !important;
+}
+
+.apexcharts-tooltip-y-group {
+  padding: 0 !important;
+  font-family: 'Roboto' !important;
+  font-weight: normal !important;
+  font-size: 14px !important;
+  line-height: 140% !important;
+  color: #2A344A !important;
 }
 
 .header {
@@ -1145,7 +1175,7 @@ fieldset {
   font-size: 18px;
   color: #7786A5;
   line-height: 160%;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 .detail__desc-item--hidden {
   display: none;
