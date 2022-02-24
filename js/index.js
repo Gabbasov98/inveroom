@@ -1045,7 +1045,7 @@ $(document).ready(function() {
         max: 13,
         value: 7,
         slide: function(event, ui) {
-            $("#useOption .form-group__wrap .form-group__num2 span").text($("#useOption .polzunok").slider("value"));
+            $("#useOption .form-group__wrap .form-group__num span").text($("#useOption .polzunok").slider("value"));
         }
     });
 
@@ -1062,6 +1062,17 @@ $(document).ready(function() {
             }
         });
     })
+
+    $("#finishDate .polzunok").slider({
+        animate: "slow",
+        range: "min",
+        min: 0,
+        max: 1000,
+        value: 54,
+        slide: function(event, ui) {
+            $("#finishDate .form-group__wrap .form-group__num2 span").text($("#finishDate .polzunok").slider("value"));
+        }
+    });
 
 
 
@@ -1098,5 +1109,102 @@ $(document).ready(function() {
         $(this).toggleClass("profit__group2-open-btn--active")
         $(`.profit__group3[data-subgroup-path="${subgroup}"]`).toggleClass("profit__group3--active")
     })
+
+
+    $(".main__more").click(function() {
+        $(".main__more-dropdown").addClass("main__more-dropdown--active")
+    })
+
+    $(document).mouseup(function(e) {
+        var div = $('.main__more-dropdown');
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+            if ($(".main__more-dropdown").hasClass("main__more-dropdown--active")) {
+                $(".main__more-dropdown").removeClass("main__more-dropdown--active")
+            }
+        }
+    });
+
+    $(".chess__flat").click(function() {
+        let flatInfo = `
+            <div class="chess__info">
+                <div class="chess__info-map">
+                    <img src="img/room-map.svg" alt="">
+                </div>
+                <div class="chess__info-item">
+                    <div class="chess__info-title">Статус</div>
+                    <div class="chess__info-desc green-text">Доступна</div>
+                </div>
+                <div class="chess__info-item">
+                    <div class="chess__info-title">Этаж</div>
+                    <div class="chess__info-desc">20</div>
+                </div>
+                <div class="chess__info-item">
+                    <div class="chess__info-title">Всего комнат</div>
+                    <div class="chess__info-desc">3</div>
+                </div>
+                <div class="chess__info-item">
+                    <div class="chess__info-title">Спален</div>
+                    <div class="chess__info-desc">2</div>
+                </div>
+                <div class="chess__info-item">
+                    <div class="chess__info-title">Общая площадь</div>
+                    <div class="chess__info-desc">202 м²</div>
+                </div>
+                <div class="chess__info-item">
+                    <div class="chess__info-title">Жилая площадь</div>
+                    <div class="chess__info-desc">167 м²</div>
+                </div>
+                <div class="chess__info-item">
+                    <div class="chess__info-title">Цена</div>
+                    <div class="chess__info-desc">158 000 €</div>
+                </div>
+            </div>
+        `
+        $(".chess__flat").removeClass("chess__flat--active")
+        $(".chess__info").remove()
+        $(this).addClass("chess__flat--active")
+        $(this).append(flatInfo)
+
+        let blockPosition = $(".chess__middle-wrap").offset().top
+        let elemetPosition = $(this).offset().top
+        console.log(blockPosition)
+        console.log(elemetPosition)
+        if ((elemetPosition - blockPosition) > 370) {
+            $(".chess__info").addClass("chess__info--top")
+        }
+    })
+
+    $(".pay__table-open").click(function() {
+        $(".pay__table-row-hidden").removeClass("pay__table-row-hidden")
+    })
+
+    $(".object__table-btn").click(function() {
+        $(".object__table-dropdown").removeClass("object__table-dropdown--active")
+        $(this).siblings(".object__table-dropdown").addClass("object__table-dropdown--active")
+    })
+
+    $(document).mouseup(function(e) {
+        var div = $('.object__table-dropdown');
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+            if ($(div).hasClass("object__table-dropdown--active")) {
+                $(div).removeClass("object__table-dropdown--active")
+            }
+        }
+    });
+
+    $(".main__gallery-btn").click(function() {
+        $("body").append('<div class="backdrop"></div>')
+        $(".gallery-modal").addClass("gallery-modal--active")
+
+        $(".gallery-modal__close").click(function() {
+            $(".gallery-modal").removeClass("gallery-modal--active")
+            $(".backdrop").remove()
+        })
+        $(".backdrop").click(function() {
+            $(".gallery-modal").removeClass("gallery-modal--active")
+            $(this).remove()
+        })
+    })
+
 
 })

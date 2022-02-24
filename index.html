@@ -19,7 +19,8 @@
         <header class='header'>
             <div class="header__left">
                 <a href="" class="header__logo">
-                    <img src="img/logo.svg" alt="">
+                    <img class="header__logo-dekstop" src="img/logo.svg" alt="">
+                    <img class="header__logo-mob" src="img/logo-mob.svg" alt="">
                 </a>
                 <button class="header__burger">
                     <svg width="37" height="12" viewBox="0 0 37 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,9 +29,16 @@
                 </button>
             </div>
             <div class="header__right">
+                <button class="header__edit">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.953 5.44082C21.0157 6.50349 21.0157 8.22643 19.953 9.28911L8.71177 20.5303C8.57112 20.671 8.38035 20.75 8.18144 20.75H4C3.58579 20.75 3.25 20.4142 3.25 20V15.8186C3.25 15.6196 3.32902 15.4289 3.46967 15.2882L14.7109 4.04701C15.7736 2.98433 17.4965 2.98433 18.5592 4.04701L19.953 5.44082ZM18.8923 8.22845C19.3692 7.75156 19.3692 6.97837 18.8923 6.50148L17.4985 5.10767C17.0216 4.63078 16.2484 4.63078 15.7716 5.10767L13.7199 7.15928L16.8407 10.2801L18.8923 8.22845ZM15.7801 11.3407L12.6593 8.21994L4.75 16.1292V19.25H7.87078L15.7801 11.3407Z" fill="#7786A5"/>
+                    </svg>
+                </button>
                 <button class="header__create btn">
-                    <strong>+</strong>
-                    <span>СОЗДАТЬ</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4V20" stroke="#7786A5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20 12H4" stroke="#7786A5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </button>
                 <div class="header__notification">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,22 +57,43 @@
                     <div class="main__inner">
                         <div class='main__gallery'>
                             <div class="main__gallery-grid">
-                                <div class="main__gallery-item"></div>
-                                <div class="main__gallery-item"></div>
-                                <div class="main__gallery-item"></div>
-                                <div class="main__gallery-item"></div>
-                                <div class="main__gallery-item"></div>
+                                <div class="main__gallery-item">
+                                    <img src="img/gallery3.png" alt="">
+                                </div>
+                                <div class="main__gallery-item">
+                                    <img src="img/gallery3.png" alt="">
+                                </div>
+                                <div class="main__gallery-item">
+                                    <img src="img/gallery3.png" alt="">
+                                </div>
+                                <div class="main__gallery-item">
+                                    <img src="img/gallery3.png" alt="">
+                                </div>
+                                <div class="main__gallery-item">
+                                    <img src="img/gallery3.png" alt="">
+                                </div>
                             </div>
-                            <button class="main__gallery-btn btn"><span>Открыть</span> еще 26</button>
+                            <div class="main__gallery-btn-block">
+                                <button class="main__gallery-btn btn"><span>Открыть</span> еще 26</button>
+                            </div>
                         </div>
                         <div class="main__top">
                             <h1 class="main__title display1">3-х комнатная квартира на Кипре для инвестиций</h1>
-                            <button class="main__more">
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.01" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H32V32H0V0Z" fill="#07122A"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 16.666C10 17.7706 9.10457 18.666 8 18.666C6.89543 18.666 6 17.7706 6 16.666C6 15.5614 6.89543 14.666 8 14.666C9.10457 14.666 10 15.5614 10 16.666ZM16 18.666C17.1046 18.666 18 17.7706 18 16.666C18 15.5614 17.1046 14.666 16 14.666C14.8954 14.666 14 15.5614 14 16.666C14 17.7706 14.8954 18.666 16 18.666ZM24 18.666C25.1046 18.666 26 17.7706 26 16.666C26 15.5614 25.1046 14.666 24 14.666C22.8954 14.666 22 15.5614 22 16.666C22 17.7706 22.8954 18.666 24 18.666Z" fill="#07122A"/>
-                                </svg>
-                            </button>
+                            <div class="main__more-block">
+                                <div class="main__more-dropdown">
+                                    <button class="main__more-item">Поделиться</button>
+                                    <button class="main__more-item">Распечатать</button>
+                                    <button class="main__more-item">Заказ консультации</button>
+                                    <button class="main__more-item">Бронировать</button>
+                                    <button class="main__more-item">Сообщить об ошибке</button>
+                                </div>
+                                <button class="main__more">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path opacity="0.01" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H32V32H0V0Z" fill="#07122A"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 16.666C10 17.7706 9.10457 18.666 8 18.666C6.89543 18.666 6 17.7706 6 16.666C6 15.5614 6.89543 14.666 8 14.666C9.10457 14.666 10 15.5614 10 16.666ZM16 18.666C17.1046 18.666 18 17.7706 18 16.666C18 15.5614 17.1046 14.666 16 14.666C14.8954 14.666 14 15.5614 14 16.666C14 17.7706 14.8954 18.666 16 18.666ZM24 18.666C25.1046 18.666 26 17.7706 26 16.666C26 15.5614 25.1046 14.666 24 14.666C22.8954 14.666 22 15.5614 22 16.666C22 17.7706 22.8954 18.666 24 18.666Z" fill="#07122A"/>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                         <div class="main__middle">
                             <div class="main__price">
@@ -102,6 +131,12 @@
                                 </div>
                             </div>
                             <div class="main__badges">
+                                <div class="main__badge main__badge--favourite">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.47082 20.754C5.9206 21.0433 5.27752 20.5761 5.38261 19.9634L6.43852 13.8069L1.96559 9.44689C1.52045 9.01299 1.76609 8.25701 2.38125 8.16762L8.56269 7.26941L11.3271 1.66808C11.6022 1.11064 12.3971 1.11064 12.6722 1.66808L15.4366 7.26941L21.6181 8.16762C22.2332 8.25701 22.4789 9.01299 22.0337 9.44689L17.5608 13.8069L18.6167 19.9634C18.7218 20.5761 18.0787 21.0433 17.5285 20.754L11.9997 17.8473L6.47082 20.754ZM6.50556 13.4181L6.72125 14.0819L6.4389 13.8067L6.50556 13.4181ZM12.3484 16.3348C12.1299 16.22 11.8689 16.22 11.6504 16.3348L7.11768 18.7179L7.98335 13.6706C8.02508 13.4273 7.94442 13.179 7.76766 13.0067L4.10059 9.43221L9.16835 8.69582C9.41264 8.66032 9.62381 8.50689 9.73306 8.28553L11.9994 3.69336L14.2658 8.28553C14.3751 8.50689 14.5862 8.66032 14.8305 8.69582L19.8983 9.43221L16.2312 13.0067C16.0544 13.179 15.9738 13.4273 16.0155 13.6706L16.8812 18.7179L12.3484 16.3348Z" fill="#2A344A"/>
+                                    </svg>
+                                    <span>4</span>
+                                </div>
                                 <div class="main__badge">ID 1445</div>
                                 <div class="main__badge">Доходность 8%</div>
                                 <div class="main__badge">Кэшбек 6%</div>
@@ -796,41 +831,6 @@
                                             <div class="chess__flat">1</div>
                                             <div class="chess__flat">1</div>
                                             <div class="chess__flat">2</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="chess__right">
-                                    <div class="chess__info">
-                                        <div class="chess__info-map">
-                                            <img src="img/room-map.svg" alt="">
-                                        </div>
-                                        <div class="chess__info-item">
-                                            <div class="chess__info-title">Статус</div>
-                                            <div class="chess__info-desc green-text">Доступна</div>
-                                        </div>
-                                        <div class="chess__info-item">
-                                            <div class="chess__info-title">Этаж</div>
-                                            <div class="chess__info-desc">20</div>
-                                        </div>
-                                        <div class="chess__info-item">
-                                            <div class="chess__info-title">Всего комнат</div>
-                                            <div class="chess__info-desc">3</div>
-                                        </div>
-                                        <div class="chess__info-item">
-                                            <div class="chess__info-title">Спален</div>
-                                            <div class="chess__info-desc">2</div>
-                                        </div>
-                                        <div class="chess__info-item">
-                                            <div class="chess__info-title">Общая площадь</div>
-                                            <div class="chess__info-desc">202 м²</div>
-                                        </div>
-                                        <div class="chess__info-item">
-                                            <div class="chess__info-title">Жилая площадь</div>
-                                            <div class="chess__info-desc">167 м²</div>
-                                        </div>
-                                        <div class="chess__info-item">
-                                            <div class="chess__info-title">Цена</div>
-                                            <div class="chess__info-desc">158 000 €</div>
                                         </div>
                                     </div>
                                 </div>
@@ -1766,9 +1766,6 @@
                                 <div class="materials__gallery-item">
                                     <img src="img/gallery.png" alt="">
                                 </div>
-                                <div class="materials__gallery-item materials__gallery-item--big">
-                                    <img src="img/gallery2.png" alt="">
-                                </div>
                                 <div class="materials__gallery-item">
                                     <img src="img/gallery.png" alt="">
                                 </div>
@@ -1777,6 +1774,15 @@
                                 </div>
                                 <div class="materials__gallery-item">
                                     <img src="img/gallery.png" alt="">
+                                </div>
+                                <div class="materials__gallery-item">
+                                    <img src="img/gallery.png" alt="">
+                                </div>
+                                <div class="materials__gallery-item">
+                                    <img src="img/gallery.png" alt="">
+                                </div>
+                                <div class="materials__gallery-btn-block">
+                                    <button class="main__gallery-btn btn"><span>Открыть</span> еще 26</button>
                                 </div>
                             </div>
                         </div>
@@ -1785,6 +1791,48 @@
                                 <div class="detail__item">
                                     <div class="detail__item-title">
                                         <img src="img/check.svg" alt="">
+                                        <span>Всего окон</span>
+                                    </div>
+                                    <div class="detail__item-desc">9</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Форма</span>
+                                    </div>
+                                    <div class="detail__item-desc">Окна в пол</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Размер</span>
+                                    </div>
+                                    <div class="detail__item-desc">1 500 х 1 500 мм</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Цвет</span>
+                                    </div>
+                                    <div class="detail__item-desc">Белый</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Площадь застекления объекта</span>
+                                    </div>
+                                    <div class="detail__item-desc">25 %</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Вид открывания</span>
+                                    </div>
+                                    <div class="detail__item-desc">Откидно-поворотное в двух направлениях</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
                                         <span>Уровень теплоизоляции</span>
                                     </div>
                                     <div class="detail__item-desc">0,66 м2 °С/Вт</div>
@@ -1815,9 +1863,6 @@
                                 <div class="materials__gallery-item">
                                     <img src="img/gallery.png" alt="">
                                 </div>
-                                <div class="materials__gallery-item materials__gallery-item--big">
-                                    <img src="img/gallery2.png" alt="">
-                                </div>
                                 <div class="materials__gallery-item">
                                     <img src="img/gallery.png" alt="">
                                 </div>
@@ -1826,6 +1871,15 @@
                                 </div>
                                 <div class="materials__gallery-item">
                                     <img src="img/gallery.png" alt="">
+                                </div>
+                                <div class="materials__gallery-item">
+                                    <img src="img/gallery.png" alt="">
+                                </div>
+                                <div class="materials__gallery-item">
+                                    <img src="img/gallery.png" alt="">
+                                </div>
+                                <div class="materials__gallery-btn-block">
+                                    <button class="main__gallery-btn btn"><span>Открыть</span> еще 26</button>
                                 </div>
                             </div>
                         </div>
@@ -1834,6 +1888,62 @@
                                 <div class="detail__item">
                                     <div class="detail__item-title">
                                         <img src="img/check.svg" alt="">
+                                        <span>Всего окон</span>
+                                    </div>
+                                    <div class="detail__item-desc">9</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Форма</span>
+                                    </div>
+                                    <div class="detail__item-desc">Окна в пол</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Размер</span>
+                                    </div>
+                                    <div class="detail__item-desc">1 500 х 1 500 мм</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Цвет</span>
+                                    </div>
+                                    <div class="detail__item-desc">Белый</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Площадь застекления объекта</span>
+                                    </div>
+                                    <div class="detail__item-desc">25 %</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Вид открывания</span>
+                                    </div>
+                                    <div class="detail__item-desc">Откидно-поворотное в двух направлениях</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Уровень теплоизоляции</span>
+                                    </div>
+                                    <div class="detail__item-desc">0,66 м2 °С/Вт</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Солнцезащита</span>
+                                    </div>
+                                    <div class="detail__item-desc">Пропускает 35% лучей</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
                                         <span>Материал</span>
                                     </div>
                                     <div class="detail__item-desc">Эластичный пенополиуретан</div>
@@ -1850,9 +1960,6 @@
                                 <div class="materials__gallery-item">
                                     <img src="img/gallery.png" alt="">
                                 </div>
-                                <div class="materials__gallery-item materials__gallery-item--big">
-                                    <img src="img/gallery2.png" alt="">
-                                </div>
                                 <div class="materials__gallery-item">
                                     <img src="img/gallery.png" alt="">
                                 </div>
@@ -1861,6 +1968,15 @@
                                 </div>
                                 <div class="materials__gallery-item">
                                     <img src="img/gallery.png" alt="">
+                                </div>
+                                <div class="materials__gallery-item">
+                                    <img src="img/gallery.png" alt="">
+                                </div>
+                                <div class="materials__gallery-item">
+                                    <img src="img/gallery.png" alt="">
+                                </div>
+                                <div class="materials__gallery-btn-block">
+                                    <button class="main__gallery-btn btn"><span>Открыть</span> еще 26</button>
                                 </div>
                             </div>
                         </div>
@@ -1869,6 +1985,48 @@
                                 <div class="detail__item">
                                     <div class="detail__item-title">
                                         <img src="img/check.svg" alt="">
+                                        <span>Всего окон</span>
+                                    </div>
+                                    <div class="detail__item-desc">9</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Форма</span>
+                                    </div>
+                                    <div class="detail__item-desc">Окна в пол</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Размер</span>
+                                    </div>
+                                    <div class="detail__item-desc">1 500 х 1 500 мм</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Цвет</span>
+                                    </div>
+                                    <div class="detail__item-desc">Белый</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Площадь застекления объекта</span>
+                                    </div>
+                                    <div class="detail__item-desc">25 %</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Вид открывания</span>
+                                    </div>
+                                    <div class="detail__item-desc">Откидно-поворотное в двух направлениях</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
                                         <span>Уровень теплоизоляции</span>
                                     </div>
                                     <div class="detail__item-desc">0,66 м2 °С/Вт</div>
@@ -1899,9 +2057,6 @@
                                 <div class="materials__gallery-item">
                                     <img src="img/gallery.png" alt="">
                                 </div>
-                                <div class="materials__gallery-item materials__gallery-item--big">
-                                    <img src="img/gallery2.png" alt="">
-                                </div>
                                 <div class="materials__gallery-item">
                                     <img src="img/gallery.png" alt="">
                                 </div>
@@ -1910,6 +2065,15 @@
                                 </div>
                                 <div class="materials__gallery-item">
                                     <img src="img/gallery.png" alt="">
+                                </div>
+                                <div class="materials__gallery-item">
+                                    <img src="img/gallery.png" alt="">
+                                </div>
+                                <div class="materials__gallery-item">
+                                    <img src="img/gallery.png" alt="">
+                                </div>
+                                <div class="materials__gallery-btn-block">
+                                    <button class="main__gallery-btn btn"><span>Открыть</span> еще 26</button>
                                 </div>
                             </div>
                         </div>
@@ -1918,45 +2082,45 @@
                                 <div class="detail__item">
                                     <div class="detail__item-title">
                                         <img src="img/check.svg" alt="">
-                                        <span>Уровень теплоизоляции</span>
+                                        <span>Всего окон</span>
                                     </div>
-                                    <div class="detail__item-desc">0,66 м2 °С/Вт</div>
+                                    <div class="detail__item-desc">9</div>
                                 </div>
                                 <div class="detail__item">
                                     <div class="detail__item-title">
                                         <img src="img/check.svg" alt="">
-                                        <span>Солнцезащита</span>
+                                        <span>Форма</span>
                                     </div>
-                                    <div class="detail__item-desc">Пропускает 35% лучей</div>
+                                    <div class="detail__item-desc">Окна в пол</div>
                                 </div>
                                 <div class="detail__item">
                                     <div class="detail__item-title">
                                         <img src="img/check.svg" alt="">
-                                        <span>Материал</span>
+                                        <span>Размер</span>
                                     </div>
-                                    <div class="detail__item-desc">Эластичный пенополиуретан</div>
+                                    <div class="detail__item-desc">1 500 х 1 500 мм</div>
                                 </div>
-                            </div>
-                            <div class="materials__gallery">
-                                <div class="materials__gallery-item">
-                                    <img src="img/gallery.png" alt="">
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Цвет</span>
+                                    </div>
+                                    <div class="detail__item-desc">Белый</div>
                                 </div>
-                                <div class="materials__gallery-item materials__gallery-item--big">
-                                    <img src="img/gallery2.png" alt="">
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Площадь застекления объекта</span>
+                                    </div>
+                                    <div class="detail__item-desc">25 %</div>
                                 </div>
-                                <div class="materials__gallery-item">
-                                    <img src="img/gallery.png" alt="">
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Вид открывания</span>
+                                    </div>
+                                    <div class="detail__item-desc">Откидно-поворотное в двух направлениях</div>
                                 </div>
-                                <div class="materials__gallery-item">
-                                    <img src="img/gallery.png" alt="">
-                                </div>
-                                <div class="materials__gallery-item">
-                                    <img src="img/gallery.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab__content" data-tab-path="6">
-                            <div class="detail__items">
                                 <div class="detail__item">
                                     <div class="detail__item-title">
                                         <img src="img/check.svg" alt="">
@@ -1990,8 +2154,108 @@
                                 <div class="materials__gallery-item">
                                     <img src="img/gallery.png" alt="">
                                 </div>
-                                <div class="materials__gallery-item materials__gallery-item--big">
-                                    <img src="img/gallery2.png" alt="">
+                                <div class="materials__gallery-item">
+                                    <img src="img/gallery.png" alt="">
+                                </div>
+                                <div class="materials__gallery-item">
+                                    <img src="img/gallery.png" alt="">
+                                </div>
+                                <div class="materials__gallery-item">
+                                    <img src="img/gallery.png" alt="">
+                                </div>
+                                <div class="materials__gallery-item">
+                                    <img src="img/gallery.png" alt="">
+                                </div>
+                                <div class="materials__gallery-item">
+                                    <img src="img/gallery.png" alt="">
+                                </div>
+                                <div class="materials__gallery-btn-block">
+                                    <button class="main__gallery-btn btn"><span>Открыть</span> еще 26</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab__content" data-tab-path="6">
+                            <div class="detail__items">
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Всего окон</span>
+                                    </div>
+                                    <div class="detail__item-desc">9</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Форма</span>
+                                    </div>
+                                    <div class="detail__item-desc">Окна в пол</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Размер</span>
+                                    </div>
+                                    <div class="detail__item-desc">1 500 х 1 500 мм</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Цвет</span>
+                                    </div>
+                                    <div class="detail__item-desc">Белый</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Площадь застекления объекта</span>
+                                    </div>
+                                    <div class="detail__item-desc">25 %</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Вид открывания</span>
+                                    </div>
+                                    <div class="detail__item-desc">Откидно-поворотное в двух направлениях</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Уровень теплоизоляции</span>
+                                    </div>
+                                    <div class="detail__item-desc">0,66 м2 °С/Вт</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Солнцезащита</span>
+                                    </div>
+                                    <div class="detail__item-desc">Пропускает 35% лучей</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Материал</span>
+                                    </div>
+                                    <div class="detail__item-desc">Эластичный пенополиуретан</div>
+                                </div>
+                                <div class="detail__item">
+                                    <div class="detail__item-title">
+                                        <img src="img/check.svg" alt="">
+                                        <span>Производитель</span>
+                                    </div>
+                                    <div class="detail__item-desc">Италия</div>
+                                </div>
+                            </div>
+                            <div class="materials__gallery">
+                                <div class="materials__gallery-item">
+                                    <img src="img/gallery.png" alt="">
+                                </div>
+                                <div class="materials__gallery-item">
+                                    <img src="img/gallery.png" alt="">
+                                </div>
+                                <div class="materials__gallery-item">
+                                    <img src="img/gallery.png" alt="">
                                 </div>
                                 <div class="materials__gallery-item">
                                     <img src="img/gallery.png" alt="">
@@ -2001,6 +2265,9 @@
                                 </div>
                                 <div class="materials__gallery-item">
                                     <img src="img/gallery.png" alt="">
+                                </div>
+                                <div class="materials__gallery-btn-block">
+                                    <button class="main__gallery-btn btn"><span>Открыть</span> еще 26</button>
                                 </div>
                             </div>
                         </div>
@@ -2022,7 +2289,7 @@
                             <div class="video-block">
                                 <button class="video-block__btn btn">
                                     <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M17.5 9.63397C18.1667 10.0189 18.1667 10.9811 17.5 11.366L1.75 20.4593C1.08333 20.8442 0.249999 20.3631 0.249999 19.5933L0.25 1.40673C0.25 0.636932 1.08333 0.155807 1.75 0.540707L17.5 9.63397Z" fill="#07122A"/>
+                                        <path d="M17.5 9.63397C18.1667 10.0189 18.1667 10.9811 17.5 11.366L1.75 20.4593C1.08333 20.8442 0.249999 20.3631 0.249999 19.5933L0.25 1.40673C0.25 0.636932 1.08333 0.155807 1.75 0.540707L17.5 9.63397Z" fill="#7786A5"/>
                                     </svg>
                                 </button>
                             </div>
@@ -2031,7 +2298,7 @@
                             <div class="video-block">
                                 <button class="video-block__btn btn">
                                     <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M17.5 9.63397C18.1667 10.0189 18.1667 10.9811 17.5 11.366L1.75 20.4593C1.08333 20.8442 0.249999 20.3631 0.249999 19.5933L0.25 1.40673C0.25 0.636932 1.08333 0.155807 1.75 0.540707L17.5 9.63397Z" fill="#07122A"/>
+                                        <path d="M17.5 9.63397C18.1667 10.0189 18.1667 10.9811 17.5 11.366L1.75 20.4593C1.08333 20.8442 0.249999 20.3631 0.249999 19.5933L0.25 1.40673C0.25 0.636932 1.08333 0.155807 1.75 0.540707L17.5 9.63397Z" fill="#7786A5"/>
                                     </svg>
                                 </button>
                             </div>
@@ -2040,7 +2307,7 @@
                             <div class="video-block">
                                 <button class="video-block__btn btn">
                                     <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M17.5 9.63397C18.1667 10.0189 18.1667 10.9811 17.5 11.366L1.75 20.4593C1.08333 20.8442 0.249999 20.3631 0.249999 19.5933L0.25 1.40673C0.25 0.636932 1.08333 0.155807 1.75 0.540707L17.5 9.63397Z" fill="#07122A"/>
+                                        <path d="M17.5 9.63397C18.1667 10.0189 18.1667 10.9811 17.5 11.366L1.75 20.4593C1.08333 20.8442 0.249999 20.3631 0.249999 19.5933L0.25 1.40673C0.25 0.636932 1.08333 0.155807 1.75 0.540707L17.5 9.63397Z" fill="#7786A5"/>
                                     </svg>
                                 </button>
                             </div>
@@ -2049,7 +2316,7 @@
                             <div class="video-block">
                                 <button class="video-block__btn btn">
                                     <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M17.5 9.63397C18.1667 10.0189 18.1667 10.9811 17.5 11.366L1.75 20.4593C1.08333 20.8442 0.249999 20.3631 0.249999 19.5933L0.25 1.40673C0.25 0.636932 1.08333 0.155807 1.75 0.540707L17.5 9.63397Z" fill="#07122A"/>
+                                        <path d="M17.5 9.63397C18.1667 10.0189 18.1667 10.9811 17.5 11.366L1.75 20.4593C1.08333 20.8442 0.249999 20.3631 0.249999 19.5933L0.25 1.40673C0.25 0.636932 1.08333 0.155807 1.75 0.540707L17.5 9.63397Z" fill="#7786A5"/>
                                     </svg>
                                 </button>
                             </div>
@@ -2285,7 +2552,9 @@
                                         <span>Разрешение на строительство</span>
                                     </div>
                                     <a href="" download="" class="about-doc__item-download">
-                                        <img src="img/u_import.svg" alt="">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5003 11.667C17.2793 11.667 17.0673 11.7548 16.9111 11.9111C16.7548 12.0674 16.667 12.2793 16.667 12.5003V15.8337C16.667 16.0547 16.5792 16.2666 16.4229 16.4229C16.2666 16.5792 16.0547 16.667 15.8337 16.667H4.16699C3.94598 16.667 3.73402 16.5792 3.57774 16.4229C3.42146 16.2666 3.33366 16.0547 3.33366 15.8337V12.5003C3.33366 12.2793 3.24586 12.0674 3.08958 11.9111C2.9333 11.7548 2.72134 11.667 2.50033 11.667C2.27931 11.667 2.06735 11.7548 1.91107 11.9111C1.75479 12.0674 1.66699 12.2793 1.66699 12.5003V15.8337C1.66699 16.4967 1.93038 17.1326 2.39923 17.6014C2.86807 18.0703 3.50395 18.3337 4.16699 18.3337H15.8337C16.4967 18.3337 17.1326 18.0703 17.6014 17.6014C18.0703 17.1326 18.3337 16.4967 18.3337 15.8337V12.5003C18.3337 12.2793 18.2459 12.0674 18.0896 11.9111C17.9333 11.7548 17.7213 11.667 17.5003 11.667ZM9.40866 13.092C9.48791 13.1679 9.58137 13.2273 9.68366 13.267C9.78341 13.3111 9.89127 13.3339 10.0003 13.3339C10.1094 13.3339 10.2172 13.3111 10.317 13.267C10.4193 13.2273 10.5127 13.1679 10.592 13.092L13.9253 9.75866C14.0822 9.60174 14.1704 9.38891 14.1704 9.16699C14.1704 8.94507 14.0822 8.73224 13.9253 8.57533C13.7684 8.41841 13.5556 8.33025 13.3337 8.33025C13.1117 8.33025 12.8989 8.41841 12.742 8.57533L10.8337 10.492V2.50033C10.8337 2.27931 10.7459 2.06735 10.5896 1.91107C10.4333 1.75479 10.2213 1.66699 10.0003 1.66699C9.77931 1.66699 9.56735 1.75479 9.41107 1.91107C9.25479 2.06735 9.16699 2.27931 9.16699 2.50033V10.492L7.25866 8.57533C7.18096 8.49763 7.08872 8.43599 6.9872 8.39394C6.88568 8.35189 6.77687 8.33025 6.66699 8.33025C6.55711 8.33025 6.4483 8.35189 6.34678 8.39394C6.24527 8.43599 6.15302 8.49763 6.07533 8.57533C5.99763 8.65302 5.93599 8.74527 5.89394 8.84678C5.85189 8.9483 5.83025 9.05711 5.83025 9.16699C5.83025 9.27687 5.85189 9.38568 5.89394 9.4872C5.93599 9.58872 5.99763 9.68096 6.07533 9.75866L9.40866 13.092Z" fill="#7786A5"/>
+                                        </svg>
                                     </a>
                                 </div>
                                 <div class="about-doc__item">
@@ -2294,7 +2563,9 @@
                                         <span>Документы на право владения землей</span>
                                     </div>
                                     <a href="" download="" class="about-doc__item-download">
-                                        <img src="img/u_import.svg" alt="">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5003 11.667C17.2793 11.667 17.0673 11.7548 16.9111 11.9111C16.7548 12.0674 16.667 12.2793 16.667 12.5003V15.8337C16.667 16.0547 16.5792 16.2666 16.4229 16.4229C16.2666 16.5792 16.0547 16.667 15.8337 16.667H4.16699C3.94598 16.667 3.73402 16.5792 3.57774 16.4229C3.42146 16.2666 3.33366 16.0547 3.33366 15.8337V12.5003C3.33366 12.2793 3.24586 12.0674 3.08958 11.9111C2.9333 11.7548 2.72134 11.667 2.50033 11.667C2.27931 11.667 2.06735 11.7548 1.91107 11.9111C1.75479 12.0674 1.66699 12.2793 1.66699 12.5003V15.8337C1.66699 16.4967 1.93038 17.1326 2.39923 17.6014C2.86807 18.0703 3.50395 18.3337 4.16699 18.3337H15.8337C16.4967 18.3337 17.1326 18.0703 17.6014 17.6014C18.0703 17.1326 18.3337 16.4967 18.3337 15.8337V12.5003C18.3337 12.2793 18.2459 12.0674 18.0896 11.9111C17.9333 11.7548 17.7213 11.667 17.5003 11.667ZM9.40866 13.092C9.48791 13.1679 9.58137 13.2273 9.68366 13.267C9.78341 13.3111 9.89127 13.3339 10.0003 13.3339C10.1094 13.3339 10.2172 13.3111 10.317 13.267C10.4193 13.2273 10.5127 13.1679 10.592 13.092L13.9253 9.75866C14.0822 9.60174 14.1704 9.38891 14.1704 9.16699C14.1704 8.94507 14.0822 8.73224 13.9253 8.57533C13.7684 8.41841 13.5556 8.33025 13.3337 8.33025C13.1117 8.33025 12.8989 8.41841 12.742 8.57533L10.8337 10.492V2.50033C10.8337 2.27931 10.7459 2.06735 10.5896 1.91107C10.4333 1.75479 10.2213 1.66699 10.0003 1.66699C9.77931 1.66699 9.56735 1.75479 9.41107 1.91107C9.25479 2.06735 9.16699 2.27931 9.16699 2.50033V10.492L7.25866 8.57533C7.18096 8.49763 7.08872 8.43599 6.9872 8.39394C6.88568 8.35189 6.77687 8.33025 6.66699 8.33025C6.55711 8.33025 6.4483 8.35189 6.34678 8.39394C6.24527 8.43599 6.15302 8.49763 6.07533 8.57533C5.99763 8.65302 5.93599 8.74527 5.89394 8.84678C5.85189 8.9483 5.83025 9.05711 5.83025 9.16699C5.83025 9.27687 5.85189 9.38568 5.89394 9.4872C5.93599 9.58872 5.99763 9.68096 6.07533 9.75866L9.40866 13.092Z" fill="#7786A5"/>
+                                        </svg>
                                     </a>
                                 </div>
                                 <div class="about-doc__item">
@@ -2303,7 +2574,9 @@
                                         <span>Свидетельство о регистрации</span>
                                     </div>
                                     <a href="" download="" class="about-doc__item-download">
-                                        <img src="img/u_import.svg" alt="">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5003 11.667C17.2793 11.667 17.0673 11.7548 16.9111 11.9111C16.7548 12.0674 16.667 12.2793 16.667 12.5003V15.8337C16.667 16.0547 16.5792 16.2666 16.4229 16.4229C16.2666 16.5792 16.0547 16.667 15.8337 16.667H4.16699C3.94598 16.667 3.73402 16.5792 3.57774 16.4229C3.42146 16.2666 3.33366 16.0547 3.33366 15.8337V12.5003C3.33366 12.2793 3.24586 12.0674 3.08958 11.9111C2.9333 11.7548 2.72134 11.667 2.50033 11.667C2.27931 11.667 2.06735 11.7548 1.91107 11.9111C1.75479 12.0674 1.66699 12.2793 1.66699 12.5003V15.8337C1.66699 16.4967 1.93038 17.1326 2.39923 17.6014C2.86807 18.0703 3.50395 18.3337 4.16699 18.3337H15.8337C16.4967 18.3337 17.1326 18.0703 17.6014 17.6014C18.0703 17.1326 18.3337 16.4967 18.3337 15.8337V12.5003C18.3337 12.2793 18.2459 12.0674 18.0896 11.9111C17.9333 11.7548 17.7213 11.667 17.5003 11.667ZM9.40866 13.092C9.48791 13.1679 9.58137 13.2273 9.68366 13.267C9.78341 13.3111 9.89127 13.3339 10.0003 13.3339C10.1094 13.3339 10.2172 13.3111 10.317 13.267C10.4193 13.2273 10.5127 13.1679 10.592 13.092L13.9253 9.75866C14.0822 9.60174 14.1704 9.38891 14.1704 9.16699C14.1704 8.94507 14.0822 8.73224 13.9253 8.57533C13.7684 8.41841 13.5556 8.33025 13.3337 8.33025C13.1117 8.33025 12.8989 8.41841 12.742 8.57533L10.8337 10.492V2.50033C10.8337 2.27931 10.7459 2.06735 10.5896 1.91107C10.4333 1.75479 10.2213 1.66699 10.0003 1.66699C9.77931 1.66699 9.56735 1.75479 9.41107 1.91107C9.25479 2.06735 9.16699 2.27931 9.16699 2.50033V10.492L7.25866 8.57533C7.18096 8.49763 7.08872 8.43599 6.9872 8.39394C6.88568 8.35189 6.77687 8.33025 6.66699 8.33025C6.55711 8.33025 6.4483 8.35189 6.34678 8.39394C6.24527 8.43599 6.15302 8.49763 6.07533 8.57533C5.99763 8.65302 5.93599 8.74527 5.89394 8.84678C5.85189 8.9483 5.83025 9.05711 5.83025 9.16699C5.83025 9.27687 5.85189 9.38568 5.89394 9.4872C5.93599 9.58872 5.99763 9.68096 6.07533 9.75866L9.40866 13.092Z" fill="#7786A5"/>
+                                        </svg>
                                     </a>
                                 </div>
                                 <div class="about-doc__item">
@@ -2312,7 +2585,9 @@
                                         <span>Заключение гос.</span>
                                     </div>
                                     <a href="" download="" class="about-doc__item-download">
-                                        <img src="img/u_import.svg" alt="">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5003 11.667C17.2793 11.667 17.0673 11.7548 16.9111 11.9111C16.7548 12.0674 16.667 12.2793 16.667 12.5003V15.8337C16.667 16.0547 16.5792 16.2666 16.4229 16.4229C16.2666 16.5792 16.0547 16.667 15.8337 16.667H4.16699C3.94598 16.667 3.73402 16.5792 3.57774 16.4229C3.42146 16.2666 3.33366 16.0547 3.33366 15.8337V12.5003C3.33366 12.2793 3.24586 12.0674 3.08958 11.9111C2.9333 11.7548 2.72134 11.667 2.50033 11.667C2.27931 11.667 2.06735 11.7548 1.91107 11.9111C1.75479 12.0674 1.66699 12.2793 1.66699 12.5003V15.8337C1.66699 16.4967 1.93038 17.1326 2.39923 17.6014C2.86807 18.0703 3.50395 18.3337 4.16699 18.3337H15.8337C16.4967 18.3337 17.1326 18.0703 17.6014 17.6014C18.0703 17.1326 18.3337 16.4967 18.3337 15.8337V12.5003C18.3337 12.2793 18.2459 12.0674 18.0896 11.9111C17.9333 11.7548 17.7213 11.667 17.5003 11.667ZM9.40866 13.092C9.48791 13.1679 9.58137 13.2273 9.68366 13.267C9.78341 13.3111 9.89127 13.3339 10.0003 13.3339C10.1094 13.3339 10.2172 13.3111 10.317 13.267C10.4193 13.2273 10.5127 13.1679 10.592 13.092L13.9253 9.75866C14.0822 9.60174 14.1704 9.38891 14.1704 9.16699C14.1704 8.94507 14.0822 8.73224 13.9253 8.57533C13.7684 8.41841 13.5556 8.33025 13.3337 8.33025C13.1117 8.33025 12.8989 8.41841 12.742 8.57533L10.8337 10.492V2.50033C10.8337 2.27931 10.7459 2.06735 10.5896 1.91107C10.4333 1.75479 10.2213 1.66699 10.0003 1.66699C9.77931 1.66699 9.56735 1.75479 9.41107 1.91107C9.25479 2.06735 9.16699 2.27931 9.16699 2.50033V10.492L7.25866 8.57533C7.18096 8.49763 7.08872 8.43599 6.9872 8.39394C6.88568 8.35189 6.77687 8.33025 6.66699 8.33025C6.55711 8.33025 6.4483 8.35189 6.34678 8.39394C6.24527 8.43599 6.15302 8.49763 6.07533 8.57533C5.99763 8.65302 5.93599 8.74527 5.89394 8.84678C5.85189 8.9483 5.83025 9.05711 5.83025 9.16699C5.83025 9.27687 5.85189 9.38568 5.89394 9.4872C5.93599 9.58872 5.99763 9.68096 6.07533 9.75866L9.40866 13.092Z" fill="#7786A5"/>
+                                        </svg>
                                     </a>
                                 </div>
                             </div>
@@ -2616,45 +2891,16 @@
                                 </div>
 
                             </fieldset>
-                            <fieldset class='form-group'>
-                                <label>Цена недвижимости</label>
-                                <div class="form-group__wrap form-group__wrap--dropdown">
+                            <fieldset id="finishDate" class='form-group'>
+                                <label>Дата завершения строительства</label>
+                                <div class="form-group__wrap">
                                     <span class="form-group__info">
                                             <span class="form-group__num">~ 1 Февраля 2024 г.</span>
-                                    <span class="form-group__num2">Через 54 мес </span>
+                                    <span class="form-group__num2">Через <span>54</span> мес </span>
                                     </span>
-                                    <button class="form-group__arrow">
-                                           <img src="img/Arrow-Bottom.svg" alt="">
-                                       </button>
                                 </div>
-                                <div class="form-group__dropdown">
-                                    <div class="form-group__dropdown-item">
-                                        <input checked type='radio' class='radio' id='buildFinish1' name='buildFinish' />
-                                        <label for='buildFinish1'>
-                                                <span class="form-group__info">
-                                                    <span class="form-group__num">~ 1 Февраля 2024 г.</span>
-                                                    <span class="form-group__num2">Через 54 мес </span>
-                                                </span>
-                                            </label>
-                                    </div>
-                                    <div class="form-group__dropdown-item">
-                                        <input type='radio' class='radio' id='buildFinish2' name='buildFinish' />
-                                        <label for='buildFinish2'>
-                                                <span class="form-group__info">
-                                                    <span class="form-group__num">~ 15 Февраля 2023 г.</span>
-                                                    <span class="form-group__num2">Через 44 мес </span>
-                                                </span>
-                                            </label>
-                                    </div>
-                                    <div class="form-group__dropdown-item">
-                                        <input type='radio' class='radio' id='buildFinish3' name='buildFinish' />
-                                        <label for='buildFinish3'>
-                                                <span class="form-group__info">
-                                                    <span class="form-group__num">~ 25 Февраля 2022 г.</span>
-                                                    <span class="form-group__num2">Через 34 мес </span>
-                                                </span>                                          
-                                            </label>
-                                    </div>
+                                <div class="form-group__range">
+                                    <div class="polzunok"></div>
                                 </div>
                             </fieldset>
                             <fieldset class='form-group'>
@@ -2701,34 +2947,15 @@
                                 </div>
                             </fieldset>
                             <fieldset class='form-group'>
-                                <label>Акции и бонусы</label>
-                                <div class="form-group__wrap form-group__wrap--dropdown">
-                                    <span class="form-group__info">
-                                            <span class="form-group__num">Кэшбек от застройщика</span>
-                                    <span class="form-group__num2">— 4 % от суммы</span>
-                                    </span>
-                                    <button class="form-group__arrow">
-                                           <img src="img/Arrow-Bottom.svg" alt="">
-                                       </button>
-                                </div>
-                                <div class="form-group__dropdown">
-                                    <div class="form-group__dropdown-item">
-                                        <input checked type='radio' class='radio' id='cashback1' name='cashback' />
-                                        <label for='cashback1'>
-                                                <span class="form-group__info">
-                                                    <span class="form-group__num">Кэшбек от застройщика</span>
-                                                <span class="form-group__num2">— 4 % от суммы</span>
-                                                </span>
-                                            </label>
-                                    </div>
-                                    <div class="form-group__dropdown-item">
-                                        <input type='radio' class='radio' id='cashback2' name='cashback' />
-                                        <label for='cashback2'>
-                                                <span class="form-group__info">
-                                                    <span class="form-group__num">Кэшбек от застройщика 2</span>
-                                                <span class="form-group__num2">— 8 % от суммы</span>
-                                                </span>
-                                            </label>
+                                <label>Вариант эксплуотации</label>
+                                <div class="form-group__wrap">
+
+                                    <div class="form-group__info">
+                                        <div class="form-group__check">
+                                            <input type='checkbox' class='checkbox' id='c' />
+                                            <label for='c'>Оплата первого взноса криптовалютой</label>
+                                        </div>
+                                        <span class="form-group__num2">+ 5 % к сумме</span>
                                     </div>
                                 </div>
                             </fieldset>
@@ -2818,16 +3045,35 @@
                                     </div>
                                 </div>
                             </fieldset>
-                            <fieldset class='form-group'>
+                            <fieldset id="" class='form-group'>
                                 <label>Вариант эксплуотации</label>
-                                <div class="form-group__wrap">
-
-                                    <div class="form-group__info">
-                                        <div class="form-group__check">
-                                            <input type='checkbox' class='checkbox' id='c' />
-                                            <label for='c'>Оплата первого взноса криптовалютой</label>
-                                        </div>
-                                        <span class="form-group__num2">+ 5 % к сумме</span>
+                                <div class="form-group__wrap form-group__wrap--dropdown">
+                                    <span class="form-group__info">
+                                            <span class="form-group__num">Сдавать в аренду с гарантией </span>
+                                    <span class="form-group__num2"><span>8</span> % в год</span>
+                                    </span>
+                                    <button class="form-group__arrow">
+                                           <img src="img/Arrow-Bottom.svg" alt="">
+                                       </button>
+                                </div>
+                                <div class="form-group__dropdown">
+                                    <div class="form-group__dropdown-item">
+                                        <input checked type='radio' class='radio' id='useVariant1' name='useVariant' />
+                                        <label for='useVariant1'>
+                                            <span class="form-group__info">
+                                                <span class="form-group__num">Сдавать в аренду с гарантией </span>
+                                        <span class="form-group__num2"><span>8</span> % в год</span>
+                                        </span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group__dropdown-item">
+                                        <input type='radio' class='radio' id='useVariant2' name='useVariant' />
+                                        <label for='useVariant2'>
+                                            <span class="form-group__info">
+                                                <span class="form-group__num">Сдавать в аренду с гарантией </span>
+                                        <span class="form-group__num2"><span>9</span> % в год</span>
+                                        </span>
+                                        </label>
                                     </div>
                                 </div>
                             </fieldset>
@@ -2865,43 +3111,19 @@
                             </fieldset>
                             <fieldset id="useOption" class='form-group'>
                                 <label>Вариант эксплуотации</label>
-                                <div class="form-group__wrap form-group__wrap--dropdown">
+                                <div class="form-group__wrap">
                                     <span class="form-group__info">
-                                            <span class="form-group__num">Сдавать в аренду с гарантией под 8 %</span>
-                                    <span class="form-group__num2"><span>7</span> мес в году</span>
+                                            <span class="form-group__num"><span>8</span> месцев</span>
                                     </span>
-                                    <button class="form-group__arrow">
-                                           <img src="img/Arrow-Bottom.svg" alt="">
-                                       </button>
                                 </div>
                                 <div class="form-group__range">
                                     <div class="polzunok"></div>
-                                </div>
-                                <div class="form-group__dropdown">
-                                    <div class="form-group__dropdown-item">
-                                        <input checked type='radio' class='radio' id='useVariant1' name='useVariant' />
-                                        <label for='useVariant1'>
-                                                <span class="form-group__info">
-                                                    <span class="form-group__num">Сдавать в аренду с гарантией под 8 %</span>
-                                                <span class="form-group__num2"><span>7</span> мес в году</span>
-                                                </span>
-                                            </label>
-                                    </div>
-                                    <div class="form-group__dropdown-item">
-                                        <input type='radio' class='radio' id='useVariant2' name='useVariant' />
-                                        <label for='useVariant2'>
-                                                <span class="form-group__info">
-                                                    <span class="form-group__num">Сдавать в аренду с гарантией под 10 %</span>
-                                                <span class="form-group__num2"><span>10</span> мес в году</span>
-                                                </span>
-                                            </label>
-                                    </div>
                                 </div>
                             </fieldset>
                         </div>
                     </div>
                 </div>
-                <div class="tab__content tab__content--active" data-tab-path="1">
+                <div class="tab__content" data-tab-path="1">
                     <div class="container">
 
                         <div class="pay__table">
@@ -3147,8 +3369,6 @@
                                         <td>До конца 2023 г.</td>
                                         <td>1 690 €</td>
                                     </tr>
-
-
                                     <tr>
                                         <td>
                                             <div class="pay__table-info">
@@ -3173,7 +3393,6 @@
                                         <td>7 600 €</td>
                                     </tr>
 
-
                                     <tr class="pay__table-row--dark">
                                         <td>
                                             Итоговая сумма в день завершения строительства
@@ -3181,22 +3400,223 @@
                                         <td>~ До 1 Февраля 2024 г.</td>
                                         <td>79 350 €</td>
                                     </tr>
-                                    <tr class="pay__table-row--blue">
+
+                                    <tr class="pay__table-row-hidden">
                                         <td>
                                             <div class="form-group__check">
-                                                <input checked disabled type="checkbox" class="checkbox" id="tableCheck18">
-                                                <label for="tableCheck18">Открыть еще 76 платежей</label>
+                                                <input checked type="checkbox" class="checkbox" id="tableCheck1">
+                                                <label for="tableCheck1">Бронирование</label>
+                                            </div>
+                                        </td>
+                                        <td>Сегодня</td>
+                                        <td>1 000 €</td>
+                                    </tr>
+                                    <tr class="pay__table-row-hidden">
+                                        <td>
+                                            <div class="form-group__check">
+                                                <input type="checkbox" class="checkbox" id="tableCheck2">
+                                                <label for="tableCheck2">Тур за недвижимостью</label>
+                                            </div>
+                                        </td>
+                                        <td>До января 2024 г.</td>
+                                        <td>0 €</td>
+                                    </tr>
+                                    <tr class="pay__table-row-hidden">
+                                        <td>
+                                            <div class="form-group__check">
+                                                <input checked disabled type="checkbox" class="checkbox" id="tableCheck3">
+                                                <label for="tableCheck3">Персональный менеджер </label>
+                                            </div>
+                                        </td>
+                                        <td>В любое время</td>
+                                        <td>0 €</td>
+                                    </tr>
+                                    <tr class="pay__table-row-hidden">
+                                        <td>
+                                            <div class="form-group__check">
+                                                <input checked disabled type="checkbox" class="checkbox" id="tableCheck4">
+                                                <label for="tableCheck4">Юридическое сопровождение сделки</label>
+                                            </div>
+                                        </td>
+                                        <td>В любое время</td>
+                                        <td>0 €</td>
+                                    </tr>
+                                    <tr class="pay__table-row-hidden">
+                                        <td>
+                                            <div class="form-group__check">
+                                                <input checked disabled type="checkbox" class="checkbox" id="tableCheck5">
+                                                <label for="tableCheck5">Первый взнос</label>
+                                            </div>
+                                        </td>
+                                        <td>Март 2022 г.</td>
+                                        <td>0 €</td>
+                                    </tr>
+                                    <tr class="pay__table-row-hidden">
+                                        <td>
+                                            <div class="form-group__check">
+                                                <input checked disabled type="checkbox" class="checkbox" id="tableCheck6">
+                                                <label for="tableCheck6">1 платеж по рассрочке</label>
+                                            </div>
+                                        </td>
+                                        <td>Апрель 2022 г.</td>
+                                        <td>7 600 €</td>
+                                    </tr>
+                                    <tr class="pay__table-row-hidden">
+                                        <td>
+                                            <div class="form-group__check">
+                                                <input checked disabled type="checkbox" class="checkbox" id="tableCheck7">
+                                                <label for="tableCheck7">2 платеж по рассрочке</label>
+                                            </div>
+                                        </td>
+                                        <td>Май 2022 г.</td>
+                                        <td>7 600 €</td>
+                                    </tr>
+                                    <tr class="pay__table-row-hidden pay__table-row--green">
+                                        <td>
+                                            <div class="form-group__check">
+                                                <input checked disabled type="checkbox" class="checkbox" id="tableCheck8">
+                                                <label for="tableCheck8">Кэшбек от застройщика</label>
+                                            </div>
+                                        </td>
+                                        <td>Июнь 2022 г.</td>
+                                        <td>+ 3 950 €</td>
+                                    </tr>
+                                    <tr class="pay__table-row-hidden">
+                                        <td>
+                                            <div class="form-group__check">
+                                                <input checked disabled type="checkbox" class="checkbox" id="tableCheck9">
+                                                <label for="tableCheck9">3 платеж по рассрочке</label>
+                                            </div>
+                                        </td>
+                                        <td>Июль 2022 г.</td>
+                                        <td>7 600 €</td>
+                                    </tr>
+                                    <tr class="pay__table-row-hidden">
+                                        <td>
+                                            <div class="form-group__check">
+                                                <input checked disabled type="checkbox" class="checkbox" id="tableCheck10">
+                                                <label for="tableCheck10">4 платеж по рассрочке</label>
+                                            </div>
+                                        </td>
+                                        <td>Август 2022 г.</td>
+                                        <td>7 600 €</td>
+                                    </tr>
+                                    <tr class="pay__table-row-hidden pay__table-row--green">
+                                        <td>
+                                            <div class="form-group__check">
+                                                <input checked disabled type="checkbox" class="checkbox" id="tableCheck11">
+                                                <label for="tableCheck11">Кэшбек от застройщика</label>
+                                            </div>
+                                        </td>
+                                        <td>Сентябрь 2022 г.</td>
+                                        <td>+ 3 950 €</td>
+                                    </tr>
+                                    <tr class="pay__table-row-hidden">
+                                        <td>
+                                            <div class="form-group__check">
+                                                <input checked disabled type="checkbox" class="checkbox" id="tableCheck12">
+                                                <label for="tableCheck12">5 платеж по рассрочке</label>
+                                            </div>
+                                        </td>
+                                        <td>Октябрь 2022 г.</td>
+                                        <td>7 600 €</td>
+                                    </tr>
+                                    <tr class="pay__table-row-hidden">
+                                        <td>
+                                            <div class="form-group__check">
+                                                <input checked disabled type="checkbox" class="checkbox" id="tableCheck13">
+                                                <label for="tableCheck13">6 платеж по рассрочке</label>
+                                            </div>
+                                        </td>
+                                        <td>Ноябрь 2022 г.</td>
+                                        <td>7 600 €</td>
+                                    </tr>
+                                    <tr class="pay__table-row-hidden pay__table-row--green">
+                                        <td>
+                                            <div class="form-group__check">
+                                                <input checked disabled type="checkbox" class="checkbox" id="tableCheck14">
+                                                <label for="tableCheck14">Кэшбек от застройщика</label>
+                                            </div>
+                                        </td>
+                                        <td>Декабрь 2022 г.</td>
+                                        <td>+ 3 950 €</td>
+                                    </tr>
+                                    <tr class="pay__table-row-hidden">
+                                        <td>
+                                            <div class="form-group__check">
+                                                <input checked disabled type="checkbox" class="checkbox" id="tableCheck15">
+                                                <label for="tableCheck15">8 платеж по рассрочке</label>
+                                            </div>
+                                        </td>
+                                        <td>Январь 2023 г.</td>
+                                        <td>7 600 €</td>
+                                    </tr>
+                                    <tr class="pay__table-row-hidden">
+                                        <td>
+                                            <div class="form-group__check">
+                                                <input checked disabled type="checkbox" class="checkbox" id="tableCheck16">
+                                                <label for="tableCheck16">9 платеж по рассрочке</label>
+                                            </div>
+                                        </td>
+                                        <td>Февраль 2023 г.</td>
+                                        <td>7 600 €</td>
+                                    </tr>
+                                    <tr class="pay__table-row-hidden pay__table-row--green">
+                                        <td>
+                                            <div class="form-group__check">
+                                                <input checked disabled type="checkbox" class="checkbox" id="tableCheck34">
+                                                <label for="tableCheck34">Кэшбек от застройщика</label>
+                                            </div>
+                                        </td>
+                                        <td>Март 2023 г.</td>
+                                        <td>+ 3 950 €</td>
+                                    </tr>
+                                    <tr class="pay__table-row-hidden">
+                                        <td>
+                                            <div class="form-group__check">
+                                                <input checked disabled type="checkbox" class="checkbox" id="tableCheck35">
+                                                <label for="tableCheck35">10 платеж по рассрочке</label>
+                                            </div>
+                                        </td>
+                                        <td>Апрель 2023 г.</td>
+                                        <td>7 600 €</td>
+                                    </tr>
+                                    <tr class="pay__table-row-hidden">
+                                        <td>
+                                            <div class="form-group__check">
+                                                <input checked disabled type="checkbox" class="checkbox" id="tableCheck36">
+                                                <label for="tableCheck36">11 платеж по рассрочке</label>
+                                            </div>
+                                        </td>
+                                        <td>Май 2023 г.</td>
+                                        <td>7 600 €</td>
+                                    </tr>
+                                    <tr class="pay__table-row-hidden">
+                                        <td>
+                                            <div class="form-group__check">
+                                                <input checked disabled type="checkbox" class="checkbox" id="tableCheck37">
+                                                <label for="tableCheck37">Гербовый взнос (за внесение в реестр)</label>
+                                            </div>
+                                        </td>
+                                        <td>До января 2024 г.</td>
+                                        <td>1 000 €</td>
+                                    </tr>
+
+                                    <tr class="pay__table-row--blue">
+                                        <td>
+                                            <div class="pay__table-open">
+                                                <span>Открыть еще 76 платежей</span>
+                                                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5.24977 5.49713C4.92018 5.16762 4.38581 5.16762 4.05621 5.49713C3.72662 5.82663 3.72662 6.36087 4.05621 6.69037L9.68273 12.3154C10.0123 12.6449 10.5467 12.6449 10.8763 12.3154L16.5028 6.69037C16.8324 6.36087 16.8324 5.82663 16.5028 5.49713C16.1732 5.16762 15.6388 5.16762 15.3092 5.49713L10.2795 10.5255L5.24977 5.49713Z" fill="#7786A5"/>
+                                                </svg>
                                             </div>
                                         </td>
                                         <td>До января 2028 г.</td>
                                         <td>98 000 €</td>
                                     </tr>
-                                    <tr class="pay__table-row--all">
+                                    <tr class="pay__table-row--blue">
                                         <td>
-                                            <div class="form-group__check">
-                                                <input checked disabled type="checkbox" class="checkbox" id="tableCheck19">
-                                                <label for="tableCheck19">Итоговый расход на недвижимость</label>
-                                            </div>
+                                            Итоговый расход на недвижимость
                                         </td>
                                         <td>До января 2028 г.</td>
                                         <td>183 350 €</td>
@@ -3333,7 +3753,9 @@
                                         </svg>
                                     </button>
                                     </div>
-                                    <div class="profit__group-item profit__col2">—</div>
+                                    <div class="profit__group-item profit__col2 profit__input">
+                                        <input type="text" value="—">
+                                    </div>
                                     <div class="profit__group-item profit__col3">1 528 600 €</div>
                                 </div>
                                 <div class="profit__group profit__group3" data-subgroup-path="1" data-group-path="1">
@@ -3343,7 +3765,9 @@
                                             <label for="c105">Платежи застройщику 2</label>
                                         </div>
                                     </div>
-                                    <div class="profit__group-item profit__col2">—</div>
+                                    <div class="profit__group-item profit__col2 profit__input">
+                                        <input type="text" value="—">
+                                    </div>
                                     <div class="profit__group-item profit__col3">1 528 600 €</div>
                                 </div>
                                 <div class="profit__group profit__group2  profit__group2--active" data-group-path="1">
@@ -3353,7 +3777,9 @@
                                             <label for="c101">Комиссия по рассрочке / ипотеке</label>
                                         </div>
                                     </div>
-                                    <div class="profit__group-item profit__col2">0 % годовых</div>
+                                    <div class="profit__group-item profit__col2 profit__input">
+                                        <input type="text" value="0 % годовых">
+                                    </div>
                                     <div class="profit__group-item profit__col3">0 €</div>
                                 </div>
                                 <div class="profit__group profit__group2  profit__group2--active" data-group-path="1">
@@ -3368,7 +3794,9 @@
                                         </svg>
                                     </button>
                                     </div>
-                                    <div class="profit__group-item profit__col2">—</div>
+                                    <div class="profit__group-item profit__col2 profit__input">
+                                        <input type="text" value="-">
+                                    </div>
                                     <div class="profit__group-item profit__col3">1 528 600 €</div>
                                 </div>
                                 <div class="profit__group profit__group3" data-subgroup-path="2" data-group-path="1">
@@ -3378,7 +3806,9 @@
                                             <label for="c106">Платежи застройщику 2</label>
                                         </div>
                                     </div>
-                                    <div class="profit__group-item profit__col2">—</div>
+                                    <div class="profit__group-item profit__col2 profit__input">
+                                        <input type="text" value="-">
+                                    </div>
                                     <div class="profit__group-item profit__col3">1 528 600 €</div>
                                 </div>
                                 <div class="profit__group profit__group2  profit__group2--active" data-group-path="1">
@@ -3388,7 +3818,9 @@
                                             <label for="c103">Экономический спад</label>
                                         </div>
                                     </div>
-                                    <div class="profit__group-item profit__col2">-</div>
+                                    <div class="profit__group-item profit__col2 profit__input">
+                                        <input type="text" value="-">
+                                    </div>
                                     <div class="profit__group-item profit__col3">1 528 600 €</div>
                                 </div>
                                 <div class="profit__group profit__group1">
@@ -3408,7 +3840,9 @@
                                             <label class=" green-text" for="c107">Рост цены на недвижимость</label>
                                         </div>
                                     </div>
-                                    <div class="profit__group-item profit__col2 green-text">+ 9 %</div>
+                                    <div class="profit__group-item profit__col2 profit__input">
+                                        <input type="text" value="+ 9 %">
+                                    </div>
                                     <div class="profit__group-item profit__col3 green-text">1 528 600 €</div>
                                 </div>
                                 <div class="profit__group profit__group2  profit__group2--active" data-group-path="2">
@@ -3418,7 +3852,9 @@
                                             <label class=" green-text" for="c108">Повышение цены застройщиком</label>
                                         </div>
                                     </div>
-                                    <div class="profit__group-item profit__col2 green-text">+ 9 % годовых</div>
+                                    <div class="profit__group-item profit__col2 profit__input">
+                                        <input type="text" value="+ 9 % годовых">
+                                    </div>
                                     <div class="profit__group-item profit__col3 green-text">1 528 600 €</div>
                                 </div>
                                 <div class="profit__group profit__group2  profit__group2--active" data-group-path="2">
@@ -3428,7 +3864,9 @@
                                             <label class=" green-text" for="c109">Кэшбек от застройщика</label>
                                         </div>
                                     </div>
-                                    <div class="profit__group-item profit__col2 green-text">+ 5 % годовых</div>
+                                    <div class="profit__group-item profit__col2 profit__input">
+                                        <input type="text" value="+ 5 % годовых">
+                                    </div>
                                     <div class="profit__group-item profit__col3 green-text">1 528 600 €</div>
                                 </div>
                                 <div class="profit__group profit__group2  profit__group2--active" data-group-path="2">
@@ -3438,7 +3876,9 @@
                                             <label class=" green-text" for="c1010">Доход от аренды</label>
                                         </div>
                                     </div>
-                                    <div class="profit__group-item profit__col2 green-text">+ 10 % годовых</div>
+                                    <div class="profit__group-item profit__col2 profit__input">
+                                        <input type="text" value="+ 10 % годовых">
+                                    </div>
                                     <div class="profit__group-item profit__col3 green-text">1 528 600 €</div>
                                 </div>
                                 <div class="profit__group profit__group1 profit__sum">
@@ -5219,7 +5659,7 @@
                         <div class="object__title display1">Другие объекты</div>
                         <div class="tabs">
                             <div class="tab tab--active" data-tab-path="1">Все квартиры ЖК</div>
-                            <div class="tab" data-tab-path="2">Шахматка</div>
+                            <div class="tab" data-tab-path="2">Похожие обекты</div>
                         </div>
                         <div class="tab__content tab__content--active" data-tab-path="1">
                             <div class="filter">
@@ -5309,6 +5749,13 @@
                                             <td>
                                                 <div class="object__table-status">
                                                     <span>Доступен</span>
+                                                    <div class="object__table-dropdown">
+                                                        <button class="object__table-dropdown-item">Поделиться</button>
+                                                        <button class="object__table-dropdown-item">Распечатать</button>
+                                                        <button class="object__table-dropdown-item">Заказ консультации</button>
+                                                        <button class="object__table-dropdown-item">Бронировать</button>
+                                                        <button class="object__table-dropdown-item">Сообщить об ошибке</button>
+                                                    </div>
                                                     <button class="object__table-btn">
                                                         <img src="img/more.svg" alt="">
                                                     </button>
@@ -5346,6 +5793,13 @@
                                             <td>
                                                 <div class="object__table-status">
                                                     <span>Доступен</span>
+                                                    <div class="object__table-dropdown">
+                                                        <button class="object__table-dropdown-item">Поделиться</button>
+                                                        <button class="object__table-dropdown-item">Распечатать</button>
+                                                        <button class="object__table-dropdown-item">Заказ консультации</button>
+                                                        <button class="object__table-dropdown-item">Бронировать</button>
+                                                        <button class="object__table-dropdown-item">Сообщить об ошибке</button>
+                                                    </div>
                                                     <button class="object__table-btn">
                                                         <img src="img/more.svg" alt="">
                                                     </button>
@@ -5383,6 +5837,20 @@
                                             <td>
                                                 <div class="object__table-status">
                                                     <span>Доступен</span>
+                                                    <div class="object__table-dropdown">
+                                                        <button class="object__table-dropdown-item">Поделиться</button>
+                                                        <button class="object__table-dropdown-item">Распечатать</button>
+                                                        <button class="object__table-dropdown-item">Заказ консультации</button>
+                                                        <button class="object__table-dropdown-item">Бронировать</button>
+                                                        <button class="object__table-dropdown-item">Сообщить об ошибке</button>
+                                                    </div>
+                                                    <div class="object__table-dropdown">
+                                                        <button class="object__table-dropdown-item">Поделиться</button>
+                                                        <button class="object__table-dropdown-item">Распечатать</button>
+                                                        <button class="object__table-dropdown-item">Заказ консультации</button>
+                                                        <button class="object__table-dropdown-item">Бронировать</button>
+                                                        <button class="object__table-dropdown-item">Сообщить об ошибке</button>
+                                                    </div>
                                                     <button class="object__table-btn">
                                                         <img src="img/more.svg" alt="">
                                                     </button>
@@ -5420,6 +5888,13 @@
                                             <td>
                                                 <div class="object__table-status">
                                                     <span>Доступен</span>
+                                                    <div class="object__table-dropdown">
+                                                        <button class="object__table-dropdown-item">Поделиться</button>
+                                                        <button class="object__table-dropdown-item">Распечатать</button>
+                                                        <button class="object__table-dropdown-item">Заказ консультации</button>
+                                                        <button class="object__table-dropdown-item">Бронировать</button>
+                                                        <button class="object__table-dropdown-item">Сообщить об ошибке</button>
+                                                    </div>
                                                     <button class="object__table-btn">
                                                         <img src="img/more.svg" alt="">
                                                     </button>
@@ -5457,6 +5932,13 @@
                                             <td>
                                                 <div class="object__table-status">
                                                     <span>Доступен</span>
+                                                    <div class="object__table-dropdown">
+                                                        <button class="object__table-dropdown-item">Поделиться</button>
+                                                        <button class="object__table-dropdown-item">Распечатать</button>
+                                                        <button class="object__table-dropdown-item">Заказ консультации</button>
+                                                        <button class="object__table-dropdown-item">Бронировать</button>
+                                                        <button class="object__table-dropdown-item">Сообщить об ошибке</button>
+                                                    </div>
                                                     <button class="object__table-btn">
                                                         <img src="img/more.svg" alt="">
                                                     </button>
@@ -5494,6 +5976,13 @@
                                             <td>
                                                 <div class="object__table-status">
                                                     <span>Доступен</span>
+                                                    <div class="object__table-dropdown">
+                                                        <button class="object__table-dropdown-item">Поделиться</button>
+                                                        <button class="object__table-dropdown-item">Распечатать</button>
+                                                        <button class="object__table-dropdown-item">Заказ консультации</button>
+                                                        <button class="object__table-dropdown-item">Бронировать</button>
+                                                        <button class="object__table-dropdown-item">Сообщить об ошибке</button>
+                                                    </div>
                                                     <button class="object__table-btn">
                                                         <img src="img/more.svg" alt="">
                                                     </button>
@@ -5531,6 +6020,13 @@
                                             <td>
                                                 <div class="object__table-status">
                                                     <span>Доступен</span>
+                                                    <div class="object__table-dropdown">
+                                                        <button class="object__table-dropdown-item">Поделиться</button>
+                                                        <button class="object__table-dropdown-item">Распечатать</button>
+                                                        <button class="object__table-dropdown-item">Заказ консультации</button>
+                                                        <button class="object__table-dropdown-item">Бронировать</button>
+                                                        <button class="object__table-dropdown-item">Сообщить об ошибке</button>
+                                                    </div>
                                                     <button class="object__table-btn">
                                                         <img src="img/more.svg" alt="">
                                                     </button>
@@ -5568,6 +6064,13 @@
                                             <td>
                                                 <div class="object__table-status">
                                                     <span>Доступен</span>
+                                                    <div class="object__table-dropdown">
+                                                        <button class="object__table-dropdown-item">Поделиться</button>
+                                                        <button class="object__table-dropdown-item">Распечатать</button>
+                                                        <button class="object__table-dropdown-item">Заказ консультации</button>
+                                                        <button class="object__table-dropdown-item">Бронировать</button>
+                                                        <button class="object__table-dropdown-item">Сообщить об ошибке</button>
+                                                    </div>
                                                     <button class="object__table-btn">
                                                         <img src="img/more.svg" alt="">
                                                     </button>
@@ -5605,6 +6108,13 @@
                                             <td>
                                                 <div class="object__table-status">
                                                     <span>Доступен</span>
+                                                    <div class="object__table-dropdown">
+                                                        <button class="object__table-dropdown-item">Поделиться</button>
+                                                        <button class="object__table-dropdown-item">Распечатать</button>
+                                                        <button class="object__table-dropdown-item">Заказ консультации</button>
+                                                        <button class="object__table-dropdown-item">Бронировать</button>
+                                                        <button class="object__table-dropdown-item">Сообщить об ошибке</button>
+                                                    </div>
                                                     <button class="object__table-btn">
                                                         <img src="img/more.svg" alt="">
                                                     </button>
@@ -5642,6 +6152,13 @@
                                             <td>
                                                 <div class="object__table-status">
                                                     <span>Доступен</span>
+                                                    <div class="object__table-dropdown">
+                                                        <button class="object__table-dropdown-item">Поделиться</button>
+                                                        <button class="object__table-dropdown-item">Распечатать</button>
+                                                        <button class="object__table-dropdown-item">Заказ консультации</button>
+                                                        <button class="object__table-dropdown-item">Бронировать</button>
+                                                        <button class="object__table-dropdown-item">Сообщить об ошибке</button>
+                                                    </div>
                                                     <button class="object__table-btn">
                                                         <img src="img/more.svg" alt="">
                                                     </button>
@@ -5920,6 +6437,36 @@
         </div>
 
 
+    </div>
+
+
+
+    <div class="gallery-modal">
+        <div class="container">
+            <div class="gallery-modal__top">
+                <button class="gallery-modal__close">
+                    <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7864 10.5629L23.7994 0.549907C24.5316 -0.182326 25.7188 -0.182326 26.451 0.549907C27.1832 1.28214 27.1832 2.46932 26.451 3.20156L16.438 13.2145L26.4513 23.2278C27.1835 23.96 27.1835 25.1472 26.4513 25.8794C25.7191 26.6117 24.5319 26.6117 23.7996 25.8794L13.7864 15.8662L3.77333 25.8792C3.0411 26.6115 1.85392 26.6115 1.12168 25.8792C0.389452 25.147 0.389452 23.9598 1.12168 23.2276L11.1347 13.2145L1.12197 3.20177C0.389735 2.46953 0.389735 1.28235 1.12197 0.550116C1.8542 -0.182117 3.04139 -0.182117 3.77362 0.550116L13.7864 10.5629Z" fill="#7786A5"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="gallery-modal__img">
+                <img src="img/gallery4.jpg" alt="">
+            </div>
+            <div class="gallery-modal__img">
+                <img src="img/gallery4.jpg" alt="">
+            </div>
+            <div class="gallery-modal__img">
+                <img src="img/gallery4.jpg" alt="">
+            </div>
+            <div class="gallery-modal__img">
+                <img src="img/gallery4.jpg" alt="">
+            </div>
+            <div class="gallery-modal__img">
+                <img src="img/gallery4.jpg" alt="">
+            </div>
+        </div>
     </div>
 
     <script>

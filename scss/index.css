@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'scroll'.
-        on line 521 of D:\work\freelance\inveroom\scss\index.scss, in `scroll'
-        from line 521 of D:\work\freelance\inveroom\scss\index.scss
+        on line 588 of D:\work\freelance\inveroom\scss\index.scss, in `scroll'
+        from line 588 of D:\work\freelance\inveroom\scss\index.scss
 
-516:             }
-517:         }
-518:     }
-519:     .tab__content {
-520:         overflow-x: auto;
-521:         @include scroll();
-522:     }
-523: }
-524: 
-525: .faq {
-526:     &__inner {
+583:             color: #2A344A;
+584:         }
+585:     }
+586:     .tab__content {
+587:         overflow-x: auto;
+588:         @include scroll();
+589:         padding-bottom: 10px;
+590:     }
+591: }
+592: 
+593: .faq {
 
 Backtrace:
-D:\work\freelance\inveroom\scss\index.scss:521:in `scroll'
-D:\work\freelance\inveroom\scss\index.scss:521
+D:\work\freelance\inveroom\scss\index.scss:588:in `scroll'
+D:\work\freelance\inveroom\scss\index.scss:588
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
@@ -77,4 +77,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'scroll'.\A         on line 521 of D:\work\freelance\inveroom\scss\index.scss, in `scroll'\A         from line 521 of D:\work\freelance\inveroom\scss\index.scss\A \A 516:             }\A 517:         }\A 518:     }\A 519:     .tab__content {\A 520:         overflow-x: auto;\A 521:         @include scroll();\A 522:     }\A 523: }\A 524: \A 525: .faq {\A 526:     &__inner {"; }
+  content: "Error: Undefined mixin 'scroll'.\A         on line 588 of D:\work\freelance\inveroom\scss\index.scss, in `scroll'\A         from line 588 of D:\work\freelance\inveroom\scss\index.scss\A \A 583:             color: #2A344A;\A 584:         }\A 585:     }\A 586:     .tab__content {\A 587:         overflow-x: auto;\A 588:         @include scroll();\A 589:         padding-bottom: 10px;\A 590:     }\A 591: }\A 592: \A 593: .faq {"; }

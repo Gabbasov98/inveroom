@@ -23,8 +23,8 @@
     font-weight: bold;
     font-size: 40px;
     line-height: 120%;
-    @media screen and (max-width: 992px) {
-        font-size: 30px;
+    @media screen and (max-width: 1152px) {
+        font-size: 32px;
     }
     @media screen and (max-width: 768px) {
         font-size: 22px;
@@ -45,14 +45,14 @@
 
 .card-bg {
     background-color: #fff;
-    padding: 30px 0;
+    padding: 80px 0;
     &:not(:first-child) {
         margin-top: 40px;
     }
-    @media screen and (max-width: 992px) {
-        padding: 16px 0;
+    @media screen and (max-width: 1152px) {
+        padding: 40px 0;
         &:not(:first-child) {
-            margin-top: 16px;
+            margin-top: 20px;
         }
     }
 }
@@ -87,9 +87,9 @@
         display: none;
     }
     &:hover {
-        background: #7786A5;
+        background: #E1EDFD;
         cursor: pointer;
-        color: #FFFFFF;
+        color: #2A344A;
     }
     &--active {
         background: #7786A5;
@@ -147,8 +147,8 @@
         height: 40px;
         background: #FFFFFF;
         border-radius: 10px;
-        padding: 0 10px;
         z-index: 4;
+        overflow: hidden;
     }
     &__prev,
     &__next {
@@ -156,8 +156,14 @@
         width: 24px;
         height: unset;
         margin-top: 0;
+        width: 49px;
+        height: 100%;
+        flex-shrink: 0;
+        &:hover {
+            background: #F1F7FF;
+        }
         img {
-            width: 100%;
+            width: 24px;
         }
         &:after {
             display: none;
@@ -165,7 +171,7 @@
     }
     &__pag {
         position: static;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 140%;
         color: #7786A5;
     }
@@ -173,6 +179,10 @@
         img {
             width: 100%;
         }
+    }
+    .swiper-pagination-current {
+        color: #2A344A;
+        font-size: 18px;
     }
     @media screen and (max-width: 768px) {
         &__nav {
@@ -190,6 +200,16 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        background: rgba(42, 52, 74, 0.25);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
     &__btn {
         position: absolute;
         top: 50%;
@@ -199,6 +219,13 @@
         height: 100px;
         background: #FFFFFF;
         border-radius: 50%;
+        z-index: 2;
+        &:hover {
+            background: #7786A5;
+            path {
+                fill: #fff;
+            }
+        }
     }
     @media screen and (max-width: 1100px) {
         height: 500px;
@@ -254,6 +281,9 @@
         flex-shrink: 0;
         letter-spacing: 0.1em;
         color: #FFFFFF;
+        &:hover {
+            background: #1A3B83;
+        }
     }
     .select {
         width: 100%;
@@ -473,6 +503,12 @@
         &--dropdown {
             cursor: pointer;
         }
+        .form-group__check {
+            label {
+                display: block;
+                background: transparent !important;
+            }
+        }
     }
     &__info {
         flex-grow: 1;
@@ -519,6 +555,7 @@
         top: -9.5px;
         outline: none !important;
         cursor: pointer;
+        transition: all .3s;
         &:before {
             content: '';
             position: absolute;
@@ -531,6 +568,9 @@
             left: 50%;
             transform: translate(-50%, -50%);
             border-radius: 50%;
+        }
+        &:hover {
+            background: #1A3B83;
         }
     }
     .ui-state-default,
@@ -598,6 +638,9 @@
                 background-color: #fff;
                 display: flex;
                 align-items: center;
+                &:hover {
+                    background: #F1F7FF;
+                }
                 &:before {
                     box-sizing: border-box;
                     content: '';
@@ -629,6 +672,10 @@
                     background-repeat: no-repeat;
                     background-position: center;
                 }
+                &:hover:before {
+                    background-color: #1A3B83;
+                    border-color: #1A3B83;
+                }
             }
             &:disabled:checked {
                 &+label:before {
@@ -646,7 +693,7 @@
                 content: '';
                 position: absolute;
                 z-index: 1;
-                border: 2px solid #E1EDFD;
+                border: 2px solid #7786A5;
                 border-radius: 5px;
                 width: 20px;
                 height: 20px;
@@ -654,6 +701,17 @@
                 top: 50%;
                 transform: translateY(-50%);
             }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        &__wrap {
+            padding-right: 40px;
+        }
+        &__arrow {
+            right: 10px;
+        }
+        &__num2 {
+            white-space: nowrap;
         }
     }
 }
@@ -701,4 +759,67 @@
     font-size: 14px !important;
     line-height: 140% !important;
     color: #2A344A !important;
+}
+
+.backdrop {
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(#000, 0.5);
+}
+
+.gallery-modal {
+    position: fixed;
+    height: calc(100vh - 50px);
+    background-color: #fff;
+    width: calc(100% - 80px);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 0 10px;
+    z-index: 10;
+    overflow-y: auto;
+    display: none;
+    @include scroll();
+    @media screen and (max-width: 768px) {
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
+    }
+    &--active {
+        display: block;
+    }
+    &__top {
+        padding: 10px 0;
+        background-color: #fff;
+        position: sticky;
+        top: 0;
+        width: 100%;
+    }
+    &__close {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 10px auto;
+        border-radius: 50%;
+        &:hover {
+            background: #F1F7FF;
+            path {
+                fill: #2A344A;
+            }
+        }
+    }
+    &__img {
+        img {
+            width: 100%;
+            display: block;
+        }
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
 }
