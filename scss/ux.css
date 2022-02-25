@@ -211,6 +211,8 @@
     background: #FFFFFF;
     border-radius: 50%;
     z-index: 2; }
+    .video-block__btn svg {
+      margin-left: 6px; }
     .video-block__btn:hover {
       background: #7786A5; }
       .video-block__btn:hover path {
@@ -584,7 +586,7 @@
     position: absolute;
     left: 0;
     top: 53px;
-    padding-top: 17px;
+    padding: 17px 7px 0 0;
     border: 2px solid #E1EDFD;
     border-top: none;
     width: 100%;
@@ -611,7 +613,7 @@
         background: #fff; }
       .form-group__dropdown-inner::-webkit-scrollbar-thumb {
         background: #E1EDFD;
-        border-radius: 20px; }
+        border-radius: 50px; }
     .form-group__dropdown-item {
       height: 44px;
       display: -webkit-box;
@@ -781,7 +783,7 @@
     background: #fff; }
   .gallery-modal::-webkit-scrollbar-thumb {
     background: #E1EDFD;
-    border-radius: 20px; }
+    border-radius: 50px; }
   .gallery-modal--active {
     display: block; }
   .gallery-modal__top {

@@ -1023,14 +1023,26 @@ $(document).ready(function() {
         }
     });
 
+    const numb = 1234567;
+    const numbFmt = numb.toLocaleString('ru-RU');
+    console.log('Отформатированное число: ' + numbFmt);
+
+    formatThosands($("#homePrice .form-group__num span"))
+
+    function formatThosands(el) {
+        let val = parseInt($(el).text())
+        val = val.toLocaleString('ru-RU')
+        $(el).text(val)
+    }
 
     $("#homePrice .polzunok").slider({
         animate: "fast",
-        min: 0,
+        min: 30000,
         max: 1000000,
         value: 158500,
         slide: function(event, ui) {
             $("#homePrice .form-group__num span").text(ui.value)
+            formatThosands($("#homePrice .form-group__num span"))
         }
     });
 

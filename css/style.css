@@ -426,6 +426,9 @@ fieldset {
   border-radius: 50%;
   z-index: 2;
 }
+.video-block__btn svg {
+  margin-left: 6px;
+}
 .video-block__btn:hover {
   background: #7786A5;
 }
@@ -870,7 +873,7 @@ fieldset {
   position: absolute;
   left: 0;
   top: 53px;
-  padding-top: 17px;
+  padding: 17px 7px 0 0;
   border: 2px solid #E1EDFD;
   border-top: none;
   width: 100%;
@@ -902,7 +905,7 @@ fieldset {
 }
 .form-group__dropdown-inner::-webkit-scrollbar-thumb {
   background: #E1EDFD;
-  border-radius: 20px;
+  border-radius: 50px;
 }
 .form-group__dropdown-item {
   height: 44px;
@@ -1104,7 +1107,7 @@ fieldset {
 }
 .gallery-modal::-webkit-scrollbar-thumb {
   background: #E1EDFD;
-  border-radius: 20px;
+  border-radius: 50px;
 }
 .gallery-modal--active {
   display: block;
@@ -1717,10 +1720,11 @@ fieldset {
 }
 .detail__desc {
   margin-top: 40px;
+  max-width: 970px;
 }
 .detail__desc-item {
   font-size: 18px;
-  color: #7786A5;
+  color: #2A344A;
   line-height: 160%;
   margin-top: 40px;
 }
@@ -2034,6 +2038,9 @@ fieldset {
 .chess__info-link:hover path {
   fill: #1A3B83;
 }
+.chess__info-link:hover svg {
+  transform: translateX(-10px);
+}
 .chess .tab__content {
   overflow-x: auto;
   padding-bottom: 10px;
@@ -2047,7 +2054,7 @@ fieldset {
 }
 .chess .tab__content::-webkit-scrollbar-thumb {
   background: #E1EDFD;
-  border-radius: 20px;
+  border-radius: 50px;
 }
 
 .faq__items {
@@ -2506,7 +2513,7 @@ fieldset {
 }
 .chart .tab__content::-webkit-scrollbar-thumb {
   background: #E1EDFD;
-  border-radius: 20px;
+  border-radius: 50px;
 }
 .chart .tab__content--active {
   position: static;
@@ -2572,6 +2579,18 @@ fieldset {
   line-height: 150%;
   color: #2A344A;
   border-bottom: 1px solid #E1EDFD;
+  position: relative;
+}
+.object__table td:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  top: -1px;
+  background: #F1F7FF;
 }
 .object__table tbody tr {
   -webkit-transition: all .3s;
@@ -2582,6 +2601,12 @@ fieldset {
   background: #F1F7FF;
 }
 .object__table tbody tr:hover .object__table-btn {
+  opacity: 1;
+}
+.object__table tbody tr:hover td {
+  border-color: #F1F7FF;
+}
+.object__table tbody tr:hover td:before {
   opacity: 1;
 }
 .object__table-row--hidden {
@@ -2694,7 +2719,7 @@ fieldset {
   margin-top: 40px;
 }
 .pay__form {
-  margin-top: 90px;
+  margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(2, calc(50% - 20px));
   gap: 40px;
@@ -2702,6 +2727,7 @@ fieldset {
 .pay__table {
   margin-top: 60px;
   overflow-x: auto;
+  padding-bottom: 5px;
 }
 .pay__table::-webkit-scrollbar {
   width: 6px;
@@ -2712,7 +2738,7 @@ fieldset {
 }
 .pay__table::-webkit-scrollbar-thumb {
   background: #E1EDFD;
-  border-radius: 20px;
+  border-radius: 50px;
 }
 .pay__table table {
   width: 100%;
@@ -2803,12 +2829,6 @@ fieldset {
 .pay__table-row--blue {
   background: #F1F7FF !important;
 }
-.pay__table-row--blue:hover {
-  background: #E1EDFD !important;
-}
-.pay__table-row--blue:hover td {
-  border-color: #E1EDFD !important;
-}
 .pay__table-row--blue:last-child td {
   border-bottom: none;
 }
@@ -2816,6 +2836,7 @@ fieldset {
   border-bottom: 4px solid #E1EDFD;
 }
 .pay__table-row--blue td:before {
+  display: none;
   height: 4px !important;
   top: -4px !important;
   background: #E1EDFD !important;
@@ -2828,6 +2849,12 @@ fieldset {
   font-weight: bold;
   font-size: 22px;
   line-height: 150%;
+}
+.pay__table-row--darkblue:hover {
+  background: #E1EDFD !important;
+}
+.pay__table-row--darkblue:hover td {
+  border-color: #E1EDFD !important;
 }
 .pay__table-open {
   display: -webkit-box;
@@ -2899,7 +2926,7 @@ fieldset {
   }
   .profit::-webkit-scrollbar-thumb {
     background: #E1EDFD;
-    border-radius: 20px;
+    border-radius: 50px;
   }
 }
 .profit__wrap {
@@ -2928,7 +2955,7 @@ fieldset {
 }
 .profit__right::-webkit-scrollbar-thumb {
   background: #E1EDFD;
-  border-radius: 20px;
+  border-radius: 50px;
 }
 @media screen and (max-width: 1200px) {
   .profit__right {
@@ -2942,10 +2969,9 @@ fieldset {
   padding: 0 !important;
 }
 .profit__input input {
-  border: 1px solid #E1EDFD;
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
-  margin: -1px 0 0 -1px;
+  border: none;
+  width: 100%;
+  height: 100%;
   font-size: 15px;
   line-height: 150%;
   color: #2A344A;
@@ -2958,8 +2984,7 @@ fieldset {
 }
 .profit__input input:focus {
   z-index: 3;
-  border-color: #7786A5;
-  outline: 1px solid #7786A5 !important;
+  outline: 2px solid #7786A5 !important;
 }
 .profit__nav {
   display: -webkit-box;
@@ -3185,9 +3210,11 @@ fieldset {
   width: 250px;
   border: 2px solid #E1EDFD;
   border-radius: 10px;
+  padding-right: 5px;
   left: 15px;
   top: 50px;
   background-color: #fff;
+  font-weight: 400;
 }
 .profit .form-group__dropdown:before, .profit .form-group__dropdown:after {
   display: none;
