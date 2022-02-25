@@ -566,6 +566,9 @@
         background-color: #fff;
         z-index: 3;
     }
+    &>.label--active {
+        z-index: 6;
+    }
     &__wrap {
         height: 100%;
         display: -webkit-box;
@@ -579,7 +582,7 @@
         line-height: 150%;
         position: relative;
         z-index: 2;
-        border: 3px solid #7786A5;
+        border: 2px solid #7786A5;
         border-radius: 10px;
         &--disable {
             pointer-events: none;
@@ -719,6 +722,8 @@
         -webkit-transition: all .3s;
         -o-transition: all .3s;
         transition: all .3s;
+        overflow: hidden;
+        background-color: #fff;
         &--active {
             opacity: 1;
             pointer-events: unset;
@@ -727,6 +732,7 @@
             max-height: 343px;
             overflow-y: auto;
             @include scroll();
+            background-color: #fff;
         }
         &-item {
             height: 44px;

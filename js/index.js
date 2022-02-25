@@ -1000,6 +1000,7 @@ $(document).ready(function() {
     $(".form-group__wrap--dropdown").click(function() {
         $(this).addClass("form-group__wrap--disable")
         $(this).siblings(".form-group__dropdown").addClass("form-group__dropdown--active")
+        $(this).siblings("label").addClass("label--active")
     })
 
     $(".form-group__dropdown input").change(function() {
@@ -1007,6 +1008,7 @@ $(document).ready(function() {
         $(this).parents(".form-group__dropdown").siblings(".form-group__wrap").find(".form-group__info").html(value)
         $(this).parents(".form-group__dropdown").removeClass("form-group__dropdown--active")
         $(this).parents(".form-group__dropdown").siblings(".form-group__wrap--dropdown").removeClass("form-group__wrap--disable")
+        $(this).parents(".form-group__dropdown").siblings("label").removeClass("label--active")
     })
 
     $(document).mouseup(function(e) {
@@ -1015,6 +1017,7 @@ $(document).ready(function() {
             if (div.hasClass("form-group__dropdown--active")) {
                 div.removeClass("form-group__dropdown--active")
                 div.siblings(".form-group__wrap").removeClass("form-group__wrap--disable")
+                div.siblings("label").removeClass("label--active")
             }
 
         }

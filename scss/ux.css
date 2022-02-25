@@ -461,6 +461,8 @@
     padding: 0 10px;
     background-color: #fff;
     z-index: 3; }
+  .form-group > .label--active {
+    z-index: 6; }
   .form-group__wrap {
     height: 100%;
     display: -webkit-box;
@@ -474,7 +476,7 @@
     line-height: 150%;
     position: relative;
     z-index: 2;
-    border: 3px solid #7786A5;
+    border: 2px solid #7786A5;
     border-radius: 10px; }
     .form-group__wrap--disable {
       pointer-events: none;
@@ -592,13 +594,16 @@
     pointer-events: none;
     -webkit-transition: all .3s;
     -o-transition: all .3s;
-    transition: all .3s; }
+    transition: all .3s;
+    overflow: hidden;
+    background-color: #fff; }
     .form-group__dropdown--active {
       opacity: 1;
       pointer-events: unset; }
     .form-group__dropdown-inner {
       max-height: 343px;
-      overflow-y: auto; }
+      overflow-y: auto;
+      background-color: #fff; }
       .form-group__dropdown-inner::-webkit-scrollbar {
         width: 6px;
         height: 6px; }
