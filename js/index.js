@@ -896,8 +896,24 @@ $(document).ready(function() {
 
 
     $(".main__price-show").click(function() {
-        $(this).parents(".main__price").toggleClass("main__price--active")
+        if ($(this).parents(".main__price").hasClass("main__price--active")) {
+            $(".main__price").removeClass("main__price--active")
+        } else {
+            $(".main__price").removeClass("main__price--active")
+            $(this).parents(".main__price").addClass("main__price--active")
+        }
+
     })
+
+    $(document).mouseup(function(e) {
+        var div = $('.main__price');
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+            if ($(div).hasClass("main__price--active")) {
+                $(div).removeClass("main__price--active")
+            }
+
+        }
+    });
 
     $(".detail__desc-btn").click(function() {
         $(this).toggleClass("detail__desc-btn--active")
@@ -1006,71 +1022,57 @@ $(document).ready(function() {
 
 
     $("#homePrice .polzunok").slider({
-        animate: "slow",
-        range: "min",
+        animate: "fast",
         min: 0,
         max: 1000000,
         value: 158500,
         slide: function(event, ui) {
-            $("#homePrice .form-group__num span").text($("#homePrice .polzunok").slider("value"));
+            $("#homePrice .form-group__num span").text(ui.value)
         }
     });
 
     $("#rentPeriod .polzunok").slider({
-        animate: "slow",
+        animate: "fast",
         range: "min",
         min: 0,
-        max: 21,
+        max: 20,
         value: 5,
         slide: function(event, ui) {
-            $("#rentPeriod .form-group__num span").text($("#rentPeriod .polzunok").slider("value"));
+            $("#rentPeriod .form-group__num span").text(ui.value)
         }
     });
 
     $("#homeSquare .polzunok").slider({
-        animate: "slow",
+        animate: "fast",
         range: "min",
-        min: 0,
+        min: 20,
         max: 1000,
         value: 202,
         slide: function(event, ui) {
-            $("#homeSquare .form-group__num span").text($("#homeSquare .polzunok").slider("value"));
+            $("#homeSquare .form-group__num span").text(ui.value)
         }
     });
 
     $("#useOption .polzunok").slider({
-        animate: "slow",
+        animate: "fast",
         range: "min",
         min: 0,
-        max: 13,
+        max: 12,
         value: 7,
         slide: function(event, ui) {
-            $("#useOption .form-group__wrap .form-group__num span").text($("#useOption .polzunok").slider("value"));
+            $("#useOption .form-group__num span").text(ui.value)
         }
     });
 
-    $("#useOption input[type='radio']").change(function() {
-        let num = parseInt($("#useOption .form-group__wrap .form-group__num2 span").text())
-        $("#useOption .polzunok").slider({
-            animate: "slow",
-            range: "min",
-            min: 0,
-            max: 13,
-            value: num,
-            slide: function(event, ui) {
-                $("#useOption .form-group__wrap .form-group__num2 span").text($("#useOption .polzunok").slider("value"));
-            }
-        });
-    })
 
     $("#finishDate .polzunok").slider({
-        animate: "slow",
+        animate: "fast",
         range: "min",
-        min: 0,
-        max: 1000,
-        value: 54,
+        min: 1,
+        max: 48,
+        value: 5,
         slide: function(event, ui) {
-            $("#finishDate .form-group__wrap .form-group__num2 span").text($("#finishDate .polzunok").slider("value"));
+            $("#finishDate .form-group__wrap .form-group__num2 span").text(ui.value)
         }
     });
 
@@ -1158,12 +1160,29 @@ $(document).ready(function() {
                     <div class="chess__info-title">Цена</div>
                     <div class="chess__info-desc">158 000 €</div>
                 </div>
+                <a href="" class="chess__info-link">
+                    <span>Перейти на страницу</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.29 6.28982C11.1963 6.38278 11.1219 6.49338 11.0711 6.61524C11.0203 6.7371 10.9942 6.8678 10.9942 6.99981C10.9942 7.13183 11.0203 7.26253 11.0711 7.38439C11.1219 7.50625 11.1963 7.61685 11.29 7.70981L14.59 10.9998L7 10.9998C6.73478 10.9998 6.48043 11.1052 6.29289 11.2927C6.10536 11.4802 6 11.7346 6 11.9998C6 12.265 6.10536 12.5194 6.29289 12.7069C6.48043 12.8945 6.73478 12.9998 7 12.9998L14.59 12.9998L11.29 16.2898C11.1017 16.4781 10.9959 16.7335 10.9959 16.9998C10.9959 17.2661 11.1017 17.5215 11.29 17.7098C11.4783 17.8981 11.7337 18.0039 12 18.0039C12.2663 18.0039 12.5217 17.8981 12.71 17.7098L17.71 12.7098C17.801 12.6147 17.8724 12.5026 17.92 12.3798C17.9729 12.2601 18.0002 12.1307 18.0002 11.9998C18.0002 11.8689 17.9729 11.7395 17.92 11.6198C17.8724 11.4971 17.801 11.3849 17.71 11.2898L12.71 6.28982C12.617 6.19609 12.5064 6.12169 12.3846 6.07092C12.2627 6.02015 12.132 5.99402 12 5.99402C11.868 5.99402 11.7373 6.02015 11.6154 6.07092C11.4936 6.12169 11.383 6.19609 11.29 6.28982Z" fill="#2551AF"/>
+                    </svg>
+                </a>
             </div>
         `
-        $(".chess__flat").removeClass("chess__flat--active")
-        $(".chess__info").remove()
-        $(this).addClass("chess__flat--active")
-        $(this).append(flatInfo)
+
+
+        if ($(this).hasClass("chess__flat--active")) {
+            $(".chess__flat").removeClass("chess__flat--active")
+            $(".chess__info").remove()
+        } else {
+            $(".chess__flat").removeClass("chess__flat--active")
+            $(".chess__info").remove()
+            $(this).addClass("chess__flat--active")
+            $(this).append(flatInfo)
+        }
+
+        if ($(this).hasClass('chess__flat--green')) {
+            $(".chess__info-link").remove()
+        }
 
         let blockPosition = $(".chess__middle-wrap").offset().top
         let elemetPosition = $(this).offset().top
@@ -1172,10 +1191,25 @@ $(document).ready(function() {
         if ((elemetPosition - blockPosition) > 370) {
             $(".chess__info").addClass("chess__info--top")
         }
+
+
+
+
+        $(document).mouseup(function(e) {
+            var div = $('.chess__info');
+            if (!div.is(e.target) && div.has(e.target).length === 0) {
+                div.remove()
+            }
+        });
     })
 
-    $(".pay__table-open").click(function() {
-        $(".pay__table-row-hidden").removeClass("pay__table-row-hidden")
+    $(".pay__table-open-btn").click(function() {
+        $(".pay__table-row-hidden").addClass("pay__table-row-show")
+        $(".pay__table-close").addClass("pay__table-close--active")
+    })
+    $(".pay__table-close").click(function() {
+        $(".pay__table-row-hidden").removeClass("pay__table-row-show")
+        $(".pay__table-close").removeClass("pay__table-close--active")
     })
 
     $(".object__table-btn").click(function() {
@@ -1193,18 +1227,32 @@ $(document).ready(function() {
     });
 
     $(".main__gallery-btn").click(function() {
-        $("body").append('<div class="backdrop"></div>')
-        $(".gallery-modal").addClass("gallery-modal--active")
-
-        $(".gallery-modal__close").click(function() {
-            $(".gallery-modal").removeClass("gallery-modal--active")
-            $(".backdrop").remove()
-        })
-        $(".backdrop").click(function() {
-            $(".gallery-modal").removeClass("gallery-modal--active")
-            $(this).remove()
-        })
+        openGallery()
     })
 
+    $(".main__gallery-item").click(function() {
+        openGallery()
+    })
+
+    $(".materials__gallery-item").click(function() {
+        openGallery()
+    })
 
 })
+
+function openGallery() {
+    $("body").append('<div class="backdrop"></div>')
+    $("body").addClass("fixed-body")
+    $(".gallery-modal").addClass("gallery-modal--active")
+
+    $(".gallery-modal__close").click(function() {
+        $(".gallery-modal").removeClass("gallery-modal--active")
+        $(".backdrop").remove()
+        $("body").removeClass("fixed-body")
+    })
+    $(".backdrop").click(function() {
+        $(".gallery-modal").removeClass("gallery-modal--active")
+        $(this).remove()
+        $("body").removeClass("fixed-body")
+    })
+}
