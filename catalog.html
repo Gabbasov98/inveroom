@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/apexcharts.css">
     <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Главная</title>
 </head>
@@ -18,7 +20,8 @@
         <header class='header'>
             <div class="header__left">
                 <a href="" class="header__logo">
-                    <img src="img/logo.svg" alt="">
+                    <img class="header__logo-dekstop" src="img/logo.svg" alt="">
+                    <img class="header__logo-mob" src="img/logo-mob.svg" alt="">
                 </a>
                 <button class="header__burger">
                     <svg width="37" height="12" viewBox="0 0 37 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,9 +30,16 @@
                 </button>
             </div>
             <div class="header__right">
+                <button class="header__edit">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.953 5.44082C21.0157 6.50349 21.0157 8.22643 19.953 9.28911L8.71177 20.5303C8.57112 20.671 8.38035 20.75 8.18144 20.75H4C3.58579 20.75 3.25 20.4142 3.25 20V15.8186C3.25 15.6196 3.32902 15.4289 3.46967 15.2882L14.7109 4.04701C15.7736 2.98433 17.4965 2.98433 18.5592 4.04701L19.953 5.44082ZM18.8923 8.22845C19.3692 7.75156 19.3692 6.97837 18.8923 6.50148L17.4985 5.10767C17.0216 4.63078 16.2484 4.63078 15.7716 5.10767L13.7199 7.15928L16.8407 10.2801L18.8923 8.22845ZM15.7801 11.3407L12.6593 8.21994L4.75 16.1292V19.25H7.87078L15.7801 11.3407Z" fill="#7786A5"/>
+                    </svg>
+                </button>
                 <button class="header__create btn">
-                    <strong>+</strong>
-                    <span>СОЗДАТЬ</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4V20" stroke="#7786A5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20 12H4" stroke="#7786A5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </button>
                 <div class="header__notification">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,16 +78,16 @@
                                 <span>Новости</span>
                             </div>
                             <div class="tab tab--hidden" data-tab-path="6">
-                                <span>Новости 2</span>
+                                <span>Новости2</span>
                             </div>
                             <div class="tab tab--hidden" data-tab-path="7">
-                                <span>Новости 3</span>
+                                <span>Новости3</span>
                             </div>
                             <div class="tab__more">Еще...</div>
                         </div>
                         <div class="tab__content tab__content--active" data-tab-path="1">
                             <div class="catalog__title display1">Каталог недвижимости</div>
-                            <div class="filter">
+                            <!-- <div class="filter">
                                 <div class="filter__form">
                                     <div class="filter__form-group">
                                         <select class="select">
@@ -116,7 +126,7 @@
                                     </div>
                                 </div>
                                 <button class="filter__btn">ИСКАТЬ</button>
-                            </div>
+                            </div> -->
                             <div class="catalog__items">
                                 <div class="catalog__item catalog-card">
                                     <div class="catalog-card__img">
@@ -124,7 +134,14 @@
                                     </div>
                                     <div class="catalog-card__right">
                                         <div class="catalog-card__top">
-                                            <div class="catalog-card__title">3-х комнатная квартира на Северном Кипре для инвестиций</div>
+                                            <a href="" class="catalog-card__title">3-х комнатная квартира на Северном Кипре для инвестиций</a>
+                                            <div class="catalog-card__dropdown">
+                                                <button class="catalog-card__dropdown-item">Поделиться</button>
+                                                <button class="catalog-card__dropdown-item">Распечатать</button>
+                                                <button class="catalog-card__dropdown-item">Заказ консультации</button>
+                                                <button class="catalog-card__dropdown-item">Бронировать</button>
+                                                <button class="catalog-card__dropdown-item">Сообщить об ошибке</button>
+                                            </div>
                                             <button class="catalog-card__more">
                                                 <img src="img/more2.svg" alt="">
                                             </button>
@@ -202,7 +219,14 @@
                                     </div>
                                     <div class="catalog-card__right">
                                         <div class="catalog-card__top">
-                                            <div class="catalog-card__title">3-х комнатная квартира на Северном Кипре для инвестиций</div>
+                                            <a href="" class="catalog-card__title">3-х комнатная квартира на Северном Кипре для инвестиций</a>
+                                            <div class="catalog-card__dropdown">
+                                                <button class="catalog-card__dropdown-item">Поделиться</button>
+                                                <button class="catalog-card__dropdown-item">Распечатать</button>
+                                                <button class="catalog-card__dropdown-item">Заказ консультации</button>
+                                                <button class="catalog-card__dropdown-item">Бронировать</button>
+                                                <button class="catalog-card__dropdown-item">Сообщить об ошибке</button>
+                                            </div>
                                             <button class="catalog-card__more">
                                                 <img src="img/more2.svg" alt="">
                                             </button>
@@ -326,12 +350,13 @@
 
     </div>
 
-    <script>
-    </script>
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/apexcharts.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 

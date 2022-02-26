@@ -893,7 +893,7 @@ $(document).ready(function() {
     }
     $(".select").niceSelect()
 
-
+    $(".form-group__dropdown-inner").mCustomScrollbar()
 
     $(".main__price-show").click(function() {
         if ($(this).parents(".main__price").hasClass("main__price--active")) {
@@ -920,6 +920,18 @@ $(document).ready(function() {
         $(this).siblings(".detail__desc-item--hidden").toggleClass("detail__desc-item--show")
     })
 
+    if (window.innerWidth < 769) {
+        $(".detail__desc-item:nth-child(2)").addClass("detail__desc-item--hidden")
+    }
+
+
+    $(window).resize(function() {
+        if (window.innerWidth < 769) {
+            $(".detail__desc-item:nth-child(2)").addClass("detail__desc-item--hidden")
+        } else {
+            $(".detail__desc-item:nth-child(2)").removeClass("detail__desc-item--hidden")
+        }
+    });
 
     $(".tab").click(function() {
         let path = $(this).attr("data-tab-path")
@@ -985,7 +997,7 @@ $(document).ready(function() {
 
     $(".object__btn").click(function() {
         $(this).toggleClass("object__btn--active")
-        $(this).parents(".object").find(".object__table-row--hidden").toggleClass("object__table-row--show")
+        $(this).parents(".tab__content").find(".object__table-row--hidden").toggleClass("object__table-row--show")
     })
 
     $(".tab__more").click(function() {
@@ -1037,6 +1049,7 @@ $(document).ready(function() {
 
     $("#homePrice .polzunok").slider({
         animate: "fast",
+        range: "min",
         min: 30000,
         max: 1000000,
         value: 158500,
@@ -1132,11 +1145,24 @@ $(document).ready(function() {
         $(".main__more-dropdown").addClass("main__more-dropdown--active")
     })
 
+    $(".catalog-card__more").click(function() {
+        $(this).siblings(".catalog-card__dropdown").addClass("catalog-card__dropdown--active")
+    })
+
     $(document).mouseup(function(e) {
         var div = $('.main__more-dropdown');
         if (!div.is(e.target) && div.has(e.target).length === 0) {
             if ($(".main__more-dropdown").hasClass("main__more-dropdown--active")) {
                 $(".main__more-dropdown").removeClass("main__more-dropdown--active")
+            }
+        }
+    });
+
+    $(document).mouseup(function(e) {
+        var div = $('.catalog-card__dropdown');
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+            if ($(".catalog-card__dropdown").hasClass("catalog-card__dropdown--active")) {
+                $(".catalog-card__dropdown").removeClass("catalog-card__dropdown--active")
             }
         }
     });
@@ -1253,7 +1279,39 @@ $(document).ready(function() {
         openGallery()
     })
 
+    $(".page-item__top").click(function() {
+        $(this).parents(".page-item").toggleClass("page-item--active")
+        $(this).parents(".page-item").find(".page-item__bottom").slideToggle(2)
+        if ($(this).parents(".page-item").hasClass("chart")) {
+            chart1()
+            if (document.getElementById("chart2")) {
+                chart2()
+            }
+            if (document.getElementById("chart3")) {
+                chart3()
+            }
+            if (document.getElementById("chart4")) {
+                chart4()
+            }
+            if (document.getElementById("chart5")) {
+                chart5()
+            }
+        }
+    })
+
+    $(".profit__group-hover").hover(onIn, onOut);
 })
+
+function onIn() {
+    let path = $(this).attr("data-hover-path")
+    $(`.profit__group-hover[data-hover-path="${path}"]`).addClass("profit__group-hover--active")
+}
+
+function onOut() {
+    let path = $(this).attr("data-hover-path")
+    $(`.profit__group-hover[data-hover-path="${path}"]`).removeClass("profit__group-hover--active")
+        // $(this).removeClass("profit__group-hover--active")
+}
 
 function openGallery() {
     $("body").append('<div class="backdrop"></div>')
