@@ -1268,8 +1268,8 @@
         margin-top: 20px;
     }
     &:hover {
-        // background: #2A344A;
-        // color: #fff;
+        background: #2A344A;
+        color: #fff;
         cursor: pointer;
         .page-item__top {
             path {
@@ -1289,7 +1289,7 @@
             }
         }
         &:hover {
-            // background: #fff;
+            background: #fff;
             color: #07122A;
             .page-item__top path {
                 fill: #2A344A;
@@ -1312,8 +1312,8 @@
         }
     }
     &__bottom {
-        // display: none;
-        // background: #fff !important;
+        display: none;
+        background: #fff !important;
     }
     &__btn {
         margin-left: 38px;

@@ -1028,6 +1028,8 @@
   .page-item:not(:first-child) {
     margin-top: 20px; }
   .page-item:hover {
+    background: #2A344A;
+    color: #fff;
     cursor: pointer; }
     .page-item:hover .page-item__top path {
       fill: #fff; }
@@ -1041,6 +1043,7 @@
         .page-item--active:not(:first-child) {
           margin-top: 20px; } }
     .page-item--active:hover {
+      background: #fff;
       color: #07122A; }
       .page-item--active:hover .page-item__top path {
         fill: #2A344A; }
@@ -1052,6 +1055,9 @@
     justify-content: space-between; }
   .page-item__top path {
     fill: #7786A5; }
+  .page-item__bottom {
+    display: none;
+    background: #fff !important; }
   .page-item__btn {
     margin-left: 38px;
     flex-shrink: 0; }
