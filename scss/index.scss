@@ -542,6 +542,7 @@
             -webkit-box-pack: justify;
             -ms-flex-pack: justify;
             justify-content: space-between;
+            position: relative;
         }
     }
     &__right {
@@ -1128,6 +1129,29 @@
         gap: 100px;
         margin-top: 40px;
     }
+    &__titles {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-grow: 1;
+        .info__title {
+            width: calc(50% + 105px);
+            @media screen and (max-width: 1240px) {
+                width: calc(50% + 80px);
+            }
+            @media screen and (max-width: 992px) {
+                width: 100%;
+            }
+            &--grey {
+                color: #7786A5;
+                width: unset;
+                flex-grow: 1;
+                @media screen and (max-width: 992px) {
+                    display: none;
+                }
+            }
+        }
+    }
     &__item {
         padding: 40px 20px;
         position: relative;
@@ -1202,8 +1226,18 @@
             }
         }
     }
-    &__group--grey {
-        color: #7786A5;
+    &__group {
+        .info__title {
+            display: none;
+        }
+        &--grey {
+            color: #7786A5;
+            @media screen and (max-width: 992px) {
+                .info__title {
+                    display: block;
+                }
+            }
+        }
     }
 }
 
@@ -1973,9 +2007,10 @@
 .catalog {
     padding: 80px 0 150px;
     .tabs {
-        margin-top: 0;
+        margin-top: -10px;
     }
     .tab {
+        font-size: 18px;
         strong {
             font-weight: 500;
             margin-left: 10px;
@@ -2209,9 +2244,7 @@
         &__inner {
             grid-template-columns: 1fr;
             gap: 70px;
-        }
-        &__title {
-            margin-bottom: 20px;
+            margin-top: 20px;
         }
         &__item {
             padding: 20px 0;
@@ -2245,6 +2278,52 @@
             display: grid;
             grid-template-columns: repeat(2, calc(50% - 15px));
             gap: 30px;
+        }
+    }
+    .chess {
+        &__info {
+            left: 50%;
+            top: 50% !important;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .infrastructure,
+    .service {
+        &__items {
+            display: grid;
+            grid-template-columns: repeat(2, calc(50% - 10px));
+            gap: 80px 20px;
+            margin-top: 40px;
+            @media screen and (max-width: 650px) {
+                grid-template-columns: 100%;
+            }
+        }
+        &__item {
+            flex-direction: column;
+            margin-top: 0;
+            justify-content: flex-start;
+            align-items: flex-start;
+            &-img {
+                -webkit-box-ordinal-group: 0;
+                -ms-flex-order: -1;
+                order: -1;
+                max-width: 100%;
+            }
+            &-content {
+                margin-top: 15px;
+                width: 100%;
+                max-width: unset;
+            }
+            &-desc {
+                margin-top: 0;
+                p {
+                    font-size: 16px;
+                }
+            }
+            &-btn {
+                font-size: 16px;
+                margin-top: 10px;
+            }
         }
     }
 }
@@ -2365,43 +2444,17 @@
         &__middle {
             padding-top: 80px;
         }
-    }
-    .infrastructure,
-    .service {
-        &__items {
-            display: grid;
-            grid-template-columns: repeat(2, calc(50% - 10px));
-            gap: 80px 20px;
-            margin-top: 40px;
-            @media screen and (max-width: 650px) {
-                grid-template-columns: 100%;
+        &__info {
+            width: 290px;
+            &-map {
+                padding: 20px;
             }
-        }
-        &__item {
-            flex-direction: column;
-            margin-top: 0;
-            justify-content: flex-start;
-            align-items: flex-start;
-            &-img {
-                -webkit-box-ordinal-group: 0;
-                -ms-flex-order: -1;
-                order: -1;
-                max-width: 100%;
+            &-item {
+                font-size: 14px;
+                padding: 10px 20px;
             }
-            &-content {
-                margin-top: 15px;
-                width: 100%;
-                max-width: unset;
-            }
-            &-desc {
-                margin-top: 0;
-                p {
-                    font-size: 16px;
-                }
-            }
-            &-btn {
-                font-size: 16px;
-                margin-top: 10px;
+            &-link {
+                padding: 20px;
             }
         }
     }

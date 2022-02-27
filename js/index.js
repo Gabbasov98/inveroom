@@ -1040,6 +1040,7 @@ $(document).ready(function() {
     console.log('Отформатированное число: ' + numbFmt);
 
     formatThosands($("#homePrice .form-group__num span"))
+    formatThosands($("#homeSquare .form-group__num span"))
 
     function formatThosands(el) {
         let val = parseInt($(el).text())
@@ -1078,6 +1079,7 @@ $(document).ready(function() {
         value: 202,
         slide: function(event, ui) {
             $("#homeSquare .form-group__num span").text(ui.value)
+            formatThosands($("#homeSquare .form-group__num span"))
         }
     });
 
@@ -1218,7 +1220,12 @@ $(document).ready(function() {
             $(".chess__flat").removeClass("chess__flat--active")
             $(".chess__info").remove()
             $(this).addClass("chess__flat--active")
-            $(this).append(flatInfo)
+            if (window.innerWidth < 992) {
+                $(this).parents(".chess__middle-wrap").append(flatInfo)
+            } else {
+                $(this).append(flatInfo)
+            }
+
         }
 
         if ($(this).hasClass('chess__flat--green')) {
@@ -1300,6 +1307,15 @@ $(document).ready(function() {
     })
 
     $(".profit__group-hover").hover(onIn, onOut);
+
+    $(".catalog-card__img-tab").click(function() {
+        let path = $(this).attr("data-tab-path")
+        let parent = $(this).parents(".catalog-card__img")
+        $(parent).find(".catalog-card__img-tab").removeClass("catalog-card__img-tab--active")
+        $(this).addClass("catalog-card__img-tab--active")
+        $(parent).find(".catalog-card__img-item").removeClass("catalog-card__img-item--active")
+        $(parent).find(`.catalog-card__img-item[data-tab-path="${path}"]`).addClass("catalog-card__img-item--active")
+    })
 })
 
 function onIn() {

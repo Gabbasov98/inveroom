@@ -167,7 +167,6 @@
                 </div>
             </section>
 
-
             <section class='detail page-item card-bg'>
                 <div class="page-item__top">
                     <div class="container">
@@ -2809,7 +2808,11 @@
                 <div class="page-item__top">
                     <div class="container">
                         <div class="page-item__top-inner">
-                            <div class="info__title display1">Плюсы</div>
+                            <div class="info__titles">
+                                <div class="info__title display1">Плюсы</div>
+                                <div class="info__title info__title--grey display1">Минусы</div>
+                            </div>
+
                             <button class="page-item__btn">
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M17.0679 20.6667L24.5345 13.0667C25.0679 12.5334 25.0679 11.7334 24.5345 11.2C24.0012 10.6667 23.2012 10.6667 22.6679 11.2L16.0012 17.7334L9.33454 11.2C8.8012 10.6667 8.0012 10.6667 7.46787 11.2C7.2012 11.4667 7.06787 11.7334 7.06787 12.1334C7.06787 12.5334 7.2012 12.8 7.46787 13.0667L14.9345 20.6667C15.6012 21.2 16.4012 21.2 17.0679 20.6667C16.9345 20.6667 16.9345 20.6667 17.0679 20.6667Z" fill="#2A344A"/>
@@ -2822,6 +2825,7 @@
                     <div class='container'>
                         <div class='info__inner'>
                             <div class="info__group">
+                                <div class="info__title display1">Плюсы</div>
                                 <div class="info__items">
                                     <div class="info__item">
                                         <div class="info__item-top">
@@ -2998,7 +3002,7 @@
                                     <div class="form-group__wrap form-group__wrap--dropdown">
                                         <span class="form-group__info">
                                             <span class="form-group__num">Каждый месяц</span>
-                                        <span class="form-group__num2">7 600 € в месяц</span>
+                                        <span class="form-group__num2">7 600 €</span>
                                         </span>
                                         <button class="form-group__arrow">
                                            <img src="img/Arrow-Bottom.svg" alt="">
@@ -3011,18 +3015,27 @@
                                                 <label for='payInterval1'>
                                                 <span class="form-group__info">
                                                     <span class="form-group__num">Каждый месяц</span>
-                                                <span class="form-group__num2">7 600 € в месяц</span>
+                                                <span class="form-group__num2">7 600 €</span>
                                                 </span>
                                             </label>
                                             </div>
                                             <div class="form-group__dropdown-item">
                                                 <input type='radio' class='radio' id='payInterval2' name='payInterval' />
                                                 <label for='payInterval2'>
-                                                <span class="form-group__info">
-                                                    <span class="form-group__num">Каждый год</span>
-                                                <span class="form-group__num2">97 600 € в месяц</span>
-                                                </span>
-                                            </label>
+                                                    <span class="form-group__info">
+                                                        <span class="form-group__num">Каждый квартал</span>
+                                                        <span class="form-group__num2">30 400 €</span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group__dropdown-item">
+                                                <input type='radio' class='radio' id='payInterval3' name='payInterval' />
+                                                <label for='payInterval3'>
+                                                    <span class="form-group__info">
+                                                        <span class="form-group__num">Каждый год</span>
+                                                        <span class="form-group__num2">91 200 €</span>
+                                                    </span>
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
@@ -3153,20 +3166,29 @@
                                             <div class="form-group__dropdown-item">
                                                 <input checked type='radio' class='radio' id='useVariant1' name='useVariant' />
                                                 <label for='useVariant1'>
-                                            <span class="form-group__info">
-                                                <span class="form-group__num">Сдавать в аренду с гарантией </span>
-                                        <span class="form-group__num2"><span>8</span> % в год</span>
-                                        </span>
-                                        </label>
+                                                    <span class="form-group__info">
+                                                        <span class="form-group__num">Сдавать в аренду с гарантией </span>
+                                                        <span class="form-group__num2"><span>8</span> % в год</span>
+                                                    </span>
+                                                </label>
                                             </div>
                                             <div class="form-group__dropdown-item">
                                                 <input type='radio' class='radio' id='useVariant2' name='useVariant' />
                                                 <label for='useVariant2'>
-                                            <span class="form-group__info">
-                                                <span class="form-group__num">Сдавать в аренду с гарантией </span>
-                                        <span class="form-group__num2"><span>9</span> % в год</span>
-                                        </span>
-                                        </label>
+                                                    <span class="form-group__info">
+                                                        <span class="form-group__num">Сдавать в аренду самостоятельно</span>
+                                                        <span class="form-group__num2"><span>30</span> % в год</span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group__dropdown-item">
+                                                <input type='radio' class='radio' id='useVariant3' name='useVariant' />
+                                                <label for='useVariant3'>
+                                                    <span class="form-group__info">
+                                                        <span class="form-group__num">Жить самому</span>
+                                                        <span class="form-group__num2"><span>0</span> % в год</span>
+                                                    </span>
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
@@ -3196,11 +3218,20 @@
                                             <div class="form-group__dropdown-item">
                                                 <input type='radio' class='radio' id='buyWay2' name='buyWay' />
                                                 <label for='buyWay2'>
-                                                <span class="form-group__info">
-                                                    <span class="form-group__num">За поклон</span>
-                                                <span class="form-group__num2">-100 %</span>
-                                                </span>
-                                            </label>
+                                                    <span class="form-group__info">
+                                                        <span class="form-group__num">В ипотеку от банка</span>
+                                                        <span class="form-group__num2">2 — 4 %</span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group__dropdown-item">
+                                                <input type='radio' class='radio' id='buyWay3' name='buyWay' />
+                                                <label for='buyWay3'>
+                                                    <span class="form-group__info">
+                                                        <span class="form-group__num">В аренду с правом выкупа</span>
+                                                        <span class="form-group__num2">5 %</span>
+                                                    </span>
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
