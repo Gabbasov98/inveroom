@@ -138,6 +138,7 @@
             &:hover {}
         }
         &-hidden {
+            z-index: 3;
             position: absolute;
             top: 100%;
             background: #FFFFFF;
@@ -848,7 +849,6 @@
 }
 
 .plan {
-    margin-top: 0 !important;
     &__slider {
         margin-top: 75px;
     }
@@ -1220,6 +1220,7 @@
         width: 100%;
         pointer-events: none;
         overflow-x: auto;
+        overflow-y: hidden;
         @include scroll();
         padding-bottom: 10px;
         &--active {
@@ -1267,7 +1268,7 @@
         @include scroll();
         table {
             width: 100%;
-            min-width: 1000px;
+            min-width: 920px;
             text-align: left;
             border-spacing: 0;
         }
