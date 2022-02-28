@@ -895,6 +895,7 @@ $(document).ready(function() {
 
     $(".form-group__dropdown-inner").mCustomScrollbar()
     $(".custom-select__dropdown-inner").mCustomScrollbar()
+    $(".price-select__dropdown-inner").mCustomScrollbar()
 
     $(".main__price-show").click(function() {
         if ($(this).parents(".main__price").hasClass("main__price--active")) {
@@ -1323,19 +1324,19 @@ $(document).ready(function() {
         $(parent).find(`.catalog-card__img-item[data-tab-path="${path}"]`).addClass("catalog-card__img-item--active")
     })
 
-
-    document.querySelectorAll(".custom-select").forEach(el => {
-        el.onclick = function() {
-            el.classList.toggle("custom-select--active")
-        }
-
-        document.addEventListener('click', (e) => {
-            const withinBoundaries = e.composedPath().includes(el);
-            if (!withinBoundaries) {
-                el.classList.remove("custom-select--active")
-            }
-        });
+    $(".custom-select").click(function() {
+        $(this).toggleClass("custom-select--active")
     })
+
+    $(document).mouseup(function(e) {
+        var div = $('.custom-select__dropdown');
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+            if (div.parents(".custom-select").hasClass("custom-select--active")) {
+                div.parents(".custom-select").removeClass("custom-select--active")
+            }
+        }
+    });
+
 
     function unselectOption(dropdown) {
         for (let elem of dropdown.getElementsByTagName('div')) {
@@ -1345,6 +1346,7 @@ $(document).ready(function() {
 
     document.querySelectorAll(".custom-select__dropdown-item").forEach(el => {
         el.onclick = function() {
+            console.log(true)
             unselectOption(el.closest(".custom-select__dropdown"))
             el.classList.add("custom-select__dropdown-item--selected")
             $(el).parents(".custom-select").find("input").attr("value", $(el).children("span").text())
@@ -1356,9 +1358,122 @@ $(document).ready(function() {
         }
     })
 
-    $(".custom-select input").change(function() {
-
+    $(".price-select__price ").click(function() {
+        $(this).parents(".price-select").addClass("price-select--active")
+        $(".price-select__dropdown-item").removeClass("price-select__dropdown-item--disabled")
     })
+
+    $(document).mouseup(function(e) {
+        var div = $('.price-select__dropdown');
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+            if (div.parents(".price-select").hasClass("price-select--active")) {
+                div.parents(".price-select").removeClass("price-select--active")
+            }
+        }
+    });
+
+    $(".price-select__from .price-select__dropdown-item").click(function() {
+        $(".price-select__from .price-select__dropdown-item").removeClass("price-select__dropdown-item--selected")
+        $(this).addClass("price-select__dropdown-item--selected")
+        $(this).parents(".price-select").find("label").addClass("label--active")
+        let value = $(this).children("span").html()
+        $(this).parents(".price-select").find(".price-select__price-from").html(value)
+
+        let dataPrice = parseInt($(this).attr("data-price"))
+        console.log(dataPrice)
+
+        $(".price-select__to .price-select__dropdown-item").each(function(index, el) {
+            let dataPrice2 = parseInt($(el).attr("data-price"));
+            if (dataPrice2 < dataPrice) {
+                $(el).addClass("price-select__dropdown-item--disabled")
+                console.log("few")
+            } else {
+                $(el).removeClass("price-select__dropdown-item--disabled")
+            }
+        });
+
+        $(".price-select").addClass("price-select--selected")
+        if ($(".price-select__to .price-select__dropdown-item").hasClass("price-select__dropdown-item--selected")) {
+            $(".price-select").removeClass("price-select--active")
+        }
+    })
+
+    $(".price-select__to .price-select__dropdown-item").click(function() {
+        $(".price-select__to .price-select__dropdown-item").removeClass("price-select__dropdown-item--selected")
+        $(this).addClass("price-select__dropdown-item--selected")
+        $(this).parents(".price-select").find("label").addClass("label--active")
+        let value = $(this).children("span").html()
+        $(this).parents(".price-select").find(".price-select__price-to").html(value)
+
+        let dataPrice = parseInt($(this).attr("data-price"))
+        console.log(dataPrice)
+
+        $(".price-select__from .price-select__dropdown-item").each(function(index, el) {
+            let dataPrice2 = parseInt($(el).attr("data-price"));
+            if (dataPrice2 > dataPrice) {
+                $(el).addClass("price-select__dropdown-item--disabled")
+                console.log("few")
+            } else {
+                $(el).removeClass("price-select__dropdown-item--disabled")
+            }
+        });
+        $(".price-select").addClass("price-select--selected")
+        if ($(".price-select__from .price-select__dropdown-item").hasClass("price-select__dropdown-item--selected")) {
+            $(".price-select").removeClass("price-select--active")
+        }
+    })
+
+    $(".room-select__rooms").click(function() {
+        $(this).parents(".room-select").addClass("room-select--active")
+    })
+
+    $(document).mouseup(function(e) {
+        var div = $('.room-select__dropdown');
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+            if (div.parents(".room-select").hasClass("room-select--active")) {
+                div.parents(".room-select").removeClass("room-select--active")
+            }
+        }
+    });
+
+    $(".room-select__dropdown input").change(function() {
+        if (isRoomSelected()) {
+            $(".room-select > label").addClass("label--active")
+        } else {
+            $(".room-select > label").removeClass("label--active")
+        }
+    })
+
+
+    if (isRoomSelected()) {
+        $(".room-select > label").addClass("label--active")
+    } else {
+        $(".room-select > label").removeClass("label--active")
+    }
+
+    function isRoomSelected() {
+        let inputs = []
+        $(".room-select__dropdown input").each(function(index, el) {
+            let input = $(el).prop('checked')
+            inputs.push(input)
+
+            attr = $(el).attr("data-room")
+            if (input) {
+                $(`.room-select__room[data-room='${attr}']`).addClass("room-select__room--active")
+            } else {
+                $(`.room-select__room[data-room='${attr}']`).removeClass("room-select__room--active")
+            }
+        });
+
+        if (inputs.includes(true)) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+
+
 })
 
 function onIn() {

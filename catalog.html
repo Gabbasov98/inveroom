@@ -89,8 +89,7 @@
                             <div class="catalog__title display1">Каталог недвижимости</div>
                             <div class="filter">
                                 <div class="filter__form">
-                                    <div class="filter__form-group">
-
+                                    <div class="filter__form-group filter__form-group--160">
                                         <div class="custom-select">
                                             <label>СТРАНА / ГОРОД</label>
                                             <input disabled type="text">
@@ -218,196 +217,240 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="filter__form-group">
-                                        <div class="custom-select">
+                                    <div class="filter__form-group filter__form-group--180">
+                                        <div class="price-select">
                                             <label>ЦЕНА ОТ — ДО</label>
-                                            <input disabled type="text">
-                                            <div class="custom-select__dropdown">
-                                                <div class="custom-select__dropdown-inner">
-                                                    <div class="custom-select__dropdown-item">
-                                                        <span>Австрия</span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
-                                                        </svg>
+                                            <div class="price-select__price">
+                                                <span class="price-select__price-from"></span>
+                                                <span class="price-select__price-split"> - </span>
+                                                <span class="price-select__price-to"></span>
+                                            </div>
+                                            <div class="price-select__dropdown">
+                                                <div class="price-select__dropdown-inner">
+                                                    <div class="price-select__dropdown-wrap">
+                                                        <div class="price-select__from">
+                                                            <div class="price-select__dropdown-item" data-price="40000">
+                                                                <span>40 000 €</span>
+                                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
+                                                            </svg>
+                                                            </div>
+                                                            <div class="price-select__dropdown-item" data-price="80000">
+                                                                <span>80 000 €</span>
+                                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
+                                                            </svg>
+                                                            </div>
+                                                            <div class="price-select__dropdown-item" data-price="100000">
+                                                                <span>100 000 €</span>
+                                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
+                                                            </svg>
+                                                            </div>
+                                                            <div class="price-select__dropdown-item" data-price="200000">
+                                                                <span>200 000 €</span>
+                                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
+                                                            </svg>
+                                                            </div>
+                                                            <div class="price-select__dropdown-item" data-price="300000">
+                                                                <span>300 000 €</span>
+                                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
+                                                            </svg>
+                                                            </div>
+                                                            <div class="price-select__dropdown-item" data-price="400000">
+                                                                <span>400 000 €</span>
+                                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
+                                                            </svg>
+                                                            </div>
+                                                            <div class="price-select__dropdown-item" data-price="500000">
+                                                                <span>500 000 €</span>
+                                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
+                                                            </svg>
+                                                            </div>
+                                                            <div class="price-select__dropdown-item" data-price="600000">
+                                                                <span>600 000 €</span>
+                                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
+                                                            </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="price-select__to">
+                                                            <div class="price-select__dropdown-item" data-price="40000">
+                                                                <span>40 000 €</span>
+                                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
+                                                            </svg>
+                                                            </div>
+                                                            <div class="price-select__dropdown-item" data-price="80000">
+                                                                <span>80 000 €</span>
+                                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
+                                                            </svg>
+                                                            </div>
+                                                            <div class="price-select__dropdown-item" data-price="100000">
+                                                                <span>100 000 €</span>
+                                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
+                                                            </svg>
+                                                            </div>
+                                                            <div class="price-select__dropdown-item" data-price="200000">
+                                                                <span>200 000 €</span>
+                                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
+                                                            </svg>
+                                                            </div>
+                                                            <div class="price-select__dropdown-item" data-price="300000">
+                                                                <span>300 000 €</span>
+                                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
+                                                            </svg>
+                                                            </div>
+                                                            <div class="price-select__dropdown-item" data-price="400000">
+                                                                <span>400 000 €</span>
+                                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
+                                                            </svg>
+                                                            </div>
+                                                            <div class="price-select__dropdown-item" data-price="500000">
+                                                                <span>500 000 €</span>
+                                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
+                                                            </svg>
+                                                            </div>
+                                                            <div class="price-select__dropdown-item" data-price="600000">
+                                                                <span>600 000 €</span>
+                                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
+                                                            </svg>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="custom-select__dropdown-item">
-                                                        <span>Австралия</span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
-                                                        </svg>
+
+                                                </div>
+                                                <div class="main__price-currency">
+                                                    <div class="main__price-currency-item main__price-currency-item--active">€</div>
+                                                    <div class="main__price-currency-item">$</div>
+                                                    <div class="main__price-currency-item">£</div>
+                                                    <div class="main__price-currency-item">₽</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__form-group">
+                                        <div class="room-select">
+                                            <label>КОМНАТ</label>
+                                            <div class="room-select__rooms">
+                                                <span class="room-select__room" data-room="1">1,</span>
+                                                <span class="room-select__room" data-room="2">2,</span>
+                                                <span class="room-select__room" data-room="3">3,</span>
+                                                <span class="room-select__room" data-room="4">4,</span>
+                                                <span class="room-select__room" data-room="5">5,</span>
+                                                <span class="room-select__room" data-room="6">6,</span>
+                                                <span class="room-select__room" data-room="7">7,</span>
+                                                <span class="room-select__room" data-room="8">8</span>
+                                            </div>
+                                            <div class="room-select__dropdown">
+                                                <div class="room-select__dropdown-inner">
+                                                    <div class="room-select__dropdown-item form-group__check">
+                                                        <input type="checkbox" class="checkbox" id="room1" data-room="1">
+                                                        <label for="room1">1</label>
                                                     </div>
-                                                    <div class="custom-select__dropdown-item">
-                                                        <span>Германия</span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
-                                                        </svg>
+                                                    <div class="room-select__dropdown-item form-group__check">
+                                                        <input type="checkbox" class="checkbox" id="room2" data-room="2">
+                                                        <label for="room2">2</label>
                                                     </div>
-                                                    <div class="custom-select__dropdown-item">
-                                                        <span>Кипр</span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
-                                                        </svg>
+                                                    <div class="room-select__dropdown-item form-group__check">
+                                                        <input type="checkbox" class="checkbox" id="room3" data-room="3">
+                                                        <label for="room3">3</label>
                                                     </div>
-                                                    <div class="custom-select__dropdown-item">
-                                                        <span>Пафос</span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
-                                                        </svg>
+                                                    <div class="room-select__dropdown-item form-group__check">
+                                                        <input type="checkbox" class="checkbox" id="room4" data-room="4">
+                                                        <label for="room4">4</label>
                                                     </div>
-                                                    <div class="custom-select__dropdown-item">
-                                                        <span>Лимасол</span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
-                                                        </svg>
+                                                    <div class="room-select__dropdown-item form-group__check">
+                                                        <input type="checkbox" class="checkbox" id="room5" data-room="5">
+                                                        <label for="room5">5</label>
                                                     </div>
-                                                    <div class="custom-select__dropdown-item">
-                                                        <span>Фамагуста</span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
-                                                        </svg>
+                                                    <div class="room-select__dropdown-item form-group__check">
+                                                        <input type="checkbox" class="checkbox" id="room6" data-room="6">
+                                                        <label for="room6">6</label>
                                                     </div>
-                                                    <div class="custom-select__dropdown-item">
-                                                        <span>Италия</span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
-                                                        </svg>
+                                                    <div class="room-select__dropdown-item form-group__check">
+                                                        <input type="checkbox" class="checkbox" id="room7" data-room="7">
+                                                        <label for="room7">7</label>
                                                     </div>
-                                                    <div class="custom-select__dropdown-item">
-                                                        <span>Option 9</span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="custom-select__dropdown-item">
-                                                        <span>Option 10</span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
-                                                        </svg>
+                                                    <div class="room-select__dropdown-item form-group__check">
+                                                        <input type="checkbox" class="checkbox" id="room8" data-room="8">
+                                                        <label for="room8">8</label>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="filter__form-group">
-                                        <div class="custom-select">
-                                            <label>КАТЕГОРИЯ</label>
+                                        <div class="custom-select custom-select--active">
+                                            <label>ПЛОЩАДЬ</label>
                                             <input disabled type="text">
                                             <div class="custom-select__dropdown">
                                                 <div class="custom-select__dropdown-inner">
+                                                    <div class="filter__area-radios">
+                                                        <div class="custom-radio">
+                                                            <input type='radio' class='radio' id='area1' name='area' />
+                                                            <label for='area1'>Общая</label>
+                                                        </div>
+                                                        <div class="custom-radio">
+                                                            <input type='radio' class='radio' id='area2' name='area' />
+                                                            <label for='area2'>Жилая</label>
+                                                        </div>
+                                                    </div>
                                                     <div class="custom-select__dropdown-item">
-                                                        <span>Австрия</span>
+                                                        <span>от 20 m2</span>
                                                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
                                                         </svg>
                                                     </div>
                                                     <div class="custom-select__dropdown-item">
-                                                        <span>Австралия</span>
+                                                        <span>от 30 m2</span>
                                                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
                                                         </svg>
                                                     </div>
                                                     <div class="custom-select__dropdown-item">
-                                                        <span>Германия</span>
+                                                        <span>от 40 m2</span>
                                                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
                                                         </svg>
                                                     </div>
                                                     <div class="custom-select__dropdown-item">
-                                                        <span>Кипр</span>
+                                                        <span>от 50 m2</span>
                                                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
                                                         </svg>
                                                     </div>
                                                     <div class="custom-select__dropdown-item">
-                                                        <span>Пафос</span>
+                                                        <span>60 m2</span>
                                                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
                                                         </svg>
                                                     </div>
                                                     <div class="custom-select__dropdown-item">
-                                                        <span>Лимасол</span>
+                                                        <span>70 m2</span>
                                                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
                                                         </svg>
                                                     </div>
                                                     <div class="custom-select__dropdown-item">
-                                                        <span>Фамагуста</span>
+                                                        <span>80 m2</span>
                                                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
                                                         </svg>
                                                     </div>
                                                     <div class="custom-select__dropdown-item">
-                                                        <span>Италия</span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="custom-select__dropdown-item">
-                                                        <span>Option 9</span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="custom-select__dropdown-item">
-                                                        <span>Option 10</span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="filter__form-group">
-                                        <div class="custom-select">
-                                            <label>ЕЩЕ</label>
-                                            <input disabled type="text">
-                                            <div class="custom-select__dropdown">
-                                                <div class="custom-select__dropdown-inner">
-                                                    <div class="custom-select__dropdown-item">
-                                                        <span>Австрия</span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="custom-select__dropdown-item">
-                                                        <span>Австралия</span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="custom-select__dropdown-item">
-                                                        <span>Германия</span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="custom-select__dropdown-item">
-                                                        <span>Кипр</span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="custom-select__dropdown-item">
-                                                        <span>Пафос</span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="custom-select__dropdown-item">
-                                                        <span>Лимасол</span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="custom-select__dropdown-item">
-                                                        <span>Фамагуста</span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="custom-select__dropdown-item">
-                                                        <span>Италия</span>
+                                                        <span>90 m2</span>
                                                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M3.82918 8.73635C3.73372 8.83237 3.60349 8.88594 3.46821 8.88594C3.33292 8.88594 3.20269 8.83237 3.10723 8.73635L0.224383 5.85304C-0.0747942 5.55386 -0.0747942 5.06873 0.224383 4.77011L0.585358 4.40905C0.884628 4.10987 1.3692 4.10987 1.66838 4.40905L3.46821 6.20897L8.3316 1.34548C8.63087 1.0463 9.11591 1.0463 9.41462 1.34548L9.7756 1.70655C10.0748 2.00572 10.0748 2.49076 9.7756 2.78947L3.82918 8.73635Z" fill="#6FB08D"/>
                                                         </svg>
