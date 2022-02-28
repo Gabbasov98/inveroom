@@ -1324,12 +1324,13 @@ $(document).ready(function() {
         $(parent).find(`.catalog-card__img-item[data-tab-path="${path}"]`).addClass("catalog-card__img-item--active")
     })
 
-    $(".custom-select").click(function() {
-        $(this).toggleClass("custom-select--active")
+    $(".custom-select__target").click(function() {
+        $(this).parents(".custom-select").toggleClass("custom-select--active")
+
     })
 
     $(document).mouseup(function(e) {
-        var div = $('.custom-select__dropdown');
+        var div = $('.custom-select__dropdown-inner');
         if (!div.is(e.target) && div.has(e.target).length === 0) {
             if (div.parents(".custom-select").hasClass("custom-select--active")) {
                 div.parents(".custom-select").removeClass("custom-select--active")
@@ -1339,32 +1340,35 @@ $(document).ready(function() {
 
 
     function unselectOption(dropdown) {
-        for (let elem of dropdown.getElementsByTagName('div')) {
-            elem.classList.remove("custom-select__dropdown-item--selected")
+        console.log($(dropdown))
+
+        if ($(dropdown).hasClass("custom-select__dropdown-item--country")) {
+            $(".custom-select__dropdown-item--country").removeClass("custom-select__dropdown-item--selected")
+            $(dropdown).addClass("custom-select__dropdown-item--selected")
+            $(dropdown).next().slideToggle()
+        } else {
+            $(dropdown).parents(".custom-select__dropdown").find(".custom-select__dropdown-item").removeClass("custom-select__dropdown-item--selected")
+            $(dropdown).parents(".custom-select").removeClass("custom-select--active")
         }
     }
 
-    document.querySelectorAll(".custom-select__dropdown-item").forEach(el => {
-        el.onclick = function() {
-            console.log(true)
-            unselectOption(el.closest(".custom-select__dropdown"))
-            el.classList.add("custom-select__dropdown-item--selected")
-            $(el).parents(".custom-select").find("input").attr("value", $(el).children("span").text())
+    $(".custom-select__dropdown-item").click(function() {
+        unselectOption($(this))
+        $(this).addClass("custom-select__dropdown-item--selected")
+        $(this).parents(".custom-select").find("input").attr("value", $(this).children("span").text())
 
-            if (!$(el).parents(".custom-select").find("label").hasClass("label--active")) {
-                $(el).parents(".custom-select").find("label").addClass("label--active")
-            }
-
+        if (!$(this).parents(".custom-select").children("label").hasClass("label--active")) {
+            $(this).parents(".custom-select").children("label").addClass("label--active")
         }
     })
 
     $(".price-select__price ").click(function() {
-        $(this).parents(".price-select").addClass("price-select--active")
+        $(this).parents(".price-select").toggleClass("price-select--active")
         $(".price-select__dropdown-item").removeClass("price-select__dropdown-item--disabled")
     })
 
     $(document).mouseup(function(e) {
-        var div = $('.price-select__dropdown');
+        var div = $('.price-select__dropdown-inner');
         if (!div.is(e.target) && div.has(e.target).length === 0) {
             if (div.parents(".price-select").hasClass("price-select--active")) {
                 div.parents(".price-select").removeClass("price-select--active")
@@ -1375,7 +1379,7 @@ $(document).ready(function() {
     $(".price-select__from .price-select__dropdown-item").click(function() {
         $(".price-select__from .price-select__dropdown-item").removeClass("price-select__dropdown-item--selected")
         $(this).addClass("price-select__dropdown-item--selected")
-        $(this).parents(".price-select").find("label").addClass("label--active")
+        $(this).parents(".price-select").children("label").addClass("label--active")
         let value = $(this).children("span").html()
         $(this).parents(".price-select").find(".price-select__price-from").html(value)
 
@@ -1424,11 +1428,11 @@ $(document).ready(function() {
     })
 
     $(".room-select__rooms").click(function() {
-        $(this).parents(".room-select").addClass("room-select--active")
+        $(this).parents(".room-select").toggleClass("room-select--active")
     })
 
     $(document).mouseup(function(e) {
-        var div = $('.room-select__dropdown');
+        var div = $('.room-select__dropdown-inner');
         if (!div.is(e.target) && div.has(e.target).length === 0) {
             if (div.parents(".room-select").hasClass("room-select--active")) {
                 div.parents(".room-select").removeClass("room-select--active")

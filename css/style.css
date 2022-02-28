@@ -577,9 +577,9 @@ fieldset {
   top: 10px;
   transform: translateY(0);
 }
-.filter__form-group .custom-select .label--active + input,
-.filter__form-group .price-select .label--active + input,
-.filter__form-group .room-select .label--active + input {
+.filter__form-group .custom-select .label--active + .custom-select__target input,
+.filter__form-group .price-select .label--active + .custom-select__target input,
+.filter__form-group .room-select .label--active + .custom-select__target input {
   padding-top: 15px;
 }
 .filter__form-group .custom-select__rooms, .filter__form-group .custom-select__price,
@@ -594,7 +594,8 @@ fieldset {
   z-index: 3;
   position: relative;
   background-color: #fff;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 14px;
   line-height: 150%;
   color: #2A344A;
   font-family: 'Roboto', sans-serif;
@@ -813,7 +814,6 @@ fieldset {
   padding-top: 10px;
   margin-top: -5px;
   opacity: 0;
-  z-index: 2;
   cursor: pointer;
 }
 .catalog-card__img-tabs:hover {
@@ -1677,13 +1677,13 @@ fieldset {
 .room-select {
   position: relative;
 }
-.custom-select__rooms, .custom-select__price, .custom-select > input,
+.custom-select__rooms, .custom-select__price, .custom-select__target input,
 .price-select__rooms,
 .price-select__price,
-.price-select > input,
+.price-select__target input,
 .room-select__rooms,
 .room-select__price,
-.room-select > input {
+.room-select__target input {
   min-height: 60px;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6663 5.66602L7.99967 10.3327L3.33301 5.66602' stroke='%237786A5' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -1699,14 +1699,25 @@ fieldset {
   transition: all .3s;
   border: 2px solid #7786A5;
 }
-.custom-select__rooms::placeholder, .custom-select__price::placeholder, .custom-select > input::placeholder,
+.custom-select__rooms::placeholder, .custom-select__price::placeholder, .custom-select__target input::placeholder,
 .price-select__rooms::placeholder,
 .price-select__price::placeholder,
-.price-select > input::placeholder,
+.price-select__target input::placeholder,
 .room-select__rooms::placeholder,
 .room-select__price::placeholder,
-.room-select > input::placeholder {
+.room-select__target input::placeholder {
   color: #74869C;
+}
+.custom-select--active .custom-select__target,
+.custom-select--active .price-select__price,
+.custom-select--active .room-select__rooms,
+.price-select--active .custom-select__target,
+.price-select--active .price-select__price,
+.price-select--active .room-select__rooms,
+.room-select--active .custom-select__target,
+.room-select--active .price-select__price,
+.room-select--active .room-select__rooms {
+  pointer-events: none;
 }
 .custom-select--active input,
 .price-select--active input,
@@ -1832,6 +1843,16 @@ fieldset {
 .price-select__dropdown-item--selected svg,
 .room-select__dropdown-item--selected svg {
   display: unset;
+}
+.custom-select__dropdown-item--country,
+.price-select__dropdown-item--country,
+.room-select__dropdown-item--country {
+  color: #2551AF !important;
+}
+.custom-select__dropdown-cities,
+.price-select__dropdown-cities,
+.room-select__dropdown-cities {
+  display: none;
 }
 @media screen and (max-width: 1152px) {
   .custom-select__dropdown,

@@ -436,7 +436,7 @@
                     font-size: 8px;
                     top: 10px;
                     transform: translateY(0);
-                    &+input {
+                    &+.custom-select__target input {
                         padding-top: 15px;
                     }
                 }
@@ -447,7 +447,8 @@
                     z-index: 3;
                     position: relative;
                     background-color: #fff;
-                    font-size: 16px;
+                    font-weight: 600;
+                    font-size: 14px;
                     line-height: 150%;
                     color: #2A344A;
                     font-family: 'Roboto', sans-serif;
@@ -656,7 +657,7 @@
             padding-top: 10px;
             margin-top: -5px;
             opacity: 0;
-            z-index: 2;
+            // z-index: 2;
             cursor: pointer;
             &:hover {
                 opacity: 1;
@@ -1516,7 +1517,7 @@
     position: relative;
     &__rooms,
     &__price,
-    &>input {
+    &__target input {
         min-height: 60px;
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6663 5.66602L7.99967 10.3327L3.33301 5.66602' stroke='%237786A5' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
@@ -1536,6 +1537,11 @@
         }
     }
     &--active {
+        .custom-select__target,
+        .price-select__price,
+        .room-select__rooms {
+            pointer-events: none;
+        }
         input {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.33317 10.3335L7.99984 5.66683L12.6665 10.3335' stroke='%231B2C3E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
             border: 2px solid #2551AF;
@@ -1593,6 +1599,12 @@
                     display: unset;
                 }
             }
+            &--country {
+                color: #2551AF !important;
+            }
+        }
+        &-cities {
+            display: none;
         }
     }
     @media screen and (max-width: 1152px) {
