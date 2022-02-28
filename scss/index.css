@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'scroll'.
-        on line 764 of D:\work\freelance\inveroom\scss\index.scss, in `scroll'
-        from line 764 of D:\work\freelance\inveroom\scss\index.scss
+        on line 775 of D:\work\freelance\inveroom\scss\index.scss, in `scroll'
+        from line 775 of D:\work\freelance\inveroom\scss\index.scss
 
-759:             }
-760:         }
-761:     }
-762:     .tab__content {
-763:         overflow-x: auto;
-764:         @include scroll();
-765:         padding-bottom: 10px;
-766:     }
-767: }
-768: 
-769: .faq {
+770:             background-color: #fff;
+771:         }
+772:     }
+773:     .tab__content {
+774:         overflow-x: auto;
+775:         @include scroll();
+776:         padding-bottom: 10px;
+777:         // border-top: 1px solid transparent;
+778:         // transition: all .3s;
+779:         position: relative;
+780:         &:before {
 
 Backtrace:
-D:\work\freelance\inveroom\scss\index.scss:764:in `scroll'
-D:\work\freelance\inveroom\scss\index.scss:764
+D:\work\freelance\inveroom\scss\index.scss:775:in `scroll'
+D:\work\freelance\inveroom\scss\index.scss:775
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
@@ -77,4 +77,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'scroll'.\A         on line 764 of D:\work\freelance\inveroom\scss\index.scss, in `scroll'\A         from line 764 of D:\work\freelance\inveroom\scss\index.scss\A \A 759:             }\A 760:         }\A 761:     }\A 762:     .tab__content {\A 763:         overflow-x: auto;\A 764:         @include scroll();\A 765:         padding-bottom: 10px;\A 766:     }\A 767: }\A 768: \A 769: .faq {"; }
+  content: "Error: Undefined mixin 'scroll'.\A         on line 775 of D:\work\freelance\inveroom\scss\index.scss, in `scroll'\A         from line 775 of D:\work\freelance\inveroom\scss\index.scss\A \A 770:             background-color: #fff;\A 771:         }\A 772:     }\A 773:     .tab__content {\A 774:         overflow-x: auto;\A 775:         @include scroll();\A 776:         padding-bottom: 10px;\A 777:         // border-top: 1px solid transparent;\A 778:         // transition: all .3s;\A 779:         position: relative;\A 780:         &:before {"; }

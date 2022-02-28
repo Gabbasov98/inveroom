@@ -894,6 +894,7 @@ $(document).ready(function() {
     $(".select").niceSelect()
 
     $(".form-group__dropdown-inner").mCustomScrollbar()
+    $(".custom-select__dropdown-inner").mCustomScrollbar()
 
     $(".main__price-show").click(function() {
         if ($(this).parents(".main__price").hasClass("main__price--active")) {
@@ -1212,6 +1213,8 @@ $(document).ready(function() {
             </div>
         `
 
+        let blockPosition = $(".chess__middle-wrap").offset().top
+        let elemetPosition = $(this).offset().top
 
         if ($(this).hasClass("chess__flat--active")) {
             $(".chess__flat").removeClass("chess__flat--active")
@@ -1222,8 +1225,15 @@ $(document).ready(function() {
             $(this).addClass("chess__flat--active")
             if (window.innerWidth < 992) {
                 $(this).parents(".chess__middle-wrap").append(flatInfo)
+                $(".chess__info").css("top", `${elemetPosition - blockPosition + 40}px`)
+                if ((elemetPosition - blockPosition) > 420) {
+                    $(".chess__info").addClass("chess__info--top")
+                }
             } else {
                 $(this).append(flatInfo)
+                if ((elemetPosition - blockPosition) > 450) {
+                    $(".chess__info").addClass("chess__info--top")
+                }
             }
 
         }
@@ -1232,13 +1242,9 @@ $(document).ready(function() {
             $(".chess__info-link").remove()
         }
 
-        let blockPosition = $(".chess__middle-wrap").offset().top
-        let elemetPosition = $(this).offset().top
         console.log(blockPosition)
         console.log(elemetPosition)
-        if ((elemetPosition - blockPosition) > 370) {
-            $(".chess__info").addClass("chess__info--top")
-        }
+
 
 
 
@@ -1308,13 +1314,50 @@ $(document).ready(function() {
 
     $(".profit__group-hover").hover(onIn, onOut);
 
-    $(".catalog-card__img-tab").click(function() {
+    $(".catalog-card__img-tab").mouseover(function() {
         let path = $(this).attr("data-tab-path")
         let parent = $(this).parents(".catalog-card__img")
         $(parent).find(".catalog-card__img-tab").removeClass("catalog-card__img-tab--active")
         $(this).addClass("catalog-card__img-tab--active")
         $(parent).find(".catalog-card__img-item").removeClass("catalog-card__img-item--active")
         $(parent).find(`.catalog-card__img-item[data-tab-path="${path}"]`).addClass("catalog-card__img-item--active")
+    })
+
+
+    document.querySelectorAll(".custom-select").forEach(el => {
+        el.onclick = function() {
+            el.classList.toggle("custom-select--active")
+        }
+
+        document.addEventListener('click', (e) => {
+            const withinBoundaries = e.composedPath().includes(el);
+            if (!withinBoundaries) {
+                el.classList.remove("custom-select--active")
+            }
+        });
+    })
+
+    function unselectOption(dropdown) {
+        for (let elem of dropdown.getElementsByTagName('div')) {
+            elem.classList.remove("custom-select__dropdown-item--selected")
+        }
+    }
+
+    document.querySelectorAll(".custom-select__dropdown-item").forEach(el => {
+        el.onclick = function() {
+            unselectOption(el.closest(".custom-select__dropdown"))
+            el.classList.add("custom-select__dropdown-item--selected")
+            $(el).parents(".custom-select").find("input").attr("value", $(el).children("span").text())
+
+            if (!$(el).parents(".custom-select").find("label").hasClass("label--active")) {
+                $(el).parents(".custom-select").find("label").addClass("label--active")
+            }
+
+        }
+    })
+
+    $(".custom-select input").change(function() {
+
     })
 })
 
