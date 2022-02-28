@@ -2848,6 +2848,7 @@ fieldset {
 .chart {
   overflow-x: hidden;
   overflow-y: visible;
+  position: relative;
 }
 .chart .tab__content {
   opacity: 0;
