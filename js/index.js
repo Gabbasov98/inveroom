@@ -1227,7 +1227,7 @@ $(document).ready(function() {
                 $(this).parents(".chess__middle-wrap").append(flatInfo)
                 $(".chess__info").css("top", `${elemetPosition - blockPosition + 40}px`)
                 if ((elemetPosition - blockPosition) > 420) {
-                    $(".chess__info").addClass("chess__info--top")
+                    $(".chess__info").css("transform", "translateX(-50%) translateY(-570px)")
                 }
             } else {
                 $(this).append(flatInfo)
