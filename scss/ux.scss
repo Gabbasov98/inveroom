@@ -56,6 +56,48 @@
     padding: 0;
 }
 
+.btn-blue {
+    background: #2551AF;
+    color: #EEF1F5;
+    &:hover {
+        background: #1E418E;
+        color: #EEF1F5;
+    }
+    &:active {
+        color: #EEF1F5;
+        background: darken(#1E418E, 10%);
+    }
+}
+
+.btn-blue-light {
+    background: #F1F7FF;
+    color: #7786A5;
+    &:hover {
+        background: #E1EDFD;
+        color: #2A344A;
+        path {
+            fill: #2A344A;
+        }
+    }
+    &:active {
+        background: darken(#E1EDFD, 10%);
+        color: #2A344A;
+    }
+}
+
+.btn-blue-dark {
+    background: #2A344A;
+    color: #fff;
+    &:hover {
+        background: darken(#2A344A, 5%);
+        color: #fff;
+    }
+    &:active {
+        background: darken(#2A344A, 10%);
+        color: #fff;
+    }
+}
+
 .display1 {
     font-weight: bold;
     font-size: 40px;
@@ -1704,6 +1746,72 @@
                 &::before {
                     left: 20px;
                 }
+            }
+        }
+    }
+}
+
+.check {
+    position: relative;
+    input {
+        position: absolute;
+        opacity: 0;
+        &:checked+label {
+            // background: #F1F7FF;
+            color: #2A344A;
+            &:before {
+                background-color: #2551AF;
+                border-color: #2551AF;
+                background-image: url(../img/check2.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            &:hover:before {
+                background-color: #1A3B83;
+                border-color: #1A3B83;
+            }
+        }
+        &:disabled:checked {
+            &+label:before {
+                background-color: #7786A5;
+                border-color: #7786A5;
+            }
+        }
+    }
+    label {
+        position: relative;
+        padding-left: 40px;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 140%;
+        &:before {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            content: '';
+            position: absolute;
+            z-index: 1;
+            border: 2px solid #7786A5;
+            border-radius: 5px;
+            width: 20px;
+            height: 20px;
+            left: 0;
+            top: 0;
+        }
+        a {
+            color: #2551AF;
+            &:hover {
+                color: #1E418E;
+                text-decoration: underline !important;
+            }
+        }
+    }
+    &--error {
+        input {}
+        label {
+            color: #DD757B;
+            &::before {
+                border-color: #DD757B;
             }
         }
     }
