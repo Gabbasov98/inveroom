@@ -1161,7 +1161,7 @@ $(document).ready(function() {
         }
     });
 
-    $(".chess__flat").click(function() {
+    $(".chess .chess__flat").click(function() {
         let flatInfo = `
             <div class="chess__info">
                 <div class="chess__info-map">

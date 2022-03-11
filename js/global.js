@@ -35,10 +35,18 @@ $(document).ready(function() {
     formatThosands($("#homePrice .form-group__num span"))
     formatThosands($("#homeSquare .form-group__num span"))
     inputFormatThosands($(".create__price-input--format input"))
+    inputFormatThosands($(".thousand-format"))
 
     $(".create__price-input--format input").change(function() {
         inputFormatThosands($(".create__price-input--format input"))
     })
+
+    $(".thousand-format").change(function() {
+        inputFormatThosands($(".thousand-format"))
+    })
+
+
+
 
     function formatThosands(el) {
         let val = parseInt($(el).text())

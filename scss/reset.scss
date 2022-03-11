@@ -40,7 +40,7 @@ input[type=file]:focus,
 input[type=checkbox]:focus,
 input[type=radio]:focus,
 input:active {
-    outline: none !important;
+    outline: none;
 }
 
 ::-webkit-input-placeholder {

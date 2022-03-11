@@ -332,7 +332,13 @@
     .filter__form-group {
       flex-grow: 1;
       width: 20%;
-      margin-left: -2px; }
+      margin-left: -2px;
+      height: 60px; }
+      .filter__form-group:first-child .price-select__price {
+        border-radius: 10px 0px 0px 10px; }
+        @media screen and (max-width: 992px) {
+          .filter__form-group:first-child .price-select__price {
+            border-radius: 10px 10px 0px 0px; } }
       .filter__form-group:first-child .custom-select input {
         border-radius: 10px 0px 0px 10px; }
       .filter__form-group--160 {
@@ -1323,7 +1329,8 @@
   .room-select--active .price-select__price,
   .room-select--active .room-select__rooms {
     border: 2px solid #2551AF;
-    z-index: 5; }
+    z-index: 5;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.33317 10.3335L7.99984 5.66683L12.6665 10.3335' stroke='%231B2C3E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
   .custom-select--active .custom-select__dropdown,
   .custom-select--active .price-select__dropdown,
   .custom-select--active .room-select__dropdown,
