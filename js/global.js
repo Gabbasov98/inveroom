@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    $('input[type="tel"]').mask('+7 (999) 999-9999', { placeholder: '+7               ' });
+
     let val = $(".form-group2 input").val()
     let val2 = $(".form-group2 textarea").val()
     if (val) {
