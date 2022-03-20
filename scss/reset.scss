@@ -128,11 +128,11 @@ a {
     text-decoration: none;
     transition: 0.4s;
     &:hover {
-        text-decoration: none !important;
+        text-decoration: none;
         color: inherit;
     }
     &:focus {
-        text-decoration: none !important;
+        text-decoration: none;
     }
 }
 

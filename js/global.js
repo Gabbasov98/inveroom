@@ -34,6 +34,12 @@ $(document).ready(function() {
     })
 
 
+    $(".form-group2 input").keyup(function() {
+        if ($(this).val()) {
+            $(this).parents(".form-group2").removeClass("form-group2--error")
+        }
+    })
+
     formatThosands($("#homePrice .form-group__num span"))
     formatThosands($("#homeSquare .form-group__num span"))
     inputFormatThosands($(".create__price-input--format input"))
@@ -61,4 +67,15 @@ $(document).ready(function() {
         val = val.toLocaleString('ru-RU')
         $(el).attr("value", val)
     }
+
+
+    $(".tab").click(function() {
+        let path = $(this).attr("data-tab-path")
+        let parentTabs = $(this).parent(".tabs")
+        $(parentTabs).children(".tab").removeClass("tab--active")
+        $(this).addClass("tab--active")
+        $(parentTabs).siblings(".tab__content").removeClass("tab__content--active")
+        $(parentTabs).siblings(`.tab__content[data-tab-path='${path}']`).addClass("tab__content--active")
+        $('.tabs').animate({ scrollLeft: $(this).position().left }, 500);
+    })
 })

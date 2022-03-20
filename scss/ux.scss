@@ -494,11 +494,13 @@
                     letter-spacing: 0.1em;
                     color: #7786A5;
                     z-index: 4;
+                    transition: all 0s;
                 }
                 .label--active {
                     font-size: 8px;
                     top: 10px;
                     transform: translateY(0);
+                    z-index: 6;
                     &+.custom-select__target input {
                         padding-top: 15px;
                     }
@@ -1785,7 +1787,6 @@
         opacity: 0;
         &:checked+label {
             // background: #F1F7FF;
-            color: #2A344A;
             &:before {
                 background-color: #2551AF;
                 border-color: #2551AF;
@@ -1812,6 +1813,9 @@
         display: block;
         font-size: 14px;
         line-height: 140%;
+        &:hover {
+            color: #2A344A;
+        }
         &:before {
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -1824,6 +1828,7 @@
             height: 20px;
             left: 0;
             top: 0;
+            transition: all 0s;
         }
         a {
             color: #2551AF;
@@ -1842,4 +1847,9 @@
             }
         }
     }
+}
+
+label::before,
+label::after {
+    box-sizing: border-box;
 }

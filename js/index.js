@@ -935,15 +935,7 @@ $(document).ready(function() {
         }
     });
 
-    $(".tab").click(function() {
-        let path = $(this).attr("data-tab-path")
-        let parentTabs = $(this).parent(".tabs")
-        $(parentTabs).children(".tab").removeClass("tab--active")
-        $(this).addClass("tab--active")
-        $(parentTabs).siblings(".tab__content").removeClass("tab__content--active")
-        $(parentTabs).siblings(`.tab__content[data-tab-path='${path}']`).addClass("tab__content--active")
-        $('.tabs').animate({ scrollLeft: $(this).position().left }, 500);
-    })
+
 
     $(".chess .tab").click(function() {
         let path = $(this).attr("data-tab-path")

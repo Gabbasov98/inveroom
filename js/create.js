@@ -97,6 +97,48 @@ $(document).ready(function() {
         $(this).siblings(".create__blocks").append(block)
     })
 
+
+    $(".create__tab-add").click(function() {
+        $(this).hide()
+        $(this).siblings(".create__new-tab").addClass("create__new-tab--active")
+    })
+
+
+    $(".create__new-tab button").click(function() {
+        let input = $("#new-tab")
+
+        if (!input.val()) {
+            $(input).parent(".form-group2").addClass("form-group2--error")
+            return
+        }
+
+
+        let tabLength = +$(this).parents(".tabs").find(".tab").length
+        let newTab = `
+            <div class="tab" data-tab-path="${tabLength+1}">${input.val()}</div>
+        `
+        let newTabContent = `
+            <div class="tab__content" data-tab-path="${tabLength+1}">${tabLength+1}</div>
+        `
+        console.log(tabLength)
+        $(`.tab[data-tab-path="${tabLength}"]`).after(newTab)
+        $(`.tab__content[data-tab-path="${tabLength}"]`).after(newTabContent)
+        $("#new-tab").val("")
+        $(this).parent(".create__new-tab").removeClass("create__new-tab--active")
+        $(this).parents(".tabs").find(".create__tab-add").show()
+
+
+
+        $(".tab").click(function() {
+            let path = $(this).attr("data-tab-path")
+            let parentTabs = $(this).parent(".tabs")
+            $(parentTabs).children(".tab").removeClass("tab--active")
+            $(this).addClass("tab--active")
+            $(parentTabs).siblings(".tab__content").removeClass("tab__content--active")
+            $(parentTabs).siblings(`.tab__content[data-tab-path='${path}']`).addClass("tab__content--active")
+            $('.tabs').animate({ scrollLeft: $(this).position().left }, 500);
+        })
+    })
 })
 
 function cartSelect() {

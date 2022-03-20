@@ -20,23 +20,32 @@
         <div class="auth">
             <div class="auth__wrap">
                 <div class="auth__tabs tabs">
-                    <div class="tab tab--active" data-tab-path="1">Вход</div>
-                    <a href="reg.html" class="tab" data-tab-path="2">Регистрация</a>
+                    <a href="" class="tab" data-tab-path="1">Вход</a>
+                    <div class="tab tab--active" data-tab-path="2">Регистрация</div>
                 </div>
-                <div class="auth__title">Добро пожаловать</div>
-                <div class="auth__desc">Всегда рады вам! Укажите логин и пароль для входа в INVEROOM.</div>
+                <div class="auth__title">Укажите полное имя</div>
+                <div class="auth__desc">Это конфиденциально!</div>
                 <form action="" class="auth__form">
-                    <fieldset class='auth__form-group form-group2 form-group2--error'>
+                    <fieldset class='auth__form-group form-group2'>
                         <input type='text' />
-                        <label>Логин</label>
-                        <span class="form-group2__error-text">Логин указан не верно</span>
+                        <label>Имя</label>
                     </fieldset>
-                    <fieldset class='auth__form-group form-group2 form-group2--pass'>
-                        <input type='password' />
-                        <label>Пароль</label>
-                        <button type="button" class="form-group2__passowrd-btn"></button>
+                    <fieldset class='auth__form-group form-group2'>
+                        <input type='text' />
+                        <label>Фамилия</label>
                     </fieldset>
-                    <a href="" class="auth__link">Забыли пароль?</a>
+                    <div class="auth__form-check check">
+                        <input type='checkbox' class='checkbox' id='c' />
+                        <label for='c'>
+                                Я принимаю <a href="">усуловия по обработке персональных данных.</a>
+                            </label>
+                    </div>
+                    <div class="auth__form-check check check--error">
+                        <input type='checkbox' class='checkbox' id='c2' />
+                        <label for='c2'>
+                                Я принимаю <a href="">усуловия по обработке персональных данных.</a>
+                            </label>
+                    </div>
                     <div class="auth__nav">
                         <a href="" class="auth__back btn btn-blue-light">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +55,6 @@
                         <button class="auth__btn btn btn-blue">Далее</button>
                     </div>
                 </form>
-
             </div>
         </div>
 

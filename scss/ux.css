@@ -363,13 +363,15 @@
           line-height: 140%;
           letter-spacing: 0.1em;
           color: #7786A5;
-          z-index: 4; }
+          z-index: 4;
+          transition: all 0s; }
         .filter__form-group .custom-select .label--active,
         .filter__form-group .price-select .label--active,
         .filter__form-group .room-select .label--active {
           font-size: 8px;
           top: 10px;
-          transform: translateY(0); }
+          transform: translateY(0);
+          z-index: 6; }
           .filter__form-group .custom-select .label--active + .custom-select__target input,
           .filter__form-group .price-select .label--active + .custom-select__target input,
           .filter__form-group .room-select .label--active + .custom-select__target input {
@@ -1508,17 +1510,15 @@
   .check input {
     position: absolute;
     opacity: 0; }
-    .check input:checked + label {
-      color: #2A344A; }
-      .check input:checked + label:before {
-        background-color: #2551AF;
-        border-color: #2551AF;
-        background-image: url(../img/check2.svg);
-        background-repeat: no-repeat;
-        background-position: center; }
-      .check input:checked + label:hover:before {
-        background-color: #1A3B83;
-        border-color: #1A3B83; }
+    .check input:checked + label:before {
+      background-color: #2551AF;
+      border-color: #2551AF;
+      background-image: url(../img/check2.svg);
+      background-repeat: no-repeat;
+      background-position: center; }
+    .check input:checked + label:hover:before {
+      background-color: #1A3B83;
+      border-color: #1A3B83; }
     .check input:disabled:checked + label:before {
       background-color: #7786A5;
       border-color: #7786A5; }
@@ -1529,6 +1529,8 @@
     display: block;
     font-size: 14px;
     line-height: 140%; }
+    .check label:hover {
+      color: #2A344A; }
     .check label:before {
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
@@ -1540,7 +1542,8 @@
       width: 20px;
       height: 20px;
       left: 0;
-      top: 0; }
+      top: 0;
+      transition: all 0s; }
     .check label a {
       color: #2551AF; }
       .check label a:hover {
@@ -1550,5 +1553,9 @@
     color: #DD757B; }
     .check--error label::before {
       border-color: #DD757B; }
+
+label::before,
+label::after {
+  box-sizing: border-box; }
 
 /*# sourceMappingURL=ux.css.map */
