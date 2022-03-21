@@ -5102,6 +5102,7 @@ label::after {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  max-width: 800px;
 }
 .create__check input:checked + label, .create__radio input:checked + label {
   background: #F1F7FF;
@@ -5112,7 +5113,7 @@ label::after {
 }
 .create__check label, .create__radio label {
   color: #2A344A;
-  padding: 13px 20px 13px 55px;
+  padding: 11px 20px 11px 55px;
   border: 2px solid #E1EDFD;
   border-radius: 10px;
   transition: all .3s;
@@ -5210,6 +5211,9 @@ label::after {
 }
 .create__price .custom-select__dropdown {
   border-radius: 0 10px 10px 10px !important;
+}
+.create__group--800 {
+  max-width: 800px;
 }
 .create__group:not(:first-child) {
   margin-top: 50px;

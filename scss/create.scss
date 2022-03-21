@@ -61,6 +61,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
+        max-width: 800px;
     }
     &__check,
     &__radio {
@@ -75,7 +76,7 @@
         }
         label {
             color: #2A344A;
-            padding: 13px 20px 13px 55px;
+            padding: 11px 20px 11px 55px;
             border: 2px solid #E1EDFD;
             border-radius: 10px;
             transition: all .3s;
@@ -182,6 +183,9 @@
         }
     }
     &__group {
+        &--800 {
+            max-width: 800px;
+        }
         &:not(:first-child) {
             margin-top: 50px;
         }
