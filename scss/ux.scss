@@ -4,7 +4,7 @@
         height: 6px;
     }
     &::-webkit-scrollbar-track {
-        background: #fff;
+        background: transparent;
     }
     &::-webkit-scrollbar-thumb {
         background: #E1EDFD;
@@ -1600,7 +1600,7 @@
         font-weight: 300;
         font-size: 14px;
         width: 100%;
-        transition: all .3s;
+        // transition: all .3s;
         border: 2px solid #7786A5;
         &::placeholder {
             color: #74869C;
@@ -1847,6 +1847,10 @@
             }
         }
     }
+}
+
+input {
+    color: #2A344A;
 }
 
 label::before,

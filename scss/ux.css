@@ -1172,7 +1172,7 @@
     width: 6px;
     height: 6px; }
   .gallery-modal::-webkit-scrollbar-track {
-    background: #fff; }
+    background: transparent; }
   .gallery-modal::-webkit-scrollbar-thumb {
     background: #E1EDFD;
     border-radius: 50px; }
@@ -1298,7 +1298,6 @@
     font-weight: 300;
     font-size: 14px;
     width: 100%;
-    transition: all .3s;
     border: 2px solid #7786A5; }
     .custom-select__rooms::placeholder, .custom-select__price::placeholder, .custom-select__target input::placeholder,
     .price-select__rooms::placeholder,
@@ -1553,6 +1552,9 @@
     color: #DD757B; }
     .check--error label::before {
       border-color: #DD757B; }
+
+input {
+  color: #2A344A; }
 
 label::before,
 label::after {

@@ -1,21 +1,33 @@
-$(document).ready(function() {
-    $('input[type="tel"]').mask('+7 (999) 999-9999', { placeholder: '+7               ' });
+const apiUrl = "http://62.113.98.140:8080"
 
-    let val = $(".form-group2 input").val()
+
+$(document).ready(function() {
+    // $('input[type="tel"]').mask('+7 (999) 999-9999', { placeholder: '+7               ' });
+
+
+    $(".form-group2 input").each(function(index, el) {
+        let val = $(el).val()
+        if (val) {
+            $(el).addClass("input-active")
+        } else {
+            $(el).removeClass("input-active")
+        }
+    });
+
+    $(".form-group2 textarea").each(function(index, el) {
+        let val = $(el).val()
+        if (val) {
+            $(el).addClass("input-active")
+        } else {
+            $(el).removeClass("input-active")
+        }
+    });
+
+
     let val2 = $(".form-group2 textarea").val()
-    if (val) {
-        $(this).addClass("input-active")
-    } else {
-        $(this).removeClass("input-active")
-    }
-    if (val2) {
-        $(this).addClass("input-active")
-    } else {
-        $(this).removeClass("input-active")
-    }
+
     $(".form-group2 input").change(function() {
         let val = $(this).val()
-        console.log(val)
         if (val) {
             $(this).addClass("input-active")
         } else {
@@ -78,4 +90,16 @@ $(document).ready(function() {
         $(parentTabs).siblings(`.tab__content[data-tab-path='${path}']`).addClass("tab__content--active")
         $('.tabs').animate({ scrollLeft: $(this).position().left }, 500);
     })
+
+
+    $(".main__price-currency-item").click(function() {
+        $(this).siblings(".main__price-currency-item").removeClass("main__price-currency-item--active")
+        $(this).addClass("main__price-currency-item--active")
+    })
+
+
 })
+
+function redirect(url) {
+    window.location.replace(`${url}`);
+}

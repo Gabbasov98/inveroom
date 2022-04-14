@@ -865,32 +865,13 @@ function initViewSliders() {
     viewSlider2()
 }
 
-function initCharts() {
-    // chart1()
-
-}
 
 $(document).ready(function() {
-    initPlanSliders()
-    initViewSliders()
-    infrastructureSlider()
-    serviceSlider()
-        // initCharts()
-    if (document.getElementById("chart1")) {
-        chart1()
-    }
-    if (document.getElementById("chart2")) {
-        chart2()
-    }
-    if (document.getElementById("chart3")) {
-        chart3()
-    }
-    if (document.getElementById("chart4")) {
-        chart4()
-    }
-    if (document.getElementById("chart5")) {
-        chart5()
-    }
+    // initPlanSliders()
+    // initViewSliders()
+    // infrastructureSlider()
+
+
     $(".select").niceSelect()
 
     $(".form-group__dropdown-inner").mCustomScrollbar()
@@ -1040,7 +1021,7 @@ $(document).ready(function() {
         value: 158500,
         slide: function(event, ui) {
             $("#homePrice .form-group__num span").text(ui.value)
-            formatThosands($("#homePrice .form-group__num span"))
+                // formatThosands($("#homePrice .form-group__num span"))
         }
     });
 
@@ -1063,7 +1044,7 @@ $(document).ready(function() {
         value: 202,
         slide: function(event, ui) {
             $("#homeSquare .form-group__num span").text(ui.value)
-            formatThosands($("#homeSquare .form-group__num span"))
+                // formatThosands($("#homeSquare .form-group__num span"))
         }
     });
 
@@ -1077,7 +1058,6 @@ $(document).ready(function() {
             $("#useOption .form-group__num span").text(ui.value)
         }
     });
-
 
     $("#finishDate .polzunok").slider({
         animate: "fast",
@@ -1279,7 +1259,9 @@ $(document).ready(function() {
         $(this).parents(".page-item").toggleClass("page-item--active")
         $(this).parents(".page-item").find(".page-item__bottom").slideToggle(2)
         if ($(this).parents(".page-item").hasClass("chart")) {
-            chart1()
+            if (document.getElementById("chart1")) {
+                chart1()
+            }
             if (document.getElementById("chart2")) {
                 chart2()
             }
@@ -1293,6 +1275,25 @@ $(document).ready(function() {
                 chart5()
             }
         }
+        if ($(this).parents(".page-item").hasClass("plan")) {
+            initPlanSliders()
+        }
+
+        if ($(this).parents(".page-item").hasClass("view")) {
+            initViewSliders()
+        }
+
+        if ($(this).parents(".page-item").hasClass("infrastructure")) {
+            infrastructureSlider()
+        }
+
+        if ($(this).parents(".page-item").hasClass("service")) {
+            serviceSlider()
+        }
+
+
+
+
     })
 
     $(".profit__group-hover").hover(onIn, onOut);

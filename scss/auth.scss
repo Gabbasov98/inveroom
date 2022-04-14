@@ -25,11 +25,19 @@
         line-height: 140%;
         margin-top: 20px;
         color: #7786A5;
-        a {
+        a,
+        button {
+            display: unset;
             color: #2551AF;
+            font-size: inherit;
             &:hover {
                 color: #1E418E;
                 text-decoration: underline;
+            }
+        }
+        &-show {
+            &--hidden {
+                display: none;
             }
         }
     }
@@ -58,6 +66,7 @@
         display: flex;
         align-items: center;
         margin-top: 40px;
+        position: relative;
     }
     &__back {
         width: 60px;
@@ -73,6 +82,23 @@
         font-weight: 500;
         font-size: 16px;
     }
+    &__disabled-btn {
+        position: absolute;
+        height: 100%;
+        width: calc(100% - 60px);
+        z-index: 2;
+        top: 0;
+        right: 0;
+        display: block;
+        cursor: pointer;
+    }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
 .form-group2 {
@@ -102,6 +128,9 @@
         border-radius: 10px;
         padding: 0 20px;
         font-size: 16px;
+        &:-webkit-autofill {
+            background-color: transparent !important;
+        }
         &:disabled {
             &:hover {
                 border-color: #E1EDFD;
@@ -136,6 +165,13 @@
         padding: 18px 20px;
         height: 442px;
         resize: none;
+        @include scroll();
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+        }
         &+label {
             top: 25px;
         }
@@ -163,6 +199,14 @@
         position: absolute;
         left: 0;
     }
+    &__error-code {
+        .codeEmpty {
+            display: none;
+        }
+        .codeIncorrect {
+            display: unset;
+        }
+    }
     &--error {
         margin-bottom: 40px !important;
         input {
@@ -185,6 +229,53 @@
             padding-right: 40px;
         }
     }
+    &--text {
+        label {
+            z-index: 2;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            width: calc(100% - 30px);
+            height: 20px;
+            background-color: #fff;
+            top: 2px;
+            left: 10px;
+            border-radius: 10px 10px 0 0;
+        }
+    }
+    &__measure {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3;
+        pointer-events: none;
+        &+input {
+            padding-right: 40px;
+        }
+    }
+}
+
+.server-data {
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+}
+
+#inputedPhone {
+    pointer-events: none;
+}
+
+.sendagain {
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+}
+
+.codeIncorrect {
+    display: none;
 }
 
 @media screen and (max-width: 992px) {
