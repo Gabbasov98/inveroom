@@ -14,6 +14,46 @@ function planSlider() {
     })
 }
 
+let catalogsSlidersArray = []
+
+function catalogsSliders() {
+    $(".text-block__info .slider").each(function(index, el) {
+        $(el).attr("data-slider-id", `${index}`)
+        catalogsSlidersArray[index] = new Swiper(`.text-block__info .slider[data-slider-id="${index}"] .swiper-container`, {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: `.text-block__info .slider[data-slider-id="${index}"] .swiper-button-next`,
+                prevEl: `.text-block__info .slider[data-slider-id="${index}"] .swiper-button-prev`,
+            },
+            pagination: {
+                el: `.text-block__info .slider[data-slider-id="${index}"] .swiper-pagination`,
+                type: 'fraction',
+                clickable: true,
+            },
+        })
+    })
+}
+
+
+
+
+function planSlider() {
+    var swiper = new Swiper('.plan__slider1 .swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.plan__slider1 .swiper-button-next',
+            prevEl: '.plan__slider1 .swiper-button-prev',
+        },
+        pagination: {
+            el: '.plan__slider1 .swiper-pagination',
+            type: 'fraction',
+            clickable: true,
+        },
+    })
+}
+
 function planSlider2() {
     var swiper = new Swiper('.plan__slider2 .swiper-container', {
         slidesPerView: 1,
@@ -870,7 +910,7 @@ $(document).ready(function() {
     // initPlanSliders()
     // initViewSliders()
     // infrastructureSlider()
-
+    catalogsSliders()
 
     $(".select").niceSelect()
 
@@ -929,18 +969,18 @@ $(document).ready(function() {
     })
 
     $(".view .tab").click(function() {
-        initViewSliders()
-    })
-    setTimeout(() => {
-        $(".chart .tab[data-tab-path='2']").trigger('click');
-        firstChart()
-    }, 1000);
+            initViewSliders()
+        })
+        // setTimeout(() => {
+        //     $(".chart .tab[data-tab-path='2']").trigger('click');
+        //     firstChart()
+        // }, 1000);
 
-    function firstChart() {
-        setTimeout(() => {
-            $(".chart .tab[data-tab-path='1']").trigger('click');
-        }, 1000);
-    }
+    // function firstChart() {
+    //     setTimeout(() => {
+    //         $(".chart .tab[data-tab-path='1']").trigger('click');
+    //     }, 1000);
+    // }
 
     $(".pay .tab").click(function() {
         let path = $(this).attr("data-tab-path")
@@ -1244,6 +1284,10 @@ $(document).ready(function() {
     });
 
     $(".main__gallery-btn").click(function() {
+        openGallery()
+    })
+
+    $(".open-gallery").click(function() {
         openGallery()
     })
 
