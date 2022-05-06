@@ -3245,6 +3245,7 @@ label::after {
 .chess__flat--active {
     background: #6FB08D !important;
     color: #EEF1F5 !important;
+    pointer-events: none;
 }
 
 .chess__flat--active:before {
@@ -3318,15 +3319,20 @@ label::after {
 
 .chess__info {
     position: absolute;
-    left: -6px;
-    top: 100%;
+    /* left: -6px;
+    top: 100%; */
+    transform: translateY(75px);
     margin-top: 10px;
     border: 1px solid #E1EDFD;
-    z-index: 3;
+    z-index: 5;
     background-color: #fff;
     width: 300px;
     border-radius: 10px;
     overflow: hidden;
+}
+
+.chess__all-flats {
+    position: relative;
 }
 
 .chess__info--top {
@@ -5201,8 +5207,8 @@ label::after {
         gap: 30px;
     }
     .chess__info {
-        left: 50%;
-        transform: translateX(-50%);
+        left: 50% !important;
+        transform: translate(-50%, 75px);
     }
     .infrastructure__items,
     .service__items {

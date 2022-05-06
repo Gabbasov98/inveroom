@@ -1216,8 +1216,10 @@ $(document).ready(function() {
             </div>
         `
 
-        let blockPosition = $(".chess__middle-wrap").offset().top
-        let elemetPosition = $(this).offset().top
+        let blockPositionY = $(".chess__all-flats").offset().top
+        let elemetPositionY = $(this).offset().top
+        let blockPositionX = $(".chess__all-flats").offset().left
+        let elemetPositionX = $(this).offset().left
 
         if ($(this).hasClass("chess__flat--active")) {
             $(".chess__flat").removeClass("chess__flat--active")
@@ -1226,31 +1228,15 @@ $(document).ready(function() {
             $(".chess__flat").removeClass("chess__flat--active")
             $(".chess__info").remove()
             $(this).addClass("chess__flat--active")
-            if (window.innerWidth < 992) {
-                $(this).parents(".chess__middle-wrap").append(flatInfo)
-                $(".chess__info").css("top", `${elemetPosition - blockPosition + 40}px`)
-                if ((elemetPosition - blockPosition) > 420) {
-                    $(".chess__info").css("transform", "translateX(-70%) translateY(-570px)")
-                }
-            } else {
-                $(this).append(flatInfo)
-                if ((elemetPosition - blockPosition) > 350) {
-                    $(".chess__info").addClass("chess__info--top")
-                }
-            }
 
+            $(".chess__all-flats").append(flatInfo)
+            $(".chess__info").css("top", `${elemetPositionY - blockPositionY}px`)
+            $(".chess__info").css("left", `${elemetPositionX - blockPositionX}px`)
         }
 
         if ($(this).hasClass('chess__flat--green')) {
             $(".chess__info-link").remove()
         }
-
-        console.log(blockPosition)
-        console.log(elemetPosition)
-
-
-
-
 
         $(document).mouseup(function(e) {
             var div = $('.chess__info');
