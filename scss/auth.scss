@@ -25,31 +25,25 @@
         line-height: 140%;
         margin-top: 20px;
         color: #7786A5;
-        a,
-        button {
-            display: unset;
+        a {
             color: #2551AF;
-            font-size: inherit;
-            &:hover {
-                color: #1E418E;
-                text-decoration: underline;
-            }
-        }
-        &-show {
-            &--hidden {
-                display: none;
-            }
         }
     }
+    &__desc a:hover {
+        color: #1E418E;
+        text-decoration: underline;
+    }
     &__desc2 {
+        a:hover {
+            color: #1E418E;
+            text-decoration: underline;
+        }
         font-size: 14px;
     }
     &__form {
         margin-top: 40px;
-        &-group {
-            &:not(:last-child) {
-                margin-bottom: 20px;
-            }
+        &-group:not(:last-child) {
+            margin-bottom: 20px;
         }
     }
     &__link {
@@ -66,7 +60,6 @@
         display: flex;
         align-items: center;
         margin-top: 40px;
-        position: relative;
     }
     &__back {
         width: 60px;
@@ -82,42 +75,23 @@
         font-weight: 500;
         font-size: 16px;
     }
-    &__disabled-btn {
-        position: absolute;
-        height: 100%;
-        width: calc(100% - 60px);
-        z-index: 2;
-        top: 0;
-        right: 0;
-        display: block;
-        cursor: pointer;
-    }
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
 .form-group2 {
     position: relative;
-    &__passowrd {
-        &-btn {
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.641 17.8211L13.8443 15.0245C12.6378 15.5738 11.325 15.8506 9.99935 15.8353C8.63258 15.8523 7.27994 15.5573 6.04435 14.9728C5.08658 14.5055 4.22655 13.8601 3.51018 13.0711C2.74976 12.256 2.1521 11.3031 1.74935 10.2636L1.66602 10.002L1.75352 9.73862C2.35586 8.2022 3.36956 6.86126 4.68352 5.86279L2.49935 3.67862L3.67685 2.50195L17.8177 16.6428L16.6427 17.8211H16.641ZM5.86268 7.04279C4.79762 7.78938 3.95656 8.81255 3.43018 10.002C4.55886 12.606 7.16257 14.2575 9.99935 14.1686C10.8742 14.1758 11.744 14.0349 12.5718 13.752L11.0718 12.252C10.738 12.4156 10.3712 12.5011 9.99935 12.502C8.62223 12.4933 7.50799 11.3791 7.49935 10.002C7.49975 9.62926 7.58526 9.26158 7.74935 8.92695L5.86268 7.04279ZM16.5427 13.0103L15.3827 11.8511C15.8707 11.2994 16.2707 10.6757 16.5685 10.002C15.4413 7.3966 12.8366 5.74452 9.99935 5.83529C9.79352 5.83529 9.58685 5.84279 9.38685 5.85695L7.91602 4.38445C8.60071 4.23798 9.29917 4.16562 9.99935 4.16862C11.3661 4.15166 12.7187 4.44664 13.9543 5.03112C14.9121 5.4984 15.7722 6.14378 16.4885 6.93279C17.2486 7.74692 17.8462 8.69868 18.2493 9.73695L18.3327 10.002L18.2452 10.2653C17.855 11.2804 17.2778 12.2132 16.5435 13.0153L16.5427 13.0103Z' fill='%237786A5'/%3E%3C/svg%3E");
-            background-size: 100% auto;
-            background-position: center;
-            background-repeat: no-repeat;
-            &--active {
-                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.99935 15.8334C8.63258 15.8504 7.27993 15.5554 6.04435 14.9709C5.08659 14.5036 4.22656 13.8582 3.51018 13.0692C2.75138 12.2535 2.15391 11.3014 1.74935 10.2634L1.66602 10L1.75352 9.73671C2.15836 8.69957 2.75455 7.74777 3.51102 6.93088C4.22713 6.14197 5.08688 5.4966 6.04435 5.02921C7.27994 4.4447 8.63258 4.14972 9.99935 4.16671C11.3661 4.14975 12.7187 4.44473 13.9543 5.02921C14.9121 5.49649 15.7722 6.14187 16.4885 6.93088C17.2488 7.74551 17.8464 8.69785 18.2493 9.73671L18.3327 10L18.2452 10.2634C16.9379 13.6665 13.6445 15.8912 9.99935 15.8334ZM9.99935 5.83338C7.16257 5.74448 4.55886 7.39596 3.43018 10C4.55868 12.6043 7.16251 14.2558 9.99935 14.1667C12.8361 14.2554 15.4396 12.604 16.5685 10C15.4413 7.39469 12.8366 5.74261 9.99935 5.83338ZM9.99935 12.5C8.79712 12.508 7.75716 11.6645 7.51682 10.4865C7.27649 9.30853 7.90291 8.12506 9.01217 7.66143C10.1214 7.19779 11.4037 7.58349 12.0731 8.58213C12.7426 9.58077 12.6122 10.9134 11.7618 11.7634C11.2963 12.2344 10.6616 12.4997 9.99935 12.5Z' fill='%237786A5'/%3E%3C/svg%3E");
-            }
+    &__passowrd-btn {
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.641 17.8211L13.8443 15.0245C12.6378 15.5738 11.325 15.8506 9.99935 15.8353C8.63258 15.8523 7.27994 15.5573 6.04435 14.9728C5.08658 14.5055 4.22655 13.8601 3.51018 13.0711C2.74976 12.256 2.1521 11.3031 1.74935 10.2636L1.66602 10.002L1.75352 9.73862C2.35586 8.2022 3.36956 6.86126 4.68352 5.86279L2.49935 3.67862L3.67685 2.50195L17.8177 16.6428L16.6427 17.8211H16.641ZM5.86268 7.04279C4.79762 7.78938 3.95656 8.81255 3.43018 10.002C4.55886 12.606 7.16257 14.2575 9.99935 14.1686C10.8742 14.1758 11.744 14.0349 12.5718 13.752L11.0718 12.252C10.738 12.4156 10.3712 12.5011 9.99935 12.502C8.62223 12.4933 7.50799 11.3791 7.49935 10.002C7.49975 9.62926 7.58526 9.26158 7.74935 8.92695L5.86268 7.04279ZM16.5427 13.0103L15.3827 11.8511C15.8707 11.2994 16.2707 10.6757 16.5685 10.002C15.4413 7.3966 12.8366 5.74452 9.99935 5.83529C9.79352 5.83529 9.58685 5.84279 9.38685 5.85695L7.91602 4.38445C8.60071 4.23798 9.29917 4.16562 9.99935 4.16862C11.3661 4.15166 12.7187 4.44664 13.9543 5.03112C14.9121 5.4984 15.7722 6.14378 16.4885 6.93279C17.2486 7.74692 17.8462 8.69868 18.2493 9.73695L18.3327 10.002L18.2452 10.2653C17.855 11.2804 17.2778 12.2132 16.5435 13.0153L16.5427 13.0103Z' fill='%237786A5'/%3E%3C/svg%3E");
+        background-size: 100% auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        &--active {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.99935 15.8334C8.63258 15.8504 7.27993 15.5554 6.04435 14.9709C5.08659 14.5036 4.22656 13.8582 3.51018 13.0692C2.75138 12.2535 2.15391 11.3014 1.74935 10.2634L1.66602 10L1.75352 9.73671C2.15836 8.69957 2.75455 7.74777 3.51102 6.93088C4.22713 6.14197 5.08688 5.4966 6.04435 5.02921C7.27994 4.4447 8.63258 4.14972 9.99935 4.16671C11.3661 4.14975 12.7187 4.44473 13.9543 5.02921C14.9121 5.49649 15.7722 6.14187 16.4885 6.93088C17.2488 7.74551 17.8464 8.69785 18.2493 9.73671L18.3327 10L18.2452 10.2634C16.9379 13.6665 13.6445 15.8912 9.99935 15.8334ZM9.99935 5.83338C7.16257 5.74448 4.55886 7.39596 3.43018 10C4.55868 12.6043 7.16251 14.2558 9.99935 14.1667C12.8361 14.2554 15.4396 12.604 16.5685 10C15.4413 7.39469 12.8366 5.74261 9.99935 5.83338ZM9.99935 12.5C8.79712 12.508 7.75716 11.6645 7.51682 10.4865C7.27649 9.30853 7.90291 8.12506 9.01217 7.66143C10.1214 7.19779 11.4037 7.58349 12.0731 8.58213C12.7426 9.58077 12.6122 10.9134 11.7618 11.7634C11.2963 12.2344 10.6616 12.4997 9.99935 12.5Z' fill='%237786A5'/%3E%3C/svg%3E");
         }
     }
     textarea,
@@ -128,55 +102,42 @@ input:-webkit-autofill:active {
         border-radius: 10px;
         padding: 0 20px;
         font-size: 16px;
-        &:-webkit-autofill {
-            background-color: transparent !important;
-        }
-        &:disabled {
-            &:hover {
-                border-color: #E1EDFD;
-            }
-        }
-        &:hover {
-            border-color: #7786A5;
-        }
-        &:focus {
-            border-color: #7786A5;
-            &+label {
-                font-size: 13px;
-                padding: 0 10px;
-                background-color: #fff;
-                top: 0;
-            }
-        }
-        &:disabled {
-            background-color: transparent;
-            color: #7786A5;
-        }
-        &.input-active {
-            &+label {
-                font-size: 13px;
-                padding: 0 10px;
-                background-color: #fff;
-                top: 0;
-            }
-        }
+    }
+    textarea:disabled:hover,
+    input:disabled:hover {
+        border-color: #E1EDFD;
+    }
+    textarea:hover,
+    input:hover,
+    textarea:focus,
+    input:focus {
+        border-color: #7786A5;
+    }
+    textarea:focus+label,
+    input:focus+label {
+        font-size: 13px;
+        padding: 0 10px;
+        background-color: #fff;
+        top: 0;
+    }
+    textarea:disabled,
+    input:disabled {
+        background-color: transparent;
+        color: #7786A5;
+    }
+    textarea.input-active+label,
+    input.input-active+label {
+        font-size: 13px;
+        padding: 0 10px;
+        background-color: #fff;
+        top: 0;
     }
     textarea {
         padding: 18px 20px;
         height: 442px;
         resize: none;
-        @include scroll();
-        position: relative;
-        &:before {
-            content: '';
-            position: absolute;
-            z-index: 1;
-        }
-        &+label {
+        +label {
             top: 25px;
-        }
-        @media screen and (max-width: 768px) {
-            height: 280px;
         }
     }
     label {
@@ -199,14 +160,6 @@ input:-webkit-autofill:active {
         position: absolute;
         left: 0;
     }
-    &__error-code {
-        .codeEmpty {
-            display: none;
-        }
-        .codeIncorrect {
-            display: unset;
-        }
-    }
     &--error {
         margin-bottom: 40px !important;
         input {
@@ -224,65 +177,20 @@ input:-webkit-autofill:active {
             display: block;
         }
     }
-    &--pass {
-        input {
-            padding-right: 40px;
-        }
+    &--pass input {
+        padding-right: 40px;
     }
-    &--text {
-        label {
-            z-index: 2;
-        }
-        &:before {
-            content: '';
-            position: absolute;
-            z-index: 1;
-            width: calc(100% - 30px);
-            height: 20px;
-            background-color: #fff;
-            top: 2px;
-            left: 10px;
-            border-radius: 10px 10px 0 0;
-        }
-    }
-    &__measure {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 3;
-        pointer-events: none;
-        &+input {
-            padding-right: 40px;
-        }
-    }
-}
-
-.server-data {
-    opacity: 0;
-    z-index: -1;
-    visibility: hidden;
-}
-
-#inputedPhone {
-    pointer-events: none;
-}
-
-.sendagain {
-    opacity: 0;
-    z-index: -1;
-    visibility: hidden;
-}
-
-.codeIncorrect {
-    display: none;
 }
 
 @media screen and (max-width: 992px) {
-    .auth {
-        &__wrap {
-            padding: 20px 0 45px;
-        }
+    .auth__wrap {
+        padding: 20px 0 45px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .form-group2 textarea {
+        height: 280px;
     }
 }
 

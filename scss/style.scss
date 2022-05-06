@@ -1,45 +1,9 @@
-@import 'reset';
-@import 'ux';
-@import 'header';
-@import 'index';
-@import 'auth';
-@import 'create';
-.wrapper {
-    width: 100%;
-}
-
-.content {
-    padding: 40px;
-    width: 100%;
-}
-
-.container {
-    max-width: 1230px;
-    margin: 0 auto;
-    padding: 0 30px;
-}
-
-@media screen and (max-width: 1152px) {
-    .container {
-        max-width: 1020px;
-        padding: 0 20px;
-    }
-    .content {
-        padding: 20px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .container {
-        max-width: 100%;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .container {
-        padding: 0 17px;
-    }
-    .content {
-        padding: 20px 0;
-    }
-}
+@import "reset";
+@import "ui";
+@import "popups";
+@import "header";
+@import "index";
+@import "catalog";
+@import "auth";
+@import "create";
+@import "global";

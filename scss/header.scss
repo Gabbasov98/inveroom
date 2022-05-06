@@ -102,10 +102,6 @@
         padding: 0 20px;
         &:hover {
             background: #2A344A;
-        }
-    }
-    &__create {
-        &:hover {
             path {
                 stroke: #fff;
             }
@@ -113,18 +109,12 @@
     }
     &__edit {
         margin-right: 0;
-        &:hover {
-            path {
-                fill: #fff;
-            }
+        &:hover path {
+            fill: #fff;
         }
     }
-    &__burger {
-        &:hover {
-            path {
-                fill: #fff;
-            }
-        }
+    &__burger:hover path {
+        fill: #fff;
     }
 }
 
@@ -135,12 +125,8 @@
 }
 
 @media screen and (max-width: 768px) {
-    .header {
-        &__burger {
-            svg {
-                width: 30px;
-            }
-        }
+    .header__burger svg {
+        width: 30px;
     }
 }
 
@@ -165,23 +151,19 @@
 }
 
 @media screen and (max-width: 414px) {
-    .header {
-        &__logo {
-            width: 20px;
-            &-dekstop {
-                display: none;
-            }
-            &-mob {
-                display: unset;
-            }
+    .header__logo {
+        width: 20px;
+        &-dekstop {
+            display: none;
+        }
+        &-mob {
+            display: unset;
         }
     }
 }
 
 @media screen and (max-width: 360px) {
-    .header {
-        &__logo {
-            margin-right: 15px;
-        }
+    .header__logo {
+        margin-right: 15px;
     }
 }
