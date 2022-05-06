@@ -3138,6 +3138,7 @@ label::after {
     margin-left: 28px;
     display: flex;
     flex-direction: column-reverse;
+    position: relative;
 }
 
 .chess__flats-small,
@@ -3424,7 +3425,8 @@ label::after {
     border-radius: 50px;
 }
 
-.chess .tab__content:before {
+.chess .tab__content:before,
+.chess .tab__content:after {
     content: '';
     position: absolute;
     z-index: 1;
@@ -3433,6 +3435,16 @@ label::after {
     top: 0;
     left: 0;
     transition: all .3s;
+}
+
+.chess .tab__content::after {
+    background: #E1EDFD;
+}
+
+.chess .tab__content:after {
+    top: unset;
+    bottom: 10px;
+    height: 6px;
 }
 
 .plan__slider {
@@ -5089,6 +5101,28 @@ label::after {
 @media screen and (max-width: 992px) and (max-width: 768px) {
     .location__map {
         height: 280px;
+    }
+    .chess__flats {
+        width: 720px;
+        min-width: 720px;
+        padding-right: 100px;
+    }
+    .chess__flats::before,
+    .chess__flats::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 1px;
+        top: -79px;
+        left: 0;
+        transition: all .3s;
+        background: #E1EDFD;
+    }
+    .chess__flats::after {
+        top: unset;
+        bottom: -1px;
+        height: 6px;
     }
 }
 

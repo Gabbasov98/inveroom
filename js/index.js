@@ -1230,11 +1230,11 @@ $(document).ready(function() {
                 $(this).parents(".chess__middle-wrap").append(flatInfo)
                 $(".chess__info").css("top", `${elemetPosition - blockPosition + 40}px`)
                 if ((elemetPosition - blockPosition) > 420) {
-                    $(".chess__info").css("transform", "translateX(-50%) translateY(-570px)")
+                    $(".chess__info").css("transform", "translateX(-70%) translateY(-570px)")
                 }
             } else {
                 $(this).append(flatInfo)
-                if ((elemetPosition - blockPosition) > 450) {
+                if ((elemetPosition - blockPosition) > 350) {
                     $(".chess__info").addClass("chess__info--top")
                 }
             }
@@ -1256,6 +1256,7 @@ $(document).ready(function() {
             var div = $('.chess__info');
             if (!div.is(e.target) && div.has(e.target).length === 0) {
                 div.remove()
+                $(".chess__flat").removeClass("chess__flat--active")
             }
         });
     })
