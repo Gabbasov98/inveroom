@@ -151,6 +151,14 @@
         transition: all .3s;
         pointer-events: none;
     }
+    &--fix-label {
+        label {
+            font-size: 13px;
+            padding: 0 10px;
+            background-color: #fff;
+            top: 0;
+        }
+    }
     &__error-text {
         margin-top: 5px;
         display: none;

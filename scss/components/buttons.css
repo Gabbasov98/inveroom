@@ -1,0 +1,45 @@
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0; }
+
+.btn-blue {
+  background: #2551AF;
+  color: #EEF1F5; }
+  .btn-blue:hover {
+    background: #1E418E;
+    color: #EEF1F5; }
+  .btn-blue:active {
+    color: #EEF1F5;
+    background: #152e64; }
+
+.btn-blue-light {
+  background: #F1F7FF;
+  color: #7786A5; }
+  .btn-blue-light:hover {
+    background: #E1EDFD;
+    color: #2A344A; }
+    .btn-blue-light:hover path {
+      fill: #2A344A; }
+  .btn-blue-light:active {
+    background: #b1d0fa;
+    color: #2A344A; }
+
+.btn-blue-dark {
+  background: #2A344A;
+  color: #fff; }
+  .btn-blue-dark:hover {
+    background: #21293a;
+    color: #fff; }
+  .btn-blue-dark:active {
+    background: #181d29;
+    color: #fff; }
+
+/*# sourceMappingURL=buttons.css.map */

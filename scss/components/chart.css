@@ -1,0 +1,45 @@
+.apexcharts-tooltip {
+  top: 0 !important; }
+
+.apexcharts-tooltip--right {
+  -webkit-transform: translateX(-50%) !important;
+  -ms-transform: translateX(-50%) !important;
+  transform: translateX(-50%) !important; }
+
+.apexcharts-tooltip--left {
+  -webkit-transform: translateX(50%) !important;
+  -ms-transform: translateX(50%) !important;
+  transform: translateX(50%) !important; }
+
+.apexcharts-tooltip {
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important; }
+
+.apexcharts-tooltip-title {
+  background-color: transparent !important;
+  border: none !important;
+  text-align: center !important;
+  font-family: 'Roboto' !important;
+  font-weight: normal !important;
+  font-size: 14px !important;
+  line-height: 140% !important;
+  color: #7786A5 !important;
+  padding: 0 !important;
+  margin: 0 !important; }
+
+.apexcharts-tooltip-series-group {
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important; }
+
+.apexcharts-tooltip-y-group {
+  padding: 0 !important;
+  font-family: 'Roboto' !important;
+  font-weight: normal !important;
+  font-size: 14px !important;
+  line-height: 140% !important;
+  color: #2A344A !important; }
+
+/*# sourceMappingURL=chart.css.map */
